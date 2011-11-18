@@ -74,12 +74,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileOwner.cpp" />
     <ClCompile Include="FileRead.cpp" />
     <ClCompile Include="FireWrite.cpp" />
     <ClCompile Include="Hymmnos.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileOwner.h" />
     <ClInclude Include="FileRead.h" />
     <ClInclude Include="FileWrite.h" />
     <ClInclude Include="Hymmnos.h" />

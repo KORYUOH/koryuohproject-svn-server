@@ -4,8 +4,11 @@
 #include <string>
 #include <fstream>
 
+#ifndef __UseStringVector
+#define __UseStringVector
 typedef std::vector<std::string> StrVector;
 typedef StrVector::iterator StrVectItor;
+#endif
 typedef std::basic_ifstream<char> FileReadStream;
 
 namespace CSV{

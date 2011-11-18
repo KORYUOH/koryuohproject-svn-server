@@ -5,17 +5,31 @@
 #include <string>
 #include <fstream>
 
+#ifndef __UseStringVector
+#define __UseStringVector
 typedef std::vector<std::string> StrVector;
-typedef typename StrVector::iterator StrVectItor;
+typedef StrVector::iterator StrVectItor;
+#endif
 typedef std::basic_ofstream<char> FileWriteStream;
 
 namespace CSV{
 	using namespace std;
 	class FileWrite{
 		FileWriteStream m_FileStream;
-		string m_ReadLine,m_calam;
+		string m_WriteLine,m_calam;
 		StrVector m_Word;
 		StrVectItor m_WordItor;
+	public:
+		FileWrite();
+		FileWrite(string acceptFileName);
+		void open(string acceptFileName);
+		void close();
+		void setWriteLine(string acceptString);
+		void Write_Line();
+		void Write_Word();
+		void Write_Line_Flush();
+		void Write_Word_Flush();
+		void Itor_begin();
 	};
 };
 #endif
