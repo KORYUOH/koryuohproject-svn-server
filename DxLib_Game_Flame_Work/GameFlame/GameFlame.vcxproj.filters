@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\Mother">
+      <UniqueIdentifier>{fdeb4f9c-ef2a-44fd-87f9-4d236dbd22ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Mother">
+      <UniqueIdentifier>{6fa61ad7-ced1-42d6-91d9-ebdd69456957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Mother\Original">
+      <UniqueIdentifier>{2b134b5e-2b66-4812-9c9a-592923c03f6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserTune">
+      <UniqueIdentifier>{3ac5da63-20ef-42b4-bf38-600ea0745372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserTune\Sorce">
+      <UniqueIdentifier>{0a1363a7-a40f-4edd-8e42-a1bda1175d4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserTune\Header">
+      <UniqueIdentifier>{88765cf1-0f76-421c-b750-30e15fe2ea36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="key.cpp">
+      <Filter>ソース ファイル\Mother</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル\Mother</Filter>
+    </ClCompile>
+    <ClCompile Include="DUfunction.cpp">
+      <Filter>UserTune\Sorce</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>UserTune\Sorce</Filter>
+    </ClCompile>
+    <ClCompile Include="ini.cpp">
+      <Filter>ソース ファイル\Mother</Filter>
+    </ClCompile>
+    <ClCompile Include="out.cpp">
+      <Filter>ソース ファイル\Mother</Filter>
+    </ClCompile>
+    <ClCompile Include="fps.cpp">
+      <Filter>ソース ファイル\Mother</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="struct.h">
+      <Filter>ヘッダー ファイル\Mother</Filter>
+    </ClInclude>
+    <ClInclude Include="Valiable.h">
+      <Filter>ヘッダー ファイル\Mother</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>ヘッダー ファイル\Mother</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>ヘッダー ファイル\Mother</Filter>
+    </ClInclude>
+    <ClInclude Include="GV.h">
+      <Filter>ヘッダー ファイル\Mother</Filter>
+    </ClInclude>
+    <ClInclude Include="DUglobal.h">
+      <Filter>UserTune\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DevUsrCtrl.h">
+      <Filter>ヘッダー ファイル\Mother\Original</Filter>
+    </ClInclude>
+    <ClInclude Include="DUstruct.h">
+      <Filter>UserTune\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DUdefine.h">
+      <Filter>UserTune\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DUvariable.h">
+      <Filter>UserTune\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SET_MODE.h">
+      <Filter>UserTune\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
