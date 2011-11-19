@@ -9,7 +9,11 @@
 typedef std::vector<std::string> StrVector;
 typedef StrVector::iterator StrVectItor;
 #endif
+
+#ifndef	__UseFileReadStream
+#define	__UseFileReadStream
 typedef std::basic_ifstream<char> FileReadStream;
+#endif
 
 namespace CSV{
 	using namespace std;
@@ -28,6 +32,8 @@ namespace CSV{
 		void setCaram(string caram);
 		string getStrLine()const;
 		string getWord();
+		string getWord(unsigned int index);
+		int length()const;
 	private:
 		void readline();
 		void Split(string split_caram);

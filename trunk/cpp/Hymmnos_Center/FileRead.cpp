@@ -45,6 +45,14 @@ string FileRead::getWord(){
 	return	(temp != m_Word.end())? *temp:" ";
 }
 
+string FileRead::getWord(unsigned int index){
+	StrVectItor temp = m_Word.begin();
+	for(unsigned int i=0;i<index && i<m_Word.size();i++)
+	if(temp != m_Word.end())
+		temp++;
+	return	(temp != m_Word.end())? *temp:" getWord Index Error \n";
+}
+
 void FileRead::Split(string split_caram){
 	string tmp = m_ReadLine;//tmpにm_ReadLineをコピーしておく
 	string temporary = tmp.substr(0,tmp.find_first_of(split_caram));
@@ -58,4 +66,8 @@ void FileRead::Split(string split_caram){
 		m_WordItor = m_Word.end()-1;//無効になったから書き直し
 	}while(tmp.compare(*m_WordItor));
 	m_WordItor = m_Word.begin();	//使ったら元に戻してね
+}
+
+int FileRead::length()const{
+	return m_Word.size();
 }

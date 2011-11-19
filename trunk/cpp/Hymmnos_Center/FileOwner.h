@@ -4,11 +4,15 @@
 #include "FileWrite.h"
 namespace CSV{
 	class FileOwner{
-		FileRead m_Reader;
-		FileWrite m_Writer;
+	public:
+		FileRead Reader;
+		FileWrite Writer;
 	public:
 		FileOwner();
 		FileOwner(std::string ReadFileName,std::string WriteFileName);
+		void SetReadFileName(string acceptFileName);
+		void SetWriteFileName(string acceptFileName);
+		void FileIO();
 		~FileOwner();
 	};
 };
