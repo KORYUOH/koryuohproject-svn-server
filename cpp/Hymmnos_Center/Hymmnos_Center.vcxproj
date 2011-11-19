@@ -76,7 +76,7 @@
   <ItemGroup>
     <ClCompile Include="FileOwner.cpp" />
     <ClCompile Include="FileRead.cpp" />
-    <ClCompile Include="FireWrite.cpp" />
+    <ClCompile Include="FileWrite.cpp" />
     <ClCompile Include="Hymmnos.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

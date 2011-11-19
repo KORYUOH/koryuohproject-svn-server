@@ -4,10 +4,17 @@
 #include <map>
 #include <vector>
 
+#ifndef	__UseStringMap
+#define	__UseStringMap
 typedef std::map<std::string,std::string> StrMap;
 typedef StrMap::iterator StrMapItr;
+#endif
+
+#ifndef __UseStringVector
+#define __UseStringVector
 typedef std::vector<std::string> StrVector;
 typedef StrVector::iterator StrVectItor;
+#endif
 
 namespace Ar_Tonelico{
 	using namespace std;
