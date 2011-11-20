@@ -34,6 +34,7 @@ namespace CSV{
 		string getWord();
 		string getWord(unsigned int index);
 		int length()const;
+		bool fail()const;
 	private:
 		void readline();
 		void Split(string split_caram);

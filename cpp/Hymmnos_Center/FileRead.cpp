@@ -71,3 +71,7 @@ void FileRead::Split(string split_caram){
 int FileRead::length()const{
 	return m_Word.size();
 }
+
+bool FileRead::fail()const{
+	return m_FileStream.fail();
+}
