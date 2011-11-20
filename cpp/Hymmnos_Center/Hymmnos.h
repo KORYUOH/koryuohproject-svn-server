@@ -22,6 +22,7 @@ namespace Ar_Tonelico{
 	private:
 		StrMap m_hymm;
 		StrMapItr m_hymmItr;
+		StrMap::reverse_iterator m_rItor;
 	public://Constractor And Deathtructors
 		EOLIA();
 		EOLIA(string str);
@@ -34,6 +35,7 @@ namespace Ar_Tonelico{
 		void add(string str1,string str2);
 		string getIteratorData_First() const ;
 		string getIteratorData_Second() const ;
+		void Revsort();
 		void SetItrBegin();
 		string Cmp_str(string str);
 	public://OverLoad

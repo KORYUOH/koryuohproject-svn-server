@@ -15,6 +15,7 @@ namespace CSV{
 		void CloseReadFile();
 		void CloseWriteFile();
 		void FileIO();
+		string getReaderWord();
 		string getReaderWord(unsigned int index);
 		bool ReadFileFail()const;
 		~FileOwner();

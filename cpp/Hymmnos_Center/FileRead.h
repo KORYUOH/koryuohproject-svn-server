@@ -33,10 +33,12 @@ namespace CSV{
 		string getStrLine()const;
 		string getWord();
 		string getWord(unsigned int index);
+		string getWord2(unsigned int index)const;
 		int length()const;
 		bool fail()const;
-	private:
 		void readline();
+		void clear();
+	private:
 		void Split(string split_caram);
 	};
 };

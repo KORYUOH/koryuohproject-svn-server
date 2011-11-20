@@ -74,6 +74,11 @@ void EOLIA::SetItrBegin(){
 }
 
 string EOLIA::Cmp_str(string str) {
+/*	for(m_rItor = m_hymm.rbegin(); m_rItor != m_hymm.rend();m_rItor++){
+		if(m_rItor->first == str)
+			return m_rItor->second;
+	}
+//*/
 	for(m_hymmItr = m_hymm.begin(); m_hymmItr != m_hymm.end();m_hymmItr++){
 		if(m_hymmItr->first == str)
 			return m_hymmItr->second;

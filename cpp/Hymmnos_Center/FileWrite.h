@@ -34,8 +34,10 @@ namespace CSV{
 		void Write_Word();
 		void Write_Line_Flush();
 		void Write_Word_Flush();
+		void Write_Word_Line_Flush();
 		void Itor_begin();
 		void push_Back(string str);
+		int length()const;
 		//// Operator
 
 	};

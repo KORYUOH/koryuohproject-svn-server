@@ -46,3 +46,17 @@ void FileWrite::push_Back(string str){
 	m_Word.push_back(str);
 	Itor_begin();
 }
+
+int FileWrite::length()const{
+	return m_Word.size();
+}
+
+void FileWrite::Write_Word_Line_Flush(){
+	for(int i=0;i<length();i++){
+	m_FileStream << *m_WordItor << " ";
+	m_WordItor++;
+	}
+	m_FileStream << endl;
+	m_Word.clear();
+	Itor_begin();
+}
