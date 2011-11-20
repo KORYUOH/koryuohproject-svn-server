@@ -34,6 +34,9 @@ void FileOwner::CloseReadFile(){
 void FileOwner::CloseWriteFile(){
 	Writer.close();
 }
+string FileOwner::getReaderWord(){
+	return Reader.getWord();
+}
 
 string FileOwner::getReaderWord(unsigned int index){
 	return Reader.getWord(index);
