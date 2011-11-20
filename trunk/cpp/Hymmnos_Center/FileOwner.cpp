@@ -19,6 +19,26 @@ void FileOwner::FileIO(){
 	Writer.Write_Line_Flush();
 }
 
-void FileOwner::SetReadFileName(string acceptFileName){
+void FileOwner::OpenReadFile(string acceptFileName){
 	Reader.open(acceptFileName);
+}
+
+void FileOwner::OpenWriteFile(string acceptFileName){
+	Writer.open(acceptFileName);
+}
+
+void FileOwner::CloseReadFile(){
+	Reader.close();
+}
+
+void FileOwner::CloseWriteFile(){
+	Writer.close();
+}
+
+string FileOwner::getReaderWord(unsigned int index){
+	return Reader.getWord(index);
+}
+
+bool FileOwner::ReadFileFail()const{
+	return Reader.fail();
 }
