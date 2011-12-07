@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Class">
+      <UniqueIdentifier>{a671e46a-d507-41b1-b78d-058005424de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\StringSplitter">
+      <UniqueIdentifier>{2408ed24-9841-47ae-82ba-0e74387c05a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Dice">
+      <UniqueIdentifier>{0e44bd55-0371-454d-85cb-57441fdfcf28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Circle">
+      <UniqueIdentifier>{5a6ccb2c-527c-4a74-a38b-1baffe2b6eda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dice\dice.cpp">
+      <Filter>Class\Dice</Filter>
+    </ClCompile>
+    <ClCompile Include="StringSplitter\StringSplit.cpp">
+      <Filter>Class\StringSplitter</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle\Circle.cpp">
+      <Filter>Class\Circle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dice\dice.h">
+      <Filter>Class\Dice</Filter>
+    </ClInclude>
+    <ClInclude Include="StringSplitter\StringSplitter.h">
+      <Filter>Class\StringSplitter</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle\Circle.h">
+      <Filter>Class\Circle</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
