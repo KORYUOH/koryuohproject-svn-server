@@ -17,6 +17,12 @@
     <Filter Include="Class\Circle">
       <UniqueIdentifier>{5a6ccb2c-527c-4a74-a38b-1baffe2b6eda}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\Buffer">
+      <UniqueIdentifier>{cba0c4f6-be22-4d20-9fca-4f1484b65884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Ball">
+      <UniqueIdentifier>{de4dcaf4-0521-495c-99e8-45d1d79e7e0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dice\dice.cpp">
@@ -27,6 +33,12 @@
     </ClCompile>
     <ClCompile Include="Circle\Circle.cpp">
       <Filter>Class\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffer\Buffer.cpp">
+      <Filter>Class\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball\Ball.cpp">
+      <Filter>Class\Ball</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,5 +51,14 @@
     <ClInclude Include="Circle\Circle.h">
       <Filter>Class\Circle</Filter>
     </ClInclude>
+    <ClInclude Include="Buffer\Buffer.h">
+      <Filter>Class\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball\Ball.h">
+      <Filter>Class\Ball</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>
