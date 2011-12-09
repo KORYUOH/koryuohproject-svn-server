@@ -8,3 +8,9 @@ bool Circle<T>::Collision(Circle<T>& tgt){
 	
 	return (X*X+Y*Y<R*R)? true:false;
 }
+
+template<class T>
+void Circle<T>::add_pos(T vx,T vy){
+	m_x += vx;
+	m_y += vy;
+}

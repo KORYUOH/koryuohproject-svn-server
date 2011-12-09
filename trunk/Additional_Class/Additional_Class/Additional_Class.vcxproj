@@ -60,14 +60,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ball\Ball.cpp" />
+    <ClCompile Include="Buffer\Buffer.cpp" />
     <ClCompile Include="Circle\Circle.cpp" />
     <ClCompile Include="Dice\dice.cpp" />
     <ClCompile Include="StringSplitter\StringSplit.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ball\Ball.h" />
+    <ClInclude Include="Buffer\Buffer.h" />
     <ClInclude Include="Circle\Circle.h" />
     <ClInclude Include="Dice\dice.h" />
     <ClInclude Include="StringSplitter\StringSplitter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
