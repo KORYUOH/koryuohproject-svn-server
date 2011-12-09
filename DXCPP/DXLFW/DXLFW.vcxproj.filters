@@ -25,6 +25,7 @@
     <ClCompile Include="Pad\Pad.cpp">
       <Filter>Pad</Filter>
     </ClCompile>
+    <ClCompile Include="Fps\Fps.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DxLibFlameWork\DxLibFW.h">
@@ -51,6 +52,7 @@
     <ClInclude Include="Define\DefineManager.h">
       <Filter>Define</Filter>
     </ClInclude>
+    <ClInclude Include="Fps\Fps.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

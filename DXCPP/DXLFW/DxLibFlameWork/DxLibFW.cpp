@@ -1,10 +1,14 @@
 //#include "../Define/Define.h"
 #include "DxLibFW.h"
 #include "../Key/KeyManager.h"
+#include "../Fps/Fps.h"
 
 int DXFW::init(){
-	if(WINDOW_MODE)
+	if(m_isWindowMode)
+		ChangeWindowMode(m_isWindowMode);
+	else
 	MessegeBox();
+
 	return (DxLib_Init() == -1 || SetDrawScreen( DX_SCREEN_BACK )!=0)? -1:0;
 }
 
@@ -25,8 +29,10 @@ void DXFW::run(){
 	while(ProcessLoop() == 0){
 		update();
 		draw();
+		FPS_Ctrl::getInstance().draw_fps(0,465);
 //		if(Key::getInstance().getState().CheckStateKey( KEY_INPUT_ESCAPE) == 1) break;
 //		if(m_Key.CheckStateKey( KEY_INPUT_ESCAPE ) == 1) break;
+		FPS_Ctrl::getInstance().fps_wait();
 		if(KeyManager::getInstance().getKeyInstance().CheckStateKey( KEY_INPUT_ESCAPE ) == 1)break;
 //		if(KeyManager::Instance.CheckStateKey(KEY_INPUT_ESCAPE) == 1)break;
 		ScreenFlip();

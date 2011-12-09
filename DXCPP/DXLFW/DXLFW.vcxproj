@@ -78,6 +78,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DxLibFlameWork\DxLibFW.cpp" />
+    <ClCompile Include="Fps\Fps.cpp" />
     <ClCompile Include="Key\Key.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pad\Pad.cpp" />
@@ -88,6 +89,7 @@
     <ClInclude Include="Define\Structure.h" />
     <ClInclude Include="DxLibFlameWork\DxLibFW.h" />
     <ClInclude Include="DxLibFlameWork\DxLibInterFace.h" />
+    <ClInclude Include="Fps\Fps.h" />
     <ClInclude Include="Key\Key.h" />
     <ClInclude Include="Key\KeyManager.h" />
     <ClInclude Include="Pad\Pad.h" />
