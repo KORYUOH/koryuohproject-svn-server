@@ -13,6 +13,9 @@
     <Filter Include="Pad">
       <UniqueIdentifier>{f8b582ca-0046-49aa-9455-46dd3afbf338}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FPS">
+      <UniqueIdentifier>{41b28826-05dd-40ee-8e55-847103a47c82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -25,7 +28,9 @@
     <ClCompile Include="Pad\Pad.cpp">
       <Filter>Pad</Filter>
     </ClCompile>
-    <ClCompile Include="Fps\Fps.cpp" />
+    <ClCompile Include="Fps\Fps.cpp">
+      <Filter>FPS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DxLibFlameWork\DxLibFW.h">
@@ -52,7 +57,9 @@
     <ClInclude Include="Define\DefineManager.h">
       <Filter>Define</Filter>
     </ClInclude>
-    <ClInclude Include="Fps\Fps.h" />
+    <ClInclude Include="Fps\Fps.h">
+      <Filter>FPS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
