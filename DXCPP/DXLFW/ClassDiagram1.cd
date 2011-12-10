@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Key" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAADAAAAAAQAAAAAAAAAAAAAAAABAAAgAAAACAA=</HashCode>
+      <FileName>Key\Key.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyManager" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAACAAAAAABAAAAAAAQAAAAgAAAAAAA=</HashCode>
+      <FileName>Key\KeyManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DXFW" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAAAAAAAAAAAoBAAAAAAAAAAIAAAgACgAEAAA=</HashCode>
+      <FileName>DxLibFlameWork\DxLibFW.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DxLibInterFace" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAIAACAACAAEAAA=</HashCode>
+      <FileName>DxLibFlameWork\DxLibInterFace.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pad" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAQAQAAABAhAAACAAEAAAAAABAAAAgA=</HashCode>
+      <FileName>Pad\Pad.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FPS_Ctrl" Collapsed="true">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAAABCgAAAIAAQAAABAAAAQAAAAAQAAIAAAAgAAAA=</HashCode>
+      <FileName>Fps\Fps.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Circle" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABhAAAAAAA=</HashCode>
+      <FileName>Define\Structure.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Rect" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAAAAAAAACAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Define\Structure.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PS2" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAACAAAgAAAACQAAQAAYAIBAIAAIAgAAoAA=</HashCode>
+      <FileName>Pad\Pad.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>
