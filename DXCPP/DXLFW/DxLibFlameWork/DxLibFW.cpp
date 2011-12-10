@@ -9,6 +9,9 @@ int DXFW::init(){
 	else
 	MessegeBox();
 
+	SetMainWindowText(m_WindowTitle.c_str());
+
+	SetOutApplicationLogValidFlag(m_isOutLog);
 	return (DxLib_Init() == -1 || SetDrawScreen( DX_SCREEN_BACK )!=0)? -1:0;
 }
 

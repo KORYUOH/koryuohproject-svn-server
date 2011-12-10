@@ -9,6 +9,16 @@
 	#endif
 #endif
 
+#ifdef SETWINDOWTITLE
+#define APPLICATIONTITLE SETWINDOWTITLE
+#else
+#define APPLICATIONTITLE "Dxlib"
+#endif
+#ifdef __Debug
+#define OUTLOGFILE true
+#else
+#define OUTLOGFILE false
+#endif
 #ifndef __FIELDSTATE
 	#define __FIELDSTATE
 	#define FIELD_MAX_X				384
