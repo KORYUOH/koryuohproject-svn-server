@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StringSplitter">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAACAiAAEAAQAGAAgAQBBEAAAAAAUAgQAAAAAA=</HashCode>
+      <FileName>StringSplitter\StringSplitter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dice">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAiAIAAAAIAABAAAAAAAAAAAABAAAAEAABA=</HashCode>
+      <FileName>Dice\dice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circle&lt;T&gt;">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKgAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle\Circle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buffer&lt;T&gt;">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAQAoAAAAQAA=</HashCode>
+      <FileName>Buffer\Buffer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ball&lt;T&gt;">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAIA=</HashCode>
+      <FileName>Ball\Ball.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="CrcleI" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle\Circle.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CrcleF" Collapsed="true">
+    <Position X="1.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle\Circle.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CrcleD" Collapsed="true">
+    <Position X="1.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle\Circle.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="メイリオ" Size="9" />
+</ClassDiagram>
