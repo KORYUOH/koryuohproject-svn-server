@@ -1,5 +1,5 @@
 #include "Pad.h"
-#include "../Key/KeyManager.h"
+#include "../Key/Key.h"
 
 //パッドとキーボードの両方の入力をチェックする関数
 void Pad::GetHitPadStateAll(){
@@ -10,20 +10,20 @@ void Pad::GetHitPadStateAll(){
 		else				Key[i]=0;
 		mul*=2;
 	}
-	input_pad_or_key(&Key[configpad.left]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_LEFT	 ));
-	input_pad_or_key(&Key[configpad.up]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_UP		 ));
-	input_pad_or_key(&Key[configpad.right]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_RIGHT	 ));
-	input_pad_or_key(&Key[configpad.down]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_DOWN	 ));
-	input_pad_or_key(&Key[configpad.circle]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_Z		 ));
-	input_pad_or_key(&Key[configpad.cross]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_X		 ));
-	input_pad_or_key(&Key[configpad.triangle]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_A		 ));//triangle
-	input_pad_or_key(&Key[configpad.square]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_S		 ));//square
-	input_pad_or_key(&Key[configpad.select]		,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_LSHIFT	 ));
-	input_pad_or_key(&Key[configpad.start]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_ESCAPE	 ));
-	input_pad_or_key(&Key[configpad.r1]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_E		 ));//R1
-	input_pad_or_key(&Key[configpad.r2]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_R		 ));//R2
-	input_pad_or_key(&Key[configpad.l1]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_W		 ));//L1
-	input_pad_or_key(&Key[configpad.l2]			,KeyManager::getInstance().getKeyInstance().CheckStateKey(KEY_INPUT_Q		 ));//L2
+	input_pad_or_key(&Key[configpad.left]			,Key::getInstance().CheckStateKey(KEY_INPUT_LEFT	 ));
+	input_pad_or_key(&Key[configpad.up]			,Key::getInstance().CheckStateKey(KEY_INPUT_UP		 ));
+	input_pad_or_key(&Key[configpad.right]		,Key::getInstance().CheckStateKey(KEY_INPUT_RIGHT	 ));
+	input_pad_or_key(&Key[configpad.down]		,Key::getInstance().CheckStateKey(KEY_INPUT_DOWN	 ));
+	input_pad_or_key(&Key[configpad.circle]		,Key::getInstance().CheckStateKey(KEY_INPUT_Z		 ));
+	input_pad_or_key(&Key[configpad.cross]		,Key::getInstance().CheckStateKey(KEY_INPUT_X		 ));
+	input_pad_or_key(&Key[configpad.triangle]		,Key::getInstance().CheckStateKey(KEY_INPUT_A		 ));//triangle
+	input_pad_or_key(&Key[configpad.square]		,Key::getInstance().CheckStateKey(KEY_INPUT_S		 ));//square
+	input_pad_or_key(&Key[configpad.select]		,Key::getInstance().CheckStateKey(KEY_INPUT_LSHIFT	 ));
+	input_pad_or_key(&Key[configpad.start]			,Key::getInstance().CheckStateKey(KEY_INPUT_ESCAPE	 ));
+	input_pad_or_key(&Key[configpad.r1]			,Key::getInstance().CheckStateKey(KEY_INPUT_E		 ));//R1
+	input_pad_or_key(&Key[configpad.r2]			,Key::getInstance().CheckStateKey(KEY_INPUT_R		 ));//R2
+	input_pad_or_key(&Key[configpad.l1]			,Key::getInstance().CheckStateKey(KEY_INPUT_W		 ));//L1
+	input_pad_or_key(&Key[configpad.l2]			,Key::getInstance().CheckStateKey(KEY_INPUT_Q		 ));//L2
 }
 
 //渡されたパッドキー番号の入力状態を返す。返り値が-1なら不正

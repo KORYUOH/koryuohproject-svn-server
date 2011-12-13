@@ -89,9 +89,9 @@
     <ClInclude Include="Define\Structure.h" />
     <ClInclude Include="DxLibFlameWork\DxLibFW.h" />
     <ClInclude Include="DxLibFlameWork\DxLibInterFace.h" />
+    <ClInclude Include="Facade\Contact.h" />
     <ClInclude Include="Fps\Fps.h" />
     <ClInclude Include="Key\Key.h" />
-    <ClInclude Include="Key\KeyManager.h" />
     <ClInclude Include="Pad\Pad.h" />
   </ItemGroup>
   <ItemGroup>
