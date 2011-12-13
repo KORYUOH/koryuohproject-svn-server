@@ -1,6 +1,7 @@
 //#include "../Define/Define.h"
 #include "DxLibFW.h"
-#include "../Key/KeyManager.h"
+#include "../Key/Key.h"
+#include "../Pad/Pad.h"
 #include "../Fps/Fps.h"
 
 int DXFW::init(){
@@ -36,8 +37,8 @@ void DXFW::run(){
 //		if(Key::getInstance().getState().CheckStateKey( KEY_INPUT_ESCAPE) == 1) break;
 //		if(m_Key.CheckStateKey( KEY_INPUT_ESCAPE ) == 1) break;
 		FPS_Ctrl::getInstance().fps_wait();
-		if(KeyManager::getInstance().getKeyInstance().CheckStateKey( KEY_INPUT_ESCAPE ) == 1)break;
-//		if(KeyManager::Instance.CheckStateKey(KEY_INPUT_ESCAPE) == 1)break;
+//		if(KeyManager::getInstance().getKeyInstance().CheckStateKey( KEY_INPUT_ESCAPE ) == 1)break;
+		if(Key::getInstance().CheckStateKey(KEY_INPUT_ESCAPE) == 1)break;
 		ScreenFlip();
 	}
 	finish();
@@ -46,9 +47,10 @@ void DXFW::run(){
 int DXFW::ProcessLoop(){
 	if(ProcessMessage() != 0) return -1;
 	if(ClearDrawScreen() != 0) return -1;
-//	Key::getInstance().getState().GetHitKeyStateAll_2();
+	Key::getInstance().GetHitKeyStateAll_2();
+	Pad::getInstance().GetHitPadStateAll();
 //	m_Key.GetHitKeyStateAll_2();
-	KeyManager::getInstance().getKeyInstance().GetHitKeyStateAll_2();
+//	KeyManager::getInstance().getKeyInstance().GetHitKeyStateAll_2();
 	return 0; 
 }
 

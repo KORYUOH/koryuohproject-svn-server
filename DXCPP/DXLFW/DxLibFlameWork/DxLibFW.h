@@ -2,7 +2,6 @@
 #define __DxLibFW
 #include	 "../../Include/DxLib.h"
 #include	 "DxLibInterFace.h"
-#include	 "../Key/KeyManager.h"
 #include	<string>
 class DXFW:public DxLibInterFace{
 private:

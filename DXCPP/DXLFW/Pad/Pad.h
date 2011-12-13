@@ -3,7 +3,7 @@
 #include "../Define/Define.h"
 #include "../Define/Structure.h"
 #include "../../Include/DxLib.h"
-#include "../Key/KeyManager.h"
+#include "../Key/Key.h"
 struct PS2{
 	int left,up,right,down,circle,triangle,square,cross,l1,l2,r1,r2,start,select;
 	
@@ -31,6 +31,9 @@ struct PS2{
 };
 class Pad{
 private:
+	Pad():configpad(){};
+	Pad(const Pad& p);
+	Pad& operator = (const Pad& pad);
 	int Key[PAD_MAX];
 	PS2 configpad;
 	void input_pad_or_key(int *p, int k){
@@ -38,6 +41,10 @@ private:
 	}
 	void KeyInit();
 public:
+	static Pad& getInstance(void){
+		static Pad Instance;
+		return Instance;
+	}
 	void	GetHitPadStateAll();
 	int CheckStatePad(unsigned int Handle);
 	int CheckStateTrigger(unsigned int Handle);

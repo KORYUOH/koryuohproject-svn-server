@@ -16,6 +16,9 @@
     <Filter Include="FPS">
       <UniqueIdentifier>{41b28826-05dd-40ee-8e55-847103a47c82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Facade">
+      <UniqueIdentifier>{37d459a1-fc38-4829-ab94-7c858e416e5f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -51,14 +54,14 @@
     <ClInclude Include="Pad\Pad.h">
       <Filter>Pad</Filter>
     </ClInclude>
-    <ClInclude Include="Key\KeyManager.h">
-      <Filter>Key</Filter>
-    </ClInclude>
     <ClInclude Include="Define\DefineManager.h">
       <Filter>Define</Filter>
     </ClInclude>
     <ClInclude Include="Fps\Fps.h">
       <Filter>FPS</Filter>
+    </ClInclude>
+    <ClInclude Include="Facade\Contact.h">
+      <Filter>Facade</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

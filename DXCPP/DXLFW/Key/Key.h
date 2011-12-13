@@ -10,7 +10,7 @@ public:
 };
 */
 class Key{
-public:
+private:
 	Key(){};
 private:
 	Key(const Key& rhs);
@@ -18,11 +18,11 @@ private:
 
 	unsigned int stateKey[256];
 public:
-	////static Key& getInstance();
-	//static Key& getInstance(void){
-	//	static Key instance;
-	//	return instance;
-	//}
+	//static Key& getInstance();
+	static Key& getInstance(void){
+		static Key instance;
+		return instance;
+	}
 		int GetHitKeyStateAll_2();
 		int CheckStateKey(unsigned char Handle);
 	//Keystate& getState(){

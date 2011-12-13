@@ -60,27 +60,27 @@
 #define PAD_KEY_START						13 
 #define PAD_KEY_SELECT						14
 
-#else
-extern PAD_MAX
-extern FIELD_MAX_X
-extern FIELD_MAX_Y
-extern FMX
-extern FMY
-extern FIELD_X
-extern FIELD_Y
-extern WINDOW_MODE
-extern PAD_KEY_UP	
-extern PAD_KEY_DOWN
-extern PAD_KEY_LEFT
-extern PAD_KEY_RIGHT
-extern PAD_KEY_CIRCLE
-extern PAD_KEY_CROSS
-extern PAD_KEY_TRIANGLE
-extern PAD_KEY_SQUARE
-extern PAD_KEY_L1	
-extern PAD_KEY_L2	
-extern PAD_KEY_R1	
-extern PAD_KEY_R2	
-extern PAD_KEY_START
-extern PAD_KEY_SELECT
+//#else
+//extern PAD_MAX
+//extern FIELD_MAX_X
+//extern FIELD_MAX_Y
+//extern FMX
+//extern FMY
+//extern FIELD_X
+//extern FIELD_Y
+//extern WINDOW_MODE
+//extern PAD_KEY_UP	
+//extern PAD_KEY_DOWN
+//extern PAD_KEY_LEFT
+//extern PAD_KEY_RIGHT
+//extern PAD_KEY_CIRCLE
+//extern PAD_KEY_CROSS
+//extern PAD_KEY_TRIANGLE
+//extern PAD_KEY_SQUARE
+//extern PAD_KEY_L1	
+//extern PAD_KEY_L2	
+//extern PAD_KEY_R1	
+//extern PAD_KEY_R2	
+//extern PAD_KEY_START
+//extern PAD_KEY_SELECT
 #endif

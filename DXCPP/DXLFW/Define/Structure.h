@@ -1,3 +1,5 @@
+#ifndef	__Struct
+#define	__Struct
 struct Circle{
 	float x,y,r;
 	Circle(){};
@@ -27,3 +29,4 @@ struct Rect{
 
 };
 
+#endif
