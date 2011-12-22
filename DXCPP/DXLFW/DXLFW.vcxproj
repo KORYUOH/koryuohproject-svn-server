@@ -24,7 +24,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -74,16 +73,22 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Container\ImgContainer.cpp" />
     <ClCompile Include="DxLibFlameWork\DxLibFW.cpp" />
     <ClCompile Include="Fps\Fps.cpp" />
     <ClCompile Include="Key\Key.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mouse\Mouce.cpp" />
     <ClCompile Include="Pad\Pad.cpp" />
+    <ClCompile Include="XML\XmlReader.cpp" />
+    <ClCompile Include="XML\XmlWriter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Container\ImgContainer.h" />
     <ClInclude Include="Define\Define.h" />
     <ClInclude Include="Define\DefineManager.h" />
     <ClInclude Include="Define\Structure.h" />
@@ -92,7 +97,11 @@
     <ClInclude Include="Facade\Contact.h" />
     <ClInclude Include="Fps\Fps.h" />
     <ClInclude Include="Key\Key.h" />
+    <ClInclude Include="Mouse\Mouce.h" />
     <ClInclude Include="Pad\Pad.h" />
+    <ClInclude Include="XML\XmlReader.h" />
+    <ClInclude Include="XML\XmlUser.h" />
+    <ClInclude Include="XML\XmlWriter.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

@@ -1,5 +1,5 @@
-#include "Fps.h"
-#include "../../Include/DxLib.h"
+#include	"Fps.h"
+#include	"../../Include/DxLib.h"
 
 int FPS_Ctrl::Phase_first(const int t){
 	if(m_fpsCount != 0)
@@ -33,8 +33,9 @@ void FPS_Ctrl::fps_wait(){
 	static int t = 0;
 	term = Phase_first(t);
 
-	if(term>0)//Wait
-		Sleep(term);
+	if(m_average >59.0)
+		if(term>0)//Wait
+			Sleep(term);
 
 	t = CreateBase(t);
 

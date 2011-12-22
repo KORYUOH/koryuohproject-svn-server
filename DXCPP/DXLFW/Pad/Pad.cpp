@@ -1,5 +1,5 @@
-#include "Pad.h"
-#include "../Key/Key.h"
+#include	"Pad.h"
+#include	"../Key/Key.h"
 
 //パッドとキーボードの両方の入力をチェックする関数
 void Pad::GetHitPadStateAll(){

@@ -19,6 +19,15 @@
     <Filter Include="Facade">
       <UniqueIdentifier>{37d459a1-fc38-4829-ab94-7c858e416e5f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Mouse">
+      <UniqueIdentifier>{25128023-829a-4559-9a3b-f9d4586c94ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{b8995239-eb43-4238-a06b-57741019a7c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Container">
+      <UniqueIdentifier>{0a9f23a4-0069-4125-b868-e19fadf19536}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -33,6 +42,18 @@
     </ClCompile>
     <ClCompile Include="Fps\Fps.cpp">
       <Filter>FPS</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse\Mouce.cpp">
+      <Filter>Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XmlReader.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="XML\XmlWriter.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Container\ImgContainer.cpp">
+      <Filter>Container</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +83,21 @@
     </ClInclude>
     <ClInclude Include="Facade\Contact.h">
       <Filter>Facade</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse\Mouce.h">
+      <Filter>Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlReader.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlWriter.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XML\XmlUser.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Container\ImgContainer.h">
+      <Filter>Container</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
