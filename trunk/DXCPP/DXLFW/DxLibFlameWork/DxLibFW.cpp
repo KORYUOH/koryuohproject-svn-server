@@ -1,8 +1,7 @@
-//#include "../Define/Define.h"
-#include "DxLibFW.h"
-#include "../Key/Key.h"
-#include "../Pad/Pad.h"
-#include "../Fps/Fps.h"
+#include	"DxLibFW.h"
+#include	"../Key/Key.h"
+#include	"../Pad/Pad.h"
+#include	"../Fps/Fps.h"
 
 int DXFW::init(){
 	if(m_isWindowMode)
@@ -14,6 +13,10 @@ int DXFW::init(){
 
 	SetOutApplicationLogValidFlag(m_isOutLog);
 	return (DxLib_Init() == -1 || SetDrawScreen( DX_SCREEN_BACK )!=0)? -1:0;
+}
+
+void DXFW::Initialize(){
+
 }
 
 void DXFW::update(){
@@ -30,14 +33,12 @@ void DXFW::finish(){
 
 void DXFW::run(){
 	init();
+	Initialize();
 	while(ProcessLoop() == 0){
 		update();
 		draw();
 		FPS_Ctrl::getInstance().draw_fps(0,465);
-//		if(Key::getInstance().getState().CheckStateKey( KEY_INPUT_ESCAPE) == 1) break;
-//		if(m_Key.CheckStateKey( KEY_INPUT_ESCAPE ) == 1) break;
 		FPS_Ctrl::getInstance().fps_wait();
-//		if(KeyManager::getInstance().getKeyInstance().CheckStateKey( KEY_INPUT_ESCAPE ) == 1)break;
 		if(Key::getInstance().CheckStateKey(KEY_INPUT_ESCAPE) == 1)break;
 		ScreenFlip();
 	}
@@ -49,18 +50,16 @@ int DXFW::ProcessLoop(){
 	if(ClearDrawScreen() != 0) return -1;
 	Key::getInstance().GetHitKeyStateAll_2();
 	Pad::getInstance().GetHitPadStateAll();
-//	m_Key.GetHitKeyStateAll_2();
-//	KeyManager::getInstance().getKeyInstance().GetHitKeyStateAll_2();
 	return 0; 
 }
 
 void DXFW::MessegeBox(){
-        int flag;
-        flag=MessageBox(
-                NULL ,
-                TEXT("フルスクリーンモードで起動しますか？") ,
-                TEXT("スクリーン設定") , 
-                MB_YESNO | MB_ICONQUESTION );
-        if(flag==IDNO)
-                ChangeWindowMode( TRUE );
+		int flag;
+		flag=MessageBox(
+				NULL ,
+				TEXT("フルスクリーンモードで起動しますか？") ,
+				TEXT("スクリーン設定") , 
+				MB_YESNO | MB_ICONQUESTION );
+		if(flag==IDNO)
+				ChangeWindowMode( TRUE );
 }

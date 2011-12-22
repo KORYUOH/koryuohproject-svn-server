@@ -1,9 +1,9 @@
 #ifndef __Pad
 #define __Pad
-#include "../Define/Define.h"
-#include "../Define/Structure.h"
-#include "../../Include/DxLib.h"
-#include "../Key/Key.h"
+#include	"../Define/Define.h"
+#include	"../Define/Structure.h"
+#include	"../../Include/DxLib.h"
+#include	"../Key/Key.h"
 struct PS2{
 	int left,up,right,down,circle,triangle,square,cross,l1,l2,r1,r2,start,select;
 	
@@ -13,20 +13,20 @@ struct PS2{
 	l1(10),l2(8),r1(11),r2(9),start(13),select(14){};
 	
 	/*
-	configpad.down	=0;
-	configpad.left=1;
-	configpad.right=2;
-	configpad.up=3;
-	configpad.cross=4;
-	configpad.circle=5;
-	configpad.triangle=6;
-	configpad.square=7;
-	configpad.l2=8;
-	configpad.r2=9;
-	configpad.l1=10;
-	configpad.r1=11;
-	configpad.start=13;
-	configpad.select=14;
+	configpad.down			=0;
+	configpad.left				=1;
+	configpad.right			=2;
+	configpad.up				=3;
+	configpad.cross			=4;
+	configpad.circle			=5;
+	configpad.triangle		=6;
+	configpad.square		=7;
+	configpad.l2				=8;
+	configpad.r2				=9;
+	configpad.l1				=10;
+	configpad.r1				=11;
+	configpad.start			=13;
+	configpad.select			=14;
 	*/
 };
 class Pad{
