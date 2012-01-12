@@ -99,6 +99,7 @@
     <ClInclude Include="Container\ImgContainer.h">
       <Filter>Container</Filter>
     </ClInclude>
+    <ClInclude Include="Singleton\Singleton.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

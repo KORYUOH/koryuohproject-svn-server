@@ -22,7 +22,7 @@ public:
 	int loadImage(std::string key);
 
 	int operator[] (std::string Key){
-		return loadImage(Key);
+		return getInstance().loadImage(Key);
 	}
 };
 #endif // _IMGCONTAINER_H_INCLUDED_
