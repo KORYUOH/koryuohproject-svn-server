@@ -3,7 +3,6 @@
 #include	"DxLibFlameWork/DxLibFW.h"
 
 int WINAPI WinMain( HINSTANCE hInstance , HINSTANCE hPrevInstance , LPSTR lpCmdLine ,int nCmdShow ){
-	DXFW systems;
-	systems.run();
+	DXFW system;system.run();
 	return 0;
 }

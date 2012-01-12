@@ -30,7 +30,11 @@ void DXFW::draw(){
 void DXFW::finish(){
 	DxLib_End();
 }
-
+/**
+*	@brief	run
+*	@work	execute program
+*	@warning	Do not override
+*/
 void DXFW::run(){
 	init();
 	Initialize();
@@ -54,12 +58,12 @@ int DXFW::ProcessLoop(){
 }
 
 void DXFW::MessegeBox(){
-		int flag;
-		flag=MessageBox(
-				NULL ,
-				TEXT("フルスクリーンモードで起動しますか？") ,
-				TEXT("スクリーン設定") , 
-				MB_YESNO | MB_ICONQUESTION );
-		if(flag==IDNO)
-				ChangeWindowMode( TRUE );
+	if( MessageBox(
+		NULL ,
+		TEXT("フルスクリーンモードで起動しますか？") ,
+		TEXT("スクリーン設定") , 
+		MB_YESNO | MB_ICONQUESTION 
+		)
+		==IDNO)
+		ChangeWindowMode( TRUE );
 }

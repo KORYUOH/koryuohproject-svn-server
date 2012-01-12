@@ -99,6 +99,7 @@
     <ClInclude Include="Key\Key.h" />
     <ClInclude Include="Mouse\Mouce.h" />
     <ClInclude Include="Pad\Pad.h" />
+    <ClInclude Include="Singleton\Singleton.h" />
     <ClInclude Include="XML\XmlReader.h" />
     <ClInclude Include="XML\XmlUser.h" />
     <ClInclude Include="XML\XmlWriter.h" />

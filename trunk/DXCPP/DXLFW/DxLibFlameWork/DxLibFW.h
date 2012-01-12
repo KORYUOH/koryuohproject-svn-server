@@ -26,6 +26,7 @@ public:
 		m_isWindowMode(WINDOW_MODE),
 		m_WindowTitle(APPLICATIONTITLE),
 		m_isOutLog(OUTLOGFILE){};
+public:
 /**
  * @brief	é¿çs
  *			
@@ -58,7 +59,7 @@ protected:
 	void	draw();
 	void	finish();
 private:
-	int		init();
+	int	 init();
 	int ProcessLoop();
 	void MessegeBox();
 };
