@@ -25,37 +25,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Dice\dice.cpp">
+    <ClCompile Include="Koryuoh\Dice\dice.cpp">
       <Filter>Class\Dice</Filter>
     </ClCompile>
-    <ClCompile Include="StringSplitter\StringSplit.cpp">
-      <Filter>Class\StringSplitter</Filter>
-    </ClCompile>
-    <ClCompile Include="Circle\Circle.cpp">
+    <ClCompile Include="Koryuoh\Circle\Circle.cpp">
       <Filter>Class\Circle</Filter>
     </ClCompile>
-    <ClCompile Include="Buffer\Buffer.cpp">
+    <ClCompile Include="Koryuoh\Buffer\Buffer.cpp">
       <Filter>Class\Buffer</Filter>
     </ClCompile>
-    <ClCompile Include="Ball\Ball.cpp">
+    <ClCompile Include="Koryuoh\Ball\Ball.cpp">
       <Filter>Class\Ball</Filter>
+    </ClCompile>
+    <ClCompile Include="Koryuoh\StringSplitter\StringSplit.cpp">
+      <Filter>Class\StringSplitter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dice\dice.h">
+    <ClInclude Include="Koryuoh\Dice\dice.h">
       <Filter>Class\Dice</Filter>
     </ClInclude>
-    <ClInclude Include="StringSplitter\StringSplitter.h">
-      <Filter>Class\StringSplitter</Filter>
-    </ClInclude>
-    <ClInclude Include="Circle\Circle.h">
+    <ClInclude Include="Koryuoh\Circle\Circle.h">
       <Filter>Class\Circle</Filter>
     </ClInclude>
-    <ClInclude Include="Buffer\Buffer.h">
+    <ClInclude Include="Koryuoh\Buffer\Buffer.h">
       <Filter>Class\Buffer</Filter>
     </ClInclude>
-    <ClInclude Include="Ball\Ball.h">
+    <ClInclude Include="Koryuoh\Ball\Ball.h">
       <Filter>Class\Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="Koryuoh\StringSplitter\StringSplitter.h">
+      <Filter>Class\StringSplitter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
