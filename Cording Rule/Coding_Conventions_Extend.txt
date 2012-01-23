@@ -1,0 +1,37 @@
+追加ルール
+Ex 01.VC++ディレクトリのインクルードディレクトリに次を追加
+	$(SolutionDir)$(TargetName)
+これにより絶対参照でヘッダーを呼び出せる
+	#include	"File.h"	//相対参照
+	#include	<File.h>	//絶対参照
+
+Ex 02.boostをなるべく使わない
+
+Ex 03.new演算子を極力使わない。使う場合はshared_ptrかauto_ptrを使う
+	<memory>に格納されている(VC2010)	使用の際はstd::shared_ptr
+	<boost/shared_ptr.hpp>に格納されている(Boostライブラリ)	使用はboost::shared_ptr
+
+Ex 04.shared_ptrにはtypedefして別名をつける
+	[書式]	typedef std::shared_ptr<Class>	Class_ptr_t;
+
+Ex 05.循環参照になるときはweak_ptrを使う
+	自己参照型のポインタとかそういうの
+
+Ex 06.C/C++ > コード生成は次のとおりに
+	構成	Debug	/MTd(マルチスレッドデバッグ)
+	構成	Releace	/MT(マルチスレッド)
+
+Ex 07.フォルダわけして管理する特にゲーム関係のソース
+以下例
+<Project>
+├	<Folder1>
+│	├	File1.h
+│	└	File1.cpp
+└	<Folder2>
+	├	File2.h
+	├	File2.cpp
+	├	File2_ext.h
+	└	File2_ext.cpp
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/更新情報_/_/_/_/_/_/_/_/_/_/_/_/_/
+2012/01/23	制定
