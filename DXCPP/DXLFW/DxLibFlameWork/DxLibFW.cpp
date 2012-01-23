@@ -1,7 +1,7 @@
-#include	"DxLibFW.h"
-#include	"../Key/Key.h"
-#include	"../Pad/Pad.h"
-#include	"../Fps/Fps.h"
+#include	<DxLibFlameWork/DxLibFW.h>
+#include	<Key/Key.h>
+#include	<Pad/Pad.h>
+#include	<Fps/Fps.h>
 
 int DXFW::init(){
 	if(m_isWindowMode)

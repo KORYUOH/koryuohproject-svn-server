@@ -1,8 +1,8 @@
 #ifndef	__Contact
 #define	__Contact
-#include	"../Key/Key.h"
-#include	"../Pad/Pad.h"
-#include	"../Mouse/Mouce.h"
+#include	<Key/Key.h>
+#include	<Pad/Pad.h>
+#include	<Mouse/Mouce.h>
 namespace CONTACT{
 	namespace MOUSE{
 		enum BUTTON{

@@ -38,6 +38,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)$(TargetName);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -91,6 +92,7 @@
     <ClInclude Include="Container\ImgContainer.h" />
     <ClInclude Include="Define\Define.h" />
     <ClInclude Include="Define\DefineManager.h" />
+    <ClInclude Include="Define\Mode_Define.h" />
     <ClInclude Include="Define\Structure.h" />
     <ClInclude Include="DxLibFlameWork\DxLibFW.h" />
     <ClInclude Include="DxLibFlameWork\DxLibInterFace.h" />

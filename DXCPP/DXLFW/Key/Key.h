@@ -1,6 +1,6 @@
 #ifndef __Key
 #define __Key
-#include	"../../Include/DxLib.h"
+#include	<../Include/DxLib.h>
 /*
 class Keystate{
 	unsigned int stateKey[256];

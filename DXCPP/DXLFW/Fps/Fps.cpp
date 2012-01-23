@@ -1,5 +1,5 @@
-#include	"Fps.h"
-#include	"../../Include/DxLib.h"
+#include	<Fps/Fps.h>
+#include	<../Include/DxLib.h>
 
 int FPS_Ctrl::Phase_first(const int t){
 	if(m_fpsCount != 0)

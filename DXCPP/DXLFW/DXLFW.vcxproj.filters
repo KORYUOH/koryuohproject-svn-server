@@ -28,6 +28,9 @@
     <Filter Include="Container">
       <UniqueIdentifier>{0a9f23a4-0069-4125-b868-e19fadf19536}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Singleton">
+      <UniqueIdentifier>{5eff94ca-7bd7-4082-ae55-dd663086281b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -99,7 +102,12 @@
     <ClInclude Include="Container\ImgContainer.h">
       <Filter>Container</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton\Singleton.h" />
+    <ClInclude Include="Singleton\Singleton.h">
+      <Filter>Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\Mode_Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

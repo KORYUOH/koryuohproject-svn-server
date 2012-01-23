@@ -1,9 +1,9 @@
 #ifndef __Pad
 #define __Pad
-#include	"../Define/Define.h"
-#include	"../Define/Structure.h"
-#include	"../../Include/DxLib.h"
-#include	"../Key/Key.h"
+#include	<Define/Define.h>
+#include	<Define/Structure.h>
+#include	<../Include/DxLib.h>
+#include	<Key/Key.h>
 struct PS2{
 	int left,up,right,down,circle,triangle,square,cross,l1,l2,r1,r2,start,select;
 	
