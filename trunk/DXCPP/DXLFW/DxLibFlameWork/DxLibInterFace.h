@@ -3,6 +3,8 @@
 #include	"../Define/DefineManager.h"
 class DxLibInterFace{
 public:
+	virtual void	run()			=0;
+protected:
 	virtual int	init()			=0;
 	virtual void	update()		=0;
 	virtual void	draw()		=0;
