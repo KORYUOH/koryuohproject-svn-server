@@ -1,6 +1,6 @@
 #ifndef __DxLibInterFace
 #define __DxLibInterFace
-#include	"../Define/DefineManager.h"
+#include	<Define/DefineManager.h>
 class DxLibInterFace{
 public:
 	virtual void	run()			=0;

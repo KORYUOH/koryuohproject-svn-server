@@ -1,7 +1,7 @@
 #ifndef _MOUCE_H_INCLUDED_
 #define _MOUCE_H_INCLUDED_
-#include	"../../Include/DxLib.h"
-#include	"../Define/DefineManager.h"
+#include	<../Include/DxLib.h>
+#include	<Define/DefineManager.h>
 
 class Mouse{
 private:

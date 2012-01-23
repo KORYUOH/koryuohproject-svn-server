@@ -1,4 +1,4 @@
-#include	"Mouce.h"
+#include	<Mouse/Mouce.h>
 
 void Mouse::setMouseCursolDispFlag(bool flag){
 	m_Dispflag = flag;

@@ -1,8 +1,8 @@
 #ifndef __DxLibFW
 #define __DxLibFW
 #pragma comment (linker,"/LIBPATH:../Include")
-#include	 "../../Include/DxLib.h"
-#include	 "DxLibInterFace.h"
+#include	<../Include/DxLib.h>
+#include	<DxLibFlameWork/DxLibInterFace.h>
 #include	<string>
 class DXFW:public DxLibInterFace{
 private:

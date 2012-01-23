@@ -1,6 +1,6 @@
 #ifndef _IMGCONTAINER_H_INCLUDED_
 #define _IMGCONTAINER_H_INCLUDED_
-#include	"../../Include/DxLib.h"
+#include	<../Include/DxLib.h>
 #include	<map>
 #include	<string>
 class Image_container{
