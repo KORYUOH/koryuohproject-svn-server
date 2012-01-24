@@ -1,7 +1,19 @@
+/**===File Commentary=======================================*/
+/**
+ *	@file	Fps.h
+ *
+ *	@brief	FPSí≤êÆ
+ *
+ *	@author	KORYUOH
+ *
+ *	@date	2012/01/01
+ */
+/**===Include Guard========================================*/
 #ifndef	__Fps_Contorol
 #define	__Fps_Contorol
-
+/**===File Include=========================================*/
 #define FPS_DEFINE 60
+/**===Class Definition=======================================*/
 class FPS_Ctrl{
 private:
 	int m_fpsCount,m_count0t;

@@ -1,9 +1,24 @@
+/**===File Commentary=======================================*/
+/**
+ *	@file	DxLibFW.h
+ *
+ *	@brief	フレームワーク本体
+ *
+ *	@attention	継承して使用
+ *
+ *	@author	KORYUOH
+ *
+ *	@date	2011/12/01
+ */
+/**===Include Guard========================================*/
 #ifndef __DxLibFW
 #define __DxLibFW
+/**===File Include=========================================*/
 #pragma comment (linker,"/LIBPATH:../Include")
 #include	<../Include/DxLib.h>
 #include	<DxLibFlameWork/DxLibInterFace.h>
 #include	<string>
+/**===Class Definition=====================================*/
 class DXFW:public DxLibInterFace{
 private:
 	bool m_isWindowMode;
@@ -13,11 +28,9 @@ public:
 /**
  * @brief	コンストラクタ
  *			
- * @param	なし
- *			
- * @return		なし
- *			
  * @note	各定数で初期化
+ *
+ *	@author	KORYUOH
  *			
  * @date	2011/12/15	KORYUOH	新規作成
  */
@@ -30,11 +43,7 @@ public:
 /**
  * @brief	実行
  *			
- * @param	なし
- *			
- * @return	なし
- *			
- * @note	なし
+ *	@author	KORYUOH
  *			
  * @date	2011/12/15	KORYUOH	新規作成
  */
@@ -43,20 +52,31 @@ public:
 /**
  * @brief	仮想デストラクタ
  *			
- * @param	なし
- *			
- * @return	なし
- *			
- * @note	なし
+ *	@author	KORYUOH
  *			
  * @date	2011/12/15	KORYUOH	新規作成
  */
-
 	virtual ~DXFW(){};
 protected:
+	/**
+	 *	@brief	初期化
+	 *	@author	KORYUOH
+	 */
 	void	Initialize();
+	/**
+	 *	@brief	更新
+	 *	@author	KORYUOH
+	 */
 	void	update();
+	/**
+	 *	@brief	描画
+	 *	@author	KORYUOH
+	 */
 	void	draw();
+	/**
+	 *	@brief	終了
+	 *	@author	KORYUOH
+	 */
 	void	finish();
 private:
 	int	 init();
