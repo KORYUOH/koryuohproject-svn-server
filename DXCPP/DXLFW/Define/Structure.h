@@ -1,3 +1,14 @@
+/**===File Commentary=======================================*/
+/**
+ *	@file	Structure.h
+ *
+ *	@brief	\‘¢‘Ì’è‹`
+ *
+ *	@author	KORYUOH
+ *
+ *	@date	2011/12/26
+ */
+/**===Include Guard========================================*/
 #ifndef	__Struct
 #define	__Struct
 class Ball;
