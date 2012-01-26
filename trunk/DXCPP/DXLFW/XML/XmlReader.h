@@ -1,7 +1,7 @@
 #ifndef _XMLREADER_H_INCLUDED_
 #define _XMLREADER_H_INCLUDED_
-#include	<boost/property_tree/xml_parser.hpp>
 #include	<string>
+#include	<vector>
 
 class XmlReader{
 private:
