@@ -24,7 +24,7 @@ public:
 	 *	@param[in]	xmlName	string	書き込みファイル名
 	 *	@note	基本的にオーバーライドして使う
 	 */
-	void write(std::string xmlName);
+	virtual void write(std::string xmlName);
 	/*===============================================
 	 *				この先オーバーライド
 	 *===============================================
