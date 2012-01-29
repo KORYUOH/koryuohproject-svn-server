@@ -16,7 +16,26 @@
 #include	<string>
 #include	<vector>
 /**===Class Implementation=================================*/
-
+/**========================================================*/
+/**
+ *	@brief	書き出し処理
+ *	@param[in]	書き出しファイル名
+ *	@param[in]	書き出しツリー
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void XmlWriter::writer(const std::string xmlName,boost::property_tree::ptree& ptree){
+			boost::property_tree::xml_parser::write_xml(
+			xmlName,
+			ptree,
+			std::locale(),
+			boost::property_tree::xml_parser::xml_writer_make_settings(
+				'	',
+				1,
+				boost::property_tree::xml_parser::widen<char>("utf-8")
+			)
+		);
+}
 /**========================================================*/
 /**
  *	@brief	<要約>
