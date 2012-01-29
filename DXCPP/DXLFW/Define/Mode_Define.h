@@ -18,9 +18,9 @@
  */
 /**=============================================*/
 //#define	__USE_XML_IO_
-#ifndef	__USE_XML_IO_
-//#define	USE_XML_WRITER
-//#define	USE_XML_READER 
+#ifdef	__USE_XML_IO_
+#define	USE_XML_WRITER
+#define	USE_XML_READER 
 #endif//	__USE_XML_IO_
 
 #endif//	__MODE_DEFINE_H_
