@@ -93,9 +93,11 @@
     <ClInclude Include="Define\Define.h" />
     <ClInclude Include="Define\DefineManager.h" />
     <ClInclude Include="Define\Mode_Define.h" />
+    <ClInclude Include="Define\Orig_def.h" />
     <ClInclude Include="Define\Structure.h" />
     <ClInclude Include="DxLibFlameWork\DxLibFW.h" />
     <ClInclude Include="DxLibFlameWork\DxLibInterFace.h" />
+    <ClInclude Include="DxLibFlameWork\IProcess.h" />
     <ClInclude Include="Facade\Contact.h" />
     <ClInclude Include="Fps\Fps.h" />
     <ClInclude Include="Key\Key.h" />

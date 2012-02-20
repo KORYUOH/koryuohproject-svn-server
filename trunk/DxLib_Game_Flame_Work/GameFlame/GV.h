@@ -17,6 +17,11 @@
 #else
 #define FPS_SHOW FALSE
 #endif
+#ifndef	SYSTEM_LOG_OUTPUT
+#define	SYSTEM_LOG	TRUE
+#else
+#define	SYSTEM_LOG	FALSE
+#endif
 #include "Valiable.h"
 #include "function.h"
 #include "DevUsrCtrl.h"

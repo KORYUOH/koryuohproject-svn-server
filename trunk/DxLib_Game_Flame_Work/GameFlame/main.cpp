@@ -28,6 +28,8 @@ void message_box(){
 int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine,int nCmdShow){
 	message_box();//ウィンドウモード?
 	SetWindowText(GT);//タイトル変えるよー
+	if(SYSTEM_LOG)
+		SetOutApplicationLogValidFlag(FALSE);
 	if(DxLib_Init() == -1 || SetDrawScreen( DX_SCREEN_BACK )!=0) return -1;//初期化と裏画面化
 	//key_init();
 	//other_Init();

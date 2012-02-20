@@ -1,9 +1,36 @@
+/**===File Commentary=======================================*/
+/**
+ *	@file	Mouse.cpp
+ *
+ *	@brief	マウス入力
+ *
+ *	@author	KORYUOH
+ *
+ *	@date	2011/12/01
+ */
+/**===File Include=========================================*/
 #include	<Mouse/Mouce.h>
-
+/**===Class Implementation=================================*/
+/**========================================================*/
+/**
+ *	@brief	マウス表示設定
+ *	@param[in]	フラグ:trueで表示(デフォルトは非表示)
+ *	@attention	デフォルトは非表示
+ *	@author	KORYUOH
+ */
+/**========================================================*/
 void Mouse::setMouseCursolDispFlag(bool flag){
 	m_Dispflag = flag;
 	SetMouseDispFlag(m_Dispflag);
 }
+/**========================================================*/
+/**
+ *	@brief	矩形内か調べる
+ *	@param[in]	矩形情報
+ *	@author	KORYUOH
+ *	@return	入っていればtrue
+ */
+/**========================================================*/
 bool Mouse::CheckRect(Rect accept){
 	//X
 	if(accept.x<= m_pos_x && m_pos_x<accept.x+accept.width)
@@ -13,10 +40,16 @@ bool Mouse::CheckRect(Rect accept){
 
 	return false;
 }
+/**========================================================*/
+/**
+ *	@brief	マウスの位置を更新する
+ *	@author	KORYUOH
+ */
+/**========================================================*/
 void Mouse::MousePositionUpdate(){
 	GetMousePoint(&m_pos_x,&m_pos_y);
 }
-
+//<!-----作り直し-----!>
 bool Mouse::onClick(){
 	if((GetMouseInput() & MOUSE_INPUT_LEFT) != 0){
 		GetMousePoint(&m_pos_x,&m_pos_y);
@@ -32,7 +65,8 @@ bool Mouse::onClickR(){
 	}
 
 	return false;
-}bool Mouse::onClickM(){
+}
+bool Mouse::onClickM(){
 	if((GetMouseInput() & MOUSE_INPUT_MIDDLE) != 0){
 		GetMousePoint(&m_pos_x,&m_pos_y);
 		return true;
