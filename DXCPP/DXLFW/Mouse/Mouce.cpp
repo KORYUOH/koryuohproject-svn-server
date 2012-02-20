@@ -74,14 +74,37 @@ bool Mouse::onClickM(){
 
 	return false;
 }
-bool Mouse::onClickInRect(Rect accept){
+bool Mouse::onClick(Rect accept){
 	if(onClick())
 		return CheckRect(accept);
 	return false;
 }
 
-bool Mouse::onClickInCircle(Circle accept){
+bool Mouse::onClick(Circle accept){
 	if(onClick())
+		return accept.Collision(Circle((float)m_pos_x,(float)m_pos_y,1.0f) );
+	return false;
+}
+
+bool Mouse::onClickR(Rect accept){
+	if(onClickR())
+		return CheckRect(accept);
+	return false;
+}
+
+bool Mouse::onClickR(Circle accept){
+	if(onClickR())
+		return accept.Collision(Circle((float)m_pos_x,(float)m_pos_y,1.0f) );
+	return false;
+}
+bool Mouse::onClickM(Rect accept){
+	if(onClickM())
+		return CheckRect(accept);
+	return false;
+}
+
+bool Mouse::onClickM(Circle accept){
+	if(onClickM())
 		return accept.Collision(Circle((float)m_pos_x,(float)m_pos_y,1.0f) );
 	return false;
 }

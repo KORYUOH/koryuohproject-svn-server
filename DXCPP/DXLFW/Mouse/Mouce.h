@@ -76,14 +76,42 @@ public:
 	 *	@author	KORYUOH
 	 *	@return	入っていればtrue
 	 */
-	bool onClickInRect(Rect accept);
+	bool onClick(Rect accept);
 	/**
 	 *	@brief	円内に入っているか
 	 *	@param[in]	accept:Circle	円情報
 	 *	@author	KORYUOH
 	 *	@return	入っていればtrue
 	 */
-	bool onClickInCircle(Circle accept);
+	bool onClick(Circle accept);
+	/**
+	 *	@brief	矩形内に入っているか
+	 *	@param[in]	accept:Rect	矩形情報
+	 *	@author	KORYUOH
+	 *	@return	入っていればtrue
+	 */
+	bool onClickR(Rect accept);
+	/**
+	 *	@brief	円内に入っているか
+	 *	@param[in]	accept:Circle	円情報
+	 *	@author	KORYUOH
+	 *	@return	入っていればtrue
+	 */
+	bool onClickR(Circle accept);
+	/**
+	 *	@brief	矩形内に入っているか
+	 *	@param[in]	accept:Rect	矩形情報
+	 *	@author	KORYUOH
+	 *	@return	入っていればtrue
+	 */
+	bool onClickM(Rect accept);
+	/**
+	 *	@brief	円内に入っているか
+	 *	@param[in]	accept:Circle	円情報
+	 *	@author	KORYUOH
+	 *	@return	入っていればtrue
+	 */
+	bool onClickM(Circle accept);
 private:
 	/**
 	 *	@brief	矩形チェック
