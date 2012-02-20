@@ -15,7 +15,7 @@ goto EXT
 
 rem .svnƒtƒHƒ‹ƒ_œ‹
 :KILL
-for /r %%A in ( _svn ) do ( if exist "%%A" ( rmdir /s /q "%%A" )
+for /r %%A in ( _svn ) do ( if exist "%%A" ( rmdir /s /q "%%A"))
 for /r %%i in ( .svn ) do ( if exist "%%i" ( rmdir /s /q "%%i"))
 goto EXT
 
