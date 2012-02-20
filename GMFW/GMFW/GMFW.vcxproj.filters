@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Define">
+      <UniqueIdentifier>{27ac7d64-24c9-4fda-8f15-7344e857efc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Glee">
+      <UniqueIdentifier>{08c045a7-a802-4896-ad16-d4509b548c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type">
+      <UniqueIdentifier>{2513db7d-1b37-481f-a963-0e176032caeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{d635b9c6-3a55-452a-b5e6-5f9a9b968587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\DirectX">
+      <UniqueIdentifier>{896661db-9d6c-4e49-b97d-08853b972e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\OpenGL">
+      <UniqueIdentifier>{95828c21-1936-4fec-83cb-07f8e55b3599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{ee871237-b72c-4432-b13c-77085700434c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT\Core">
+      <UniqueIdentifier>{c2458273-f0db-4cf4-bdc1-8f1a670af65e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Buffer">
+      <UniqueIdentifier>{eaa54274-b0b5-4ead-977c-39a14f76fe4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\Texture">
+      <UniqueIdentifier>{3120f520-0010-488f-a65d-bb8de0b2db9b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Define\Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector3.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Math.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Matrix4.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector2.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Color4.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\IRender.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\OpenGL\OpenGL.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Render.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Buffer\BufferDesc.h">
+      <Filter>Render\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Buffer\IBuffer.h">
+      <Filter>Render\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\DirectX\Buffer.h">
+      <Filter>Render\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\OpenGL\Buffer.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="GLee\GLee.h">
+      <Filter>Glee</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>DXUT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\DirectX\DirectX10.h">
+      <Filter>Render\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Texture\Texture_Desc.h">
+      <Filter>Render\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Texture\ITexture.h">
+      <Filter>Render\Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Type\Math.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Matrix4.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector2.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector3.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Color4.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="GLee\GLee.c">
+      <Filter>Glee</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\DirectX\Buffer.cpp">
+      <Filter>Render\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\OpenGL\Buffer.cpp">
+      <Filter>Render\OpenGL</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

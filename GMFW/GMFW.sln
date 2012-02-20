@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMFW", "GMFW\GMFW.vcxproj", "{21598435-9D77-4D70-9A06-94B658655DA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21598435-9D77-4D70-9A06-94B658655DA5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21598435-9D77-4D70-9A06-94B658655DA5}.Debug|Win32.Build.0 = Debug|Win32
+		{21598435-9D77-4D70-9A06-94B658655DA5}.Release|Win32.ActiveCfg = Release|Win32
+		{21598435-9D77-4D70-9A06-94B658655DA5}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
