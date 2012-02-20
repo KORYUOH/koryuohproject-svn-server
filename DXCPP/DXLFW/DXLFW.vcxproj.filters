@@ -108,6 +108,12 @@
     <ClInclude Include="Define\Mode_Define.h">
       <Filter>Define</Filter>
     </ClInclude>
+    <ClInclude Include="DxLibFlameWork\IProcess.h">
+      <Filter>DxLibFlameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\Orig_def.h">
+      <Filter>Define</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

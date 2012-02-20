@@ -23,6 +23,12 @@
     <Filter Include="Class\Ball">
       <UniqueIdentifier>{de4dcaf4-0521-495c-99e8-45d1d79e7e0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\Matrix">
+      <UniqueIdentifier>{d431534d-4a6d-4634-938e-8eb521682019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Matrix\Matrix2">
+      <UniqueIdentifier>{58bf6693-44df-4ef9-8280-9cba9cdd41ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Koryuoh\Dice\dice.cpp">
@@ -56,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="Koryuoh\StringSplitter\StringSplitter.h">
       <Filter>Class\StringSplitter</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix2.h">
+      <Filter>Class\Matrix\Matrix2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

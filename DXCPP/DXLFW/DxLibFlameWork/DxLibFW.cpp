@@ -2,6 +2,7 @@
 #include	<Key/Key.h>
 #include	<Pad/Pad.h>
 #include	<Fps/Fps.h>
+#include	<algorithm>
 
 int DXFW::init(){
 	if(m_isWindowMode)
@@ -16,18 +17,19 @@ int DXFW::init(){
 }
 
 void DXFW::Initialize(){
-
+	std::for_each(m_Process.begin(),m_Process.end(),[&](IPShare ips){ips->initalize();});
 }
 
 void DXFW::update(){
-
+	std::for_each(m_Process.begin(),m_Process.end(),[&](IPShare ips){ips->update();});
 }
 
 void DXFW::draw(){
-
+	std::for_each(m_Process.begin(),m_Process.end(),[&](IPShare ips){ips->draw();});
 }
 
 void DXFW::finish(){
+	std::for_each(m_Process.begin(),m_Process.end(),[&](IPShare ips){ips->finish();});
 	DxLib_End();
 }
 /**
