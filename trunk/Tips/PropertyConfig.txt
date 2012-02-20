@@ -1,0 +1,7 @@
+XP
+C:\Documents and Settings\（ユーザー名）\Local Settings\Application Data\Microsoft\MSBuild\v4.0\Microsoft.Cpp.Win32.user.props
+Vista/7
+C:\Users\（ユーザー名）\AppData\Local\Microsoft\MSBuild\v4.0\Microsoft.Cpp.Win32.user.props
+
+<IncludePath>$(IncludePath)</IncludePath>
+<LibraryPath>&(LibraryPath)</LibraryPath>
