@@ -96,6 +96,9 @@
     <ClInclude Include="Render\DirectX\Texture.h">
       <Filter>Render\DirectX</Filter>
     </ClInclude>
+    <ClInclude Include="Render\OpenGL\Texture.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -134,6 +137,9 @@
     </ClCompile>
     <ClCompile Include="Render\DirectX\Texture.cpp">
       <Filter>Render\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\OpenGL\Texture.cpp">
+      <Filter>Render\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

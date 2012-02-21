@@ -92,6 +92,7 @@
     <ClInclude Include="Render\OpenGL\OpenGL.h" />
     <ClInclude Include="Render\IRender.h" />
     <ClInclude Include="Render\Texture\Texture_Desc.h" />
+    <ClInclude Include="Render\OpenGL\Texture.h" />
     <ClInclude Include="Type\Color4.h" />
     <ClInclude Include="Type\Math.h" />
     <ClInclude Include="Type\Matrix4.h" />
@@ -107,6 +108,7 @@
     <ClCompile Include="GLee\GLee.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Render\DirectX\Texture.cpp" />
+    <ClCompile Include="Render\OpenGL\Texture.cpp" />
     <ClCompile Include="Type\Color4.cpp" />
     <ClCompile Include="Type\Math.cpp" />
     <ClCompile Include="Type\Matrix4.cpp" />
