@@ -8,7 +8,7 @@
  *
  *	@author	KORYUOH
  *
- *	@date	yyyy/mm/dd
+ *	@date	2012/02/21
  */
 /**===Include Guard========================================*/
 #ifndef	_TEXTURE_DX10_H_
@@ -73,7 +73,7 @@ protected:
 	struct Pixel{
 		DXGI_FORMAT	resourceFormat;		//リソースフォーマット
 		DXGI_FORMAT	shaderFormat;		//シェーダーフォーマット
-		DXGI_FORMAT	deptjStencilFormat;	//デプス・ステンシルビューフォーマット
+		DXGI_FORMAT	depthStencilFormat;	//デプス・ステンシルビューフォーマット
 		unsigned int	size;					//1ピクセルのバイトサイズ
 		bool	complessed;						//圧縮フォーマットか？
 		bool	depthStencil;						//デプス・ステンシル用フォーマットか？
@@ -83,7 +83,7 @@ protected:
 	 *	@author	KORYUOH
 	 *	@return	ピクセルフォーマット
 	 */
-	const Pixel pixel () const;
+	const Pixel& pixel () const;
 	/**
 	 *	@brief	テクスチャの使用法取得
 	 *	@author	KORYUOH

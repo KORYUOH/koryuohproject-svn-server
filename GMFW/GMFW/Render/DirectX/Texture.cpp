@@ -6,7 +6,7 @@
  *
  *	@author	KORYUOH
  *
- *	@date	yyyy/mm/dd
+ *	@date	2012/02/21
  */
 /**===File Include=========================================*/
 #include	<Render/DirectX/Texture.h>
@@ -16,12 +16,11 @@
 
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	コンストラクタ
+ *	@param[in]	デバイス
+ *	@param[in]	ディスクプリタ
+ *	@param[in]	データ
  *	@author	KORYUOH
- *	@return	<戻り値>
  */
 /**========================================================*/
 Texture::Texture( ID3D10Device*	device,const TextureDesc& desc, const void* data):
@@ -56,7 +55,7 @@ m_desc(desc),
 		descSR.ViewDimension	=D3D10_SRV_DIMENSION_TEXTURE2D;
 		descSR.Texture2D.MipLevels	= m_desc.mipLevels;
 		descSR.Texture2D.MostDetailedMip	=0;
-		device->CreateShaderResourceView(resouse(),&descSR,&m_shaderResouseView,);
+		device->CreateShaderResourceView(resource(),&descSR,&m_shaderResouseView);
 		assert( shaderResourceView != NULL);
 }
 /**========================================================*/
@@ -88,7 +87,7 @@ const TextureDesc& Texture::desc() const{
 /**========================================================*/
 void Texture::setData(const void* data){
 	assert(m_desc.usage_ == TEXTURE_USAGE_DYNAMIC);
-	ID3D10Texture2D* texture2D = static_cast<ID3D10Texture2D*>(resouse());
+	ID3D10Texture2D* texture2D = static_cast<ID3D10Texture2D*>(resource());
 	D3D10_MAPPED_TEXTURE2D mapped;
 	texture2D->Map(0,D3D10_MAP_WRITE_DISCARD,0,&mapped);
 	const BYTE* src = static_cast<const BYTE*>(data);
@@ -158,7 +157,7 @@ unsigned int Texture::size()const{
 /**========================================================*/
 /**
  *	@brief	リソース取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	リソース
  */
 /**========================================================*/
@@ -167,22 +166,96 @@ ID3D10Resource* Texture::resource(){
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
- *	@author	<作者名>
- *	@return	<戻り値>
+ *	@brief	シェーダーリソースビュー取得
+ *	@author	KORYUOH
+ *	@return	シェーダーリソースビュー
  */
 /**========================================================*/
-
-
-
-
-
-
-
+ID3D10ShaderResourceView* Texture::shaderResourceView(){
+	return m_shaderResouseView;
 }
+/**========================================================*/
+/**
+ *	@brief	ピクセルフォーマット取得
+ *	@author	KORYUOH
+ *	@return	ピクセルフォーマット
+ */
+/**========================================================*/
+const Texture::Pixel&  Texture::pixel() const{
+	static const Pixel pixelFormat[] = {
+		//TEXTURE_FORMAT_RGBA8
+		{ DXGI_FORMAT_R8G8B8A8_TYPELESS, DXGI_FORMAT_R10G10B10A2_UNORM, DXGI_FORMAT_UNKNOWN, sizeof(BYTE)*4,false,false}
+	};
+	return pixelFormat[0];
+}
+/**========================================================*/
+/**
+ *	@brief	テクスチャ使用法取得
+ *	@author	KORYUOH
+ *	@return	テクスチャ使用法
+ */
+/**========================================================*/
+D3D10_USAGE Texture::usage() const{
+	static const D3D10_USAGE usages[] ={
+		D3D10_USAGE_DEFAULT,
+		D3D10_USAGE_IMMUTABLE,
+		D3D10_USAGE_DYNAMIC
+	};
+	return usages[m_desc.usage_];
+}
+/**========================================================*/
+/**
+ *	@brief	CPUアクセスフラグ取得
+ *	@author	KORYUOH
+ *	@return	CPUアクセスフラグ
+ */
+/**========================================================*/
+UINT Texture::cpuAccessFlags() const{
+	static const UINT cpuAccessFlags[] = {
+		0,										//TEXTURE_USAGE_DEFALT
+		0,										//TEXTURE_USAGE_IMMUTABLE
+		D3D10_CPU_ACCESS_WRITE	//TEXTURE_USAGE_DYNAMIC
+	};
+	return cpuAccessFlags[m_desc.usage_];
+}
+/**========================================================*/
+/**
+ *	@brief	バインドフラグ取得
+ *	@author	KORYUOH
+ *	@return	バインドフラグ
+ */
+/**========================================================*/
+UINT Texture::bindFlags() const{
+	UINT bindFlags = D3D10_BIND_SHADER_RESOURCE;
+	if(pixel().depthStencilFormat){
+		bindFlags |= D3D10_BIND_DEPTH_STENCIL;
+	}else if(m_desc.renderTarget_){
+		bindFlags |= D3D10_BIND_RENDER_TARGET;
+	}
+	return bindFlags;
+}
+/**========================================================*/
+/**
+ *	@brief	オプションフラグ取得
+ *	@author	KORYUOH
+ *	@return	オプションフラグ
+ */
+/**========================================================*/
+UINT Texture::miscFlags() const{
+	UINT miscFlag = 0;
+	if(m_desc.type_ == TEXTURE_TYPE_CUBE){
+		miscFlag |= D3D10_RESOURCE_MISC_TEXTURECUBE;
+	}
+	if(m_desc.renderTarget_ && m_desc.mipLevels > 1){
+		miscFlag |= D3D10_RESOURCE_MISC_GENERATE_MIPS;
+	}
+	return miscFlag;
+}
+
+
+
+
+
 
 
 
