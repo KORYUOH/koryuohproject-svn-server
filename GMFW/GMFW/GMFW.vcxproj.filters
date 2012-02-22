@@ -31,6 +31,9 @@
     <Filter Include="Render\Texture">
       <UniqueIdentifier>{3120f520-0010-488f-a65d-bb8de0b2db9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Render\Effect">
+      <UniqueIdentifier>{3aebbaf5-ba3f-432f-b5a5-9c6eda4a3dda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define\Define.h">
@@ -98,6 +101,12 @@
     </ClInclude>
     <ClInclude Include="Render\OpenGL\Texture.h">
       <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Effect\InputSignatureDesc.h">
+      <Filter>Render\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\Effect\IEffect.h">
+      <Filter>Render\Effect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
