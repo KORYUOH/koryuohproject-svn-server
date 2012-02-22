@@ -79,6 +79,8 @@
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
     <ClInclude Include="DXUT\Core\DXUTmisc.h" />
+    <ClInclude Include="Render\Effect\IEffect.h" />
+    <ClInclude Include="Render\Effect\InputSignatureDesc.h" />
     <ClInclude Include="Render\DirectX\Texture.h" />
     <ClInclude Include="Render\Texture\ITexture.h" />
     <ClInclude Include="Render\OpenGL\Buffer.h" />
