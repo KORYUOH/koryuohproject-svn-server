@@ -76,9 +76,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cg\include\Cg\cg.h" />
+    <ClInclude Include="Cg\include\Cg\cgD3D10.h" />
+    <ClInclude Include="Cg\include\Cg\cgD3D11.h" />
+    <ClInclude Include="Cg\include\Cg\cgD3D9.h" />
+    <ClInclude Include="Cg\include\Cg\cgGL.h" />
+    <ClInclude Include="Cg\include\GL\glut.h" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
     <ClInclude Include="DXUT\Core\DXUTmisc.h" />
+    <ClInclude Include="Render\OpenGL\CgInc.h" />
+    <ClInclude Include="Render\OpenGL\Effect.h" />
     <ClInclude Include="Render\Effect\IEffect.h" />
     <ClInclude Include="Render\Effect\InputSignatureDesc.h" />
     <ClInclude Include="Render\DirectX\Texture.h" />
@@ -102,6 +110,7 @@
     <ClInclude Include="Type\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Render\OpenGL\Effect.cpp" />
     <ClCompile Include="Render\OpenGL\Buffer.cpp" />
     <ClCompile Include="Render\DirectX\Buffer.cpp" />
     <ClCompile Include="DXUT\Core\DXUT.cpp" />

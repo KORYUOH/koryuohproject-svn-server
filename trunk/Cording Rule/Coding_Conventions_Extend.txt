@@ -33,5 +33,13 @@ Ex 07.フォルダわけして管理する特にゲーム関係のソース
 	├	File2_ext.h
 	└	File2_ext.cpp
 
+Ex 08.ヘッダがクラスの定義などをしていない場合に限り、#pragma onceを使用してもよいこととする。
+	//Head.h
+	#pragma once
+	#include	<something>
+	#pragma comment (lib,"something.lib")
+	//End of File
+
 _/_/_/_/_/_/_/_/_/_/_/_/_/_/更新情報_/_/_/_/_/_/_/_/_/_/_/_/_/
 2012/01/23	制定
+2012/02/23	改定	Extend Ex08
