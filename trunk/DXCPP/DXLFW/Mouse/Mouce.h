@@ -112,6 +112,22 @@ public:
 	 *	@return	入っていればtrue
 	 */
 	bool onClickM(Circle accept);
+	/**
+	 *	@brief	マウスのX座標を得る
+	 *	@author	KORYUOH
+	 *	@return	X座標
+	 */
+	int getMousePositionX()const{
+		return m_pos_x;
+	}
+		/**
+	 *	@brief	マウスのY座標を得る
+	 *	@author	KORYUOH
+	 *	@return	Y座標
+	 */
+	int getMousePositionY()const{
+		return m_pos_y;
+	}
 private:
 	/**
 	 *	@brief	矩形チェック
