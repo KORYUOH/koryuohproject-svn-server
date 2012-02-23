@@ -20,7 +20,7 @@ public:
 	 *	@brief	初期化
 	 *	@author	KORYUOH
 	 */
-	virtual void initalize()	=0;
+	virtual void initialize()	=0;
 	/**
 	 *	@brief	<要約>
 	 *	@param[in]	<[引数名]:[タイプ]>			<概要>

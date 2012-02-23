@@ -16,8 +16,8 @@ int DXFW::init(){
 	return (DxLib_Init() == -1 || SetDrawScreen( DX_SCREEN_BACK )!=0)? -1:0;
 }
 
-void DXFW::Initialize(){
-	std::for_each(m_Process.begin(),m_Process.end(),[&](IPShare ips){ips->initalize();});
+void DXFW::initialize(){
+	std::for_each(m_Process.begin(),m_Process.end(),[&](IPShare ips){ips->initialize();});
 }
 
 void DXFW::update(){
@@ -39,7 +39,7 @@ void DXFW::finish(){
 */
 void DXFW::run(){
 	init();
-	Initialize();
+	initialize();
 	while(ProcessLoop() == 0){
 		update();
 		draw();
@@ -68,4 +68,8 @@ void DXFW::MessegeBox(){
 		)
 		==IDNO)
 		ChangeWindowMode( TRUE );
+}
+
+void DXFW::Pushed(const IPShare& Share){
+	m_Process.push_back(Share);
 }
