@@ -34,6 +34,15 @@
     <Filter Include="Render\Effect">
       <UniqueIdentifier>{3aebbaf5-ba3f-432f-b5a5-9c6eda4a3dda}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Cg">
+      <UniqueIdentifier>{669f25e4-590f-440e-bbbb-f1ec02a2c8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cg\Cg">
+      <UniqueIdentifier>{449d4299-2a21-4f00-a2ad-72e080ba697c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cg\GL">
+      <UniqueIdentifier>{2fd652f2-775e-4e11-99fb-4677814fe500}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define\Define.h">
@@ -108,6 +117,30 @@
     <ClInclude Include="Render\Effect\IEffect.h">
       <Filter>Render\Effect</Filter>
     </ClInclude>
+    <ClInclude Include="Render\OpenGL\Effect.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Cg\include\Cg\cgGL.h">
+      <Filter>Cg\Cg</Filter>
+    </ClInclude>
+    <ClInclude Include="Cg\include\Cg\cg.h">
+      <Filter>Cg\Cg</Filter>
+    </ClInclude>
+    <ClInclude Include="Cg\include\Cg\cgD3D10.h">
+      <Filter>Cg\Cg</Filter>
+    </ClInclude>
+    <ClInclude Include="Cg\include\Cg\cgD3D11.h">
+      <Filter>Cg\Cg</Filter>
+    </ClInclude>
+    <ClInclude Include="Cg\include\Cg\cgD3D9.h">
+      <Filter>Cg\Cg</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\OpenGL\CgInc.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Cg\include\GL\glut.h">
+      <Filter>Cg\GL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -148,6 +181,9 @@
       <Filter>Render\DirectX</Filter>
     </ClCompile>
     <ClCompile Include="Render\OpenGL\Texture.cpp">
+      <Filter>Render\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\OpenGL\Effect.cpp">
       <Filter>Render\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
