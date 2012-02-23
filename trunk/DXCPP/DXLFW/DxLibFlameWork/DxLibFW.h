@@ -54,7 +54,17 @@ public:
  * @date	2011/12/15	KORYUOH	新規作成
  */
 
-	void run();
+	virtual void run();
+
+	/**
+	 * @brief	データ設定
+	 *			
+	 *	@author	KORYUOH
+	 *			
+	 * @date	2011/12/15	KORYUOH	新規作成
+	 */
+	void Pushed(const IPShare& Share);
+public:
 /**
  * @brief	仮想デストラクタ
  *			
@@ -68,22 +78,22 @@ private:
 	 *	@brief	初期化
 	 *	@author	KORYUOH
 	 */
-	void	Initialize();
+	virtual void	initialize();
 	/**
 	 *	@brief	更新
 	 *	@author	KORYUOH
 	 */
-	void	update();
+	virtual void	update();
 	/**
 	 *	@brief	描画
 	 *	@author	KORYUOH
 	 */
-	void	draw();
+	virtual void	draw();
 	/**
 	 *	@brief	終了
 	 *	@author	KORYUOH
 	 */
-	void	finish();
+	virtual void	finish();
 private:
 	int	 init();
 	int ProcessLoop();
