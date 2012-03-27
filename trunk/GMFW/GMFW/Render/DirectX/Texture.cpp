@@ -56,7 +56,7 @@ m_desc(desc),
 		descSR.Texture2D.MipLevels	= m_desc.mipLevels;
 		descSR.Texture2D.MostDetailedMip	=0;
 		device->CreateShaderResourceView(resource(),&descSR,&m_shaderResouseView);
-		assert( shaderResourceView != NULL);
+		assert( m_shaderResouseView != NULL);
 }
 /**========================================================*/
 /**
