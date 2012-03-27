@@ -19,12 +19,9 @@
 
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	コンストラクタ
+ *	@param[in]	ファイル名
  *	@author	KORYUOH
- *	@return	<戻り値>
  */
 /**========================================================*/
 Effect::Effect(const char* fileName)
@@ -48,12 +45,8 @@ Effect::Effect(const char* fileName)
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	デストラクタ
  *	@author	KORYUOH
- *	@return	<戻り値>
  */
 /**========================================================*/
 Effect::~Effect(){
@@ -68,12 +61,10 @@ Effect::~Effect(){
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
+ *	@brief	テクニック開始
+ *	@param[in]	テクニック名
  *	@note	<メモ書き>
  *	@author	KORYUOH
- *	@return	<戻り値>
  */
 /**========================================================*/
 void Effect::technique(const char* techniqueName){
@@ -82,12 +73,9 @@ void Effect::technique(const char* techniqueName){
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	パスを開始
+ *	@param[in]	パス番号
  *	@author	KORYUOH
- *	@return	<戻り値>
  */
 /**========================================================*/
 void Effect::begin(int passNo){
@@ -101,12 +89,8 @@ void Effect::begin(int passNo){
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	パスを終了
  *	@author	KORYUOH
- *	@return	<戻り値>
  */
 /**========================================================*/
 void Effect::end(){
@@ -117,12 +101,10 @@ void Effect::end(){
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	テクニック名を取得
+ *	@param[in]	テクニック番号
  *	@author	KORYUOH
- *	@return	<戻り値>
+ *	@return	テクニック名
  */
 /**========================================================*/
 const char* Effect::getTechniqueName(int techniqueNo ){
@@ -134,12 +116,9 @@ const char* Effect::getTechniqueName(int techniqueNo ){
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
+ *	@brief	テクニック番号取得
  *	@author	KORYUOH
- *	@return	<戻り値>
+ *	@return	テクニック番号
  */
 /**========================================================*/
 int Effect::getNumTechnique(){
@@ -148,6 +127,126 @@ int Effect::getNumTechnique(){
 		numTechnique++;
 	}
 	return numTechnique;
+}
+/**========================================================*/
+/**
+ *	@brief	パス番号取得
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+int Effect::getNumPass(){
+	int numPass =0;
+	for(CGpass p = cgGetFirstPass(m_tecnique); cgIsPass(p);p = cgGetNextPass(p)){
+		numPass++;
+	}
+	return numPass;
+}
+/**========================================================*/
+/**
+ *	@brief	スカラー設定
+ *	@param[in]	名前
+ *	@param[in]	スカラー
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setScalar(const char* name,float v){
+	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
+	cgSetParameter1f(param,v);
+}
+/**========================================================*/
+/**
+ *	@brief	ベクトル設定
+ *	@param[in]	名前
+ *	@param[in]	ベクトルX
+ *	@param[in]	ベクトルY
+ *	@param[in]	ベクトルZ
+ *	@param[in]	ベクトルW
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setVector(const char* name,float x,float y, float z,float w){
+	CGparameter param= cgGetNamedEffectParameter(m_effect,name);
+	float v[4] = {x,y,z,w};
+	cgSetParameterValuefc(param,cgGetParameterColumns(param),v);
+}
+/**========================================================*/
+/**
+ *	@brief	行列設定
+ *	@param[in]	名前
+ *	@param[in]	行列
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setMatrix(const char* name,float* matrix){
+	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
+	cgSetMatrixParameterfr(param,matrix);
+}
+/**========================================================*/
+/**
+ *	@brief	スカラーの配列を設定
+ *	@param[in]	名前
+ *	@param[in]	配列
+ *	@param[in]	カウント
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setScalarArray(const char* name, float* array,unsigned int count){
+	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
+	cgSetParameterValuefc(param,count,array);
+}
+/**========================================================*/
+/**
+ *	@brief	ベクトルの配列を設定
+ *	@param[in]	名前
+ *	@param[in]	配列
+ *	@param[in]	カウント
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setVectorArray(const char* name, float* array,unsigned int count){
+	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
+	cgSetParameterValuefc(param,cgGetParameterColumns(param)+count,array);
+}
+/**========================================================*/
+/**
+ *	@brief	行列の配列を設定
+ *	@param[in]	名前
+ *	@param[in]	配列
+ *	@param[in]	カウント
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setMatrixArray(const char* name,float* array,unsigned int count){
+	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
+	cgSetParameterValuefr(param,cgGetParameterColumns(param)*cgGetParameterRows(param),array);
+}
+/**========================================================*/
+/**
+ *	@brief	テクスチャ設定
+ *	@param[in]	名前
+ *	@param[in]	テクスチャ
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Effect::setTexture(const char* name,ITexture* texture){
+	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
+	cgGLSetupSampler(param,static_cast<Texture*>(texture)->texture() );
+}
+/**========================================================*/
+/**
+ *	@brief	シェーダー入力シグニチャ記述子取得
+ *	@param[in]	テクニック名
+ *	@param[in]	パス番号
+ *	@author	KORYUOH
+ *	@return	シェーダー入力記述子
+ */
+/**========================================================*/
+InputSignatureDesc Effect::inputSignature(const char* techniqueName,int passNo)const{
+	(void)techniqueName;
+	(void)passNo;
+	//DirectX10との互換を持たせるダミー
+	InputSignatureDesc descSignature = {0,0};
+	return descSignature;
 }
 
 
