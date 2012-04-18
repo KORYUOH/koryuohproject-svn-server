@@ -46,6 +46,9 @@
     <ClCompile Include="Koryuoh\StringSplitter\StringSplit.cpp">
       <Filter>Class\StringSplitter</Filter>
     </ClCompile>
+    <ClCompile Include="Koryuoh\Matrix\Matrix2\Matrix2.cpp">
+      <Filter>Class\Matrix\Matrix2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Koryuoh\Dice\dice.h">
@@ -63,7 +66,7 @@
     <ClInclude Include="Koryuoh\StringSplitter\StringSplitter.h">
       <Filter>Class\StringSplitter</Filter>
     </ClInclude>
-    <ClInclude Include="Matrix2.h">
+    <ClInclude Include="Koryuoh\Matrix\Matrix2\Matrix2.h">
       <Filter>Class\Matrix\Matrix2</Filter>
     </ClInclude>
   </ItemGroup>
