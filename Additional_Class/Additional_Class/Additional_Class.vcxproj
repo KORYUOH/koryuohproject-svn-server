@@ -65,6 +65,7 @@
     <ClCompile Include="Koryuoh\Circle\Circle.cpp" />
     <ClCompile Include="Koryuoh\Dice\dice.cpp" />
     <ClCompile Include="Koryuoh\StringSplitter\StringSplit.cpp" />
+    <ClCompile Include="Koryuoh\Matrix\Matrix2\Matrix2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Koryuoh\Ball\Ball.h" />
@@ -72,7 +73,7 @@
     <ClInclude Include="Koryuoh\Circle\Circle.h" />
     <ClInclude Include="Koryuoh\Dice\dice.h" />
     <ClInclude Include="Koryuoh\StringSplitter\StringSplitter.h" />
-    <ClInclude Include="Matrix2.h" />
+    <ClInclude Include="Koryuoh\Matrix\Matrix2\Matrix2.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
