@@ -90,12 +90,37 @@ public:
 		this->scale(s);
 		return *this;
 	};
-	Matrix2& operator /=(const Matrix2& Target){
-		this->x-=Target.x;
-		this->y-=Target.y;
+	Matrix2& operator /=(const float Target){
+		if(Target != 0){
+		this->x/=Target;
+		this->y/=Target;
+		return *this;
+		}
 		return *this;
 	};
 
+	const Matrix2 operator + (const Matrix2& v){
+		Matrix2 Instance = *this;
+		Instance += v;
+		return Instance;
+	}
+
+	const Matrix2 operator -(const Matrix2& v){
+		Matrix2 Instance = *this;
+		Instance -= v;
+		return Instance;
+	}
+
+	const Matrix2 operator * (float f){
+		return Matrix2(*this)*=f;
+	}
+
+	const Matrix2 operator / (float f){
+		if(f != 0){
+			return Matrix2(*this)/=f;
+		}
+		return *this;
+	}
 
 
 };
