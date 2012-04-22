@@ -16,8 +16,10 @@
 #endif
 #ifdef __Debug
 #define OUTLOGFILE true
+#define	DEBUG	true
 #else
 #define OUTLOGFILE false
+#define	DEBUG	false
 #endif
 #ifndef __FIELDSTATE
 	#define __FIELDSTATE

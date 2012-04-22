@@ -65,7 +65,22 @@ public:
 	 *	@date	2012/04/18
 	 */
 	float innerProduct(const Matrix2& target);
-
+	/**
+	 *	@brief	X成分取得
+	 *	@author	KORYUOH
+	 *	@date	2012/04/22
+	 */
+	float getX()const{
+		return this->x;
+	}
+	/**
+	 *	@brief	Y成分取得
+	 *	@author	KORYUOH
+	 *	@date	2012/04/22
+	 */
+	float getY()const{
+		return this->y;
+	}
 	//_/_/_/_/_/オーバーロード_/_/_/_/_/
 
 	Matrix2 operator +(){
@@ -122,7 +137,7 @@ public:
 		return *this;
 	}
 
-
+	}
 };
 /**===End Class Definition=================================*/
 #endif // _MATRIX2_H_

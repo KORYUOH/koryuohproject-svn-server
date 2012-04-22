@@ -1,26 +1,30 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	IProcess.h
+ *	@file	Matrix3.h
  *
- *	@brief	プロセス
+ *	@brief	３次ベクトル
  *
  *	@author	KORYUOH
  *
- *	@date	2012/02/20
+ *	@date	2012/04/22
  */
 /**===Include Guard========================================*/
-#ifndef	_IPROCESS_H_
-#define	_IPROCESS_H_
+#ifndef	_MATRIX3_H_
+#define	_MATRIX3_H_
 /**===File Include=========================================*/
-
+#include	"../Matrix2/Matrix2.h"
 /**===Class Definition=====================================*/
-class IProcess{
+class Matrix3{
 public:
 	/**
-	 *	@brief	初期化
+	 *	@brief	コンストラクター
+	 *	@param[in]	x成分
+	 *	@param[in]	y成分
+	 *	@param[in]	z成分
 	 *	@author	KORYUOH
 	 */
-	virtual void initialize()	=0;
+	Matrix3(float x,float y,float z);
+	
 	/**
 	 *	@brief	<要約>
 	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
@@ -28,24 +32,12 @@ public:
 	 *	@author	<作者名>
 	 *	@return	<戻り値>
 	 */
-	virtual void update()	=0;
-	/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	<作者名>
-	 *	@return	<戻り値>
-	 */
-	virtual void draw()	=0;
-	/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	<作者名>
-	 *	@return	<戻り値>
-	 */
-	virtual void finish()	=0;
+	Matrix3(const Matrix2& matrix,z);
+private:
+	/**	メンバー変数*/
+	Matrix2 m_matrix;
+	float z;
 };
 /**===End Class Definition=================================*/
-#endif
+#endif	//_MATRIX3_H_
 /**===End Of File==========================================*/
