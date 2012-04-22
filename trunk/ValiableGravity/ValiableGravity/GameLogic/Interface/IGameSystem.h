@@ -14,6 +14,7 @@
 /**===File Include=========================================*/
 /**===Class Definition=====================================*/
 class IGameSystem{
+
 public:
 	/**
 	 *	@brief	‰Šú‰»
@@ -24,7 +25,7 @@ public:
 	 *	@brief	ƒQ[ƒ€ƒƒCƒ“
 	 *	@author	KORYUOH
 	 */
-	virtual void main() =0;
+	virtual void update() =0;
 	/**
 	 *	@brief	•`‰æ
 	 *	@author	KORYUOH

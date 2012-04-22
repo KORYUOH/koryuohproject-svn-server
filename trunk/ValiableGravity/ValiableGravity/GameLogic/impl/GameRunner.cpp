@@ -36,7 +36,7 @@ void GameRunner::run(){
 	//MainLoop
 	while(true){
 		//Main
-		initialize();
+		update();
 		//Draw
 		draw();
 	}
@@ -58,8 +58,8 @@ void GameRunner::initialize(){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void GameRunner::main(){
-	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->main();});
+void GameRunner::update(){
+	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->update();});
 }
 /**========================================================*/
 /**
