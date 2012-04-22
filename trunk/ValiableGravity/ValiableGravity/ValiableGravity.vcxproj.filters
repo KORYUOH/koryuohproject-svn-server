@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="GameLogic">
+      <UniqueIdentifier>{1750417c-76ed-413e-bfdc-fc3e53cde911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Interface">
+      <UniqueIdentifier>{0ed13589-061d-4aae-98c3-0aa5cbe8bf22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Define">
+      <UniqueIdentifier>{c4e4a22a-15c6-4ad9-949a-68eaa9b373e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\impl">
+      <UniqueIdentifier>{9cee05ab-2f7a-4a15-9853-480d4307957a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CordingRule">
+      <UniqueIdentifier>{f7882a9b-7972-4a9b-8b2a-aef75e14ef87}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="..\..\Cording Rule\Header_Rules.txt">
+      <Filter>CordingRule</Filter>
+    </None>
+    <None Include="..\..\Cording Rule\Source_Rules.txt">
+      <Filter>CordingRule</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameLogic\Interface\IGameSystem.h">
+      <Filter>GameLogic\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\ClassDefine.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\impl\GameRunner.h">
+      <Filter>GameLogic\impl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameLogic\impl\GameRunner.cpp">
+      <Filter>GameLogic\impl</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

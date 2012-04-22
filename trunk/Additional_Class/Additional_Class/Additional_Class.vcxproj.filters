@@ -29,6 +29,9 @@
     <Filter Include="Class\Matrix\Matrix2">
       <UniqueIdentifier>{58bf6693-44df-4ef9-8280-9cba9cdd41ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\Matrix\Matrix3">
+      <UniqueIdentifier>{6971d5af-bf50-4a97-8aff-ded372bf64fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Koryuoh\Dice\dice.cpp">
@@ -68,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="Koryuoh\Matrix\Matrix2\Matrix2.h">
       <Filter>Class\Matrix\Matrix2</Filter>
+    </ClInclude>
+    <ClInclude Include="Koryuoh\Matrix\Matrix3\Matrix3.h">
+      <Filter>Class\Matrix\Matrix3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
