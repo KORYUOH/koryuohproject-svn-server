@@ -20,6 +20,9 @@
     <Filter Include="CordingRule">
       <UniqueIdentifier>{f7882a9b-7972-4a9b-8b2a-aef75e14ef87}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameApplication">
+      <UniqueIdentifier>{5c9a5a69-b372-4b6a-95cf-4975bee04dbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -40,10 +43,14 @@
     <ClInclude Include="GameLogic\impl\GameRunner.h">
       <Filter>GameLogic\impl</Filter>
     </ClInclude>
+    <ClInclude Include="GameApplication\GameApplication.h">
+      <Filter>GameApplication</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">
       <Filter>GameLogic\impl</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>

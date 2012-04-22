@@ -1,47 +1,43 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	GameRunner.h
+ *	@file	GameApplication.h
  *
- *	@brief	ゲーム実行ヘッダーファイル
+ *	@brief	ゲームアプリケーション
  *
- *	@author	<作者名>
+ *	@note	OpenGL
  *
- *	@date	2012/04/22
+ *	@author	KORYUOH
+ *
+ *	@date	2012/04/23
  */
 /**===Include Guard========================================*/
-#ifndef	_GAMERUNNER_H_
-#define	_GAMERUNNER_H_
+#ifndef	_GAMEAPPLICATION_H_
+#define	_GAMEAPPLICATION_H_
 /**===File Include=========================================*/
-#include	<list>
-#include	<GameLogic/Interface/IGameSystem.h>
-#include	<Define/ClassDefine.h>
+#include	<string>
 /**===Class Definition=====================================*/
-class GameRunner:public IGameSystem{
+class GameApplication{
 public:
 	/**
-	 *	@brief	コンストラクタ
+	 *	@brief	実行
 	 *	@author	KORYUOH
 	 */
-	GameRunner(GameSystem_ptr_t& ptr);
+	void run();
+
+protected:
+	/**
+	 *	@brief	コンストラクタ
+	 *	@param[in]	引数の数
+	 *	@param[in]	コマンドラインオプション
+	 *	@author	KORYUOH
+	 */
+	GameApplication(int argc,char* argv[]);
 	/**
 	 *	@brief	仮想デストラクタ
 	 *	@author	KORYUOH
 	 */
-	virtual ~GameRunner(){};
-	/**
-	 *	@brief	Runner
-	 *	@author	KORYUOH
-	 */
-	void run();
-	/**
-	 *	@brief	後ろ追加
-	 *	@author	KORYUOH
-	 */
-	void push_back(GameSystem_ptr_t& ptr);
-
-
-private:
-	/**
+	virtual ~GameApplication(){};
+		/**
 	 *	@brief	初期化
 	 *	@author	KORYUOH
 	 */
@@ -50,7 +46,7 @@ private:
 	 *	@brief	ゲームメイン
 	 *	@author	KORYUOH
 	 */
-	virtual void update();
+	virtual void update(float f);
 	/**
 	 *	@brief	描画
 	 *	@author	KORYUOH
@@ -64,7 +60,7 @@ private:
 
 private:
 	/**	メンバー変数*/
-	std::list<GameSystem_ptr_t> m_system;
+
 };
 /**===End Class Definition=================================*/
 #endif

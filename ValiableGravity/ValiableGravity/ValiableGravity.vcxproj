@@ -80,11 +80,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define\ClassDefine.h" />
+    <ClInclude Include="GameApplication\GameApplication.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
