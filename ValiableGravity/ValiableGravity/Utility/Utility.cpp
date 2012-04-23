@@ -4,7 +4,7 @@
 *
 *	@brief	ゲーム用ユーティリティー実装
 *
-*	@author	<作者名>
+*	@author	KORYUOH
 *
 *	@date	2012/04/23
 */
@@ -17,7 +17,7 @@ namespace KORYUOH{
 	*	@brief	衝突判定
 	*	@param[in]	円情報1
 	*	@param[in]	円情報2
-	*	@author	<作者名>
+	*	@author	KORYUOH
 	*	@return	当たり判定
 	*/
 	/**========================================================*/
@@ -34,7 +34,7 @@ namespace KORYUOH{
 	*	@param[in]	半径1
 	*	@param[in]	球情報2
 	*	@param[in]	半径2
-	*	@author	<作者名>
+	*	@author	KORYUOH
 	*	@return	当たり判定
 	*/
 	/**========================================================*/
