@@ -26,6 +26,9 @@
     <Filter Include="Type">
       <UniqueIdentifier>{2e74a724-8574-4f7f-90ac-4e561a58464d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{7647d05e-a01f-427f-abca-63a11728dd43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -64,6 +67,12 @@
     <ClInclude Include="Type\Vector3.h">
       <Filter>Type</Filter>
     </ClInclude>
+    <ClInclude Include="Utility\Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Type</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">
@@ -87,6 +96,9 @@
     </ClCompile>
     <ClCompile Include="GameApplication\GameApplication.cpp">
       <Filter>GameApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
