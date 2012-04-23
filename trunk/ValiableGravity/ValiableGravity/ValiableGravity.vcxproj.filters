@@ -23,6 +23,9 @@
     <Filter Include="GameApplication">
       <UniqueIdentifier>{5c9a5a69-b372-4b6a-95cf-4975bee04dbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Type">
+      <UniqueIdentifier>{2e74a724-8574-4f7f-90ac-4e561a58464d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -46,11 +49,44 @@
     <ClInclude Include="GameApplication\GameApplication.h">
       <Filter>GameApplication</Filter>
     </ClInclude>
+    <ClInclude Include="Type\Color4.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Math.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Matrix4.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector2.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector3.h">
+      <Filter>Type</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">
       <Filter>GameLogic\impl</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Type\Color4.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Math.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Matrix4.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector2.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector3.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApplication\GameApplication.cpp">
+      <Filter>GameApplication</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

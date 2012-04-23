@@ -25,26 +25,6 @@ GameRunner::GameRunner(GameSystem_ptr_t& ptr){
 }
 /**========================================================*/
 /**
- *	@brief	Às
- *	@author	KORYUOH
- */
-/**========================================================*/
-void GameRunner::run(){
-	//Initialize
-	initialize();
-
-	//MainLoop
-	while(true){
-		//Main
-		update();
-		//Draw
-		draw();
-	}
-	//finish
-	finish();
-}
-/**========================================================*/
-/**
  *	@brief	‰Šú‰»
  *	@author	KORYUOH
  */
@@ -58,8 +38,8 @@ void GameRunner::initialize(){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void GameRunner::update(){
-	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->update();});
+void GameRunner::update(float f){
+	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->update(f);});
 }
 /**========================================================*/
 /**
