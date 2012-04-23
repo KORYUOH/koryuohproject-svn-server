@@ -1,4 +1,4 @@
-//*	DirectX (Vista以降でないと起動しない)
+/*	DirectX (Vista以降でないと起動しない)
 #include	<Render/DirectX/DirectX10.h>
 //初期化
 HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* device, const DXGI_SURFACE_DESC *surfaceDesc, void* userContext){
@@ -33,7 +33,7 @@ void display(){
 
 //*/
 int main(int argc,char **argv){
-	//*	DirectX
+	/*	DirectX
 	DXUTSetCallbackD3D10DeviceCreated(OnD3D10CreateDevice);
 	DXUTSetCallbackD3D10DeviceDestroyed(On3D10DestoroyDevice);
 	DXUTSetCallbackD3D10FrameRender(OnD3D10FrameRender);
@@ -44,7 +44,7 @@ int main(int argc,char **argv){
 	return DXUTGetExitCode();
 	//*/
 
-	/*	OpenGL
+	//*	OpenGL
 	//ウィンドウセッティング
 	glutInit( &argc, argv);
 	glutInitDisplayMode( GLUT_DOUBLE|GLUT_RGBA|GLUT_DEPTH);
