@@ -162,7 +162,7 @@ void GameApplication::destroy( void ){
 	//入力デバイスシステム終了
 	gsFinishInput();
 	//サウンドシステム終了
-	gsFinishSound()
+	gsFinishSound();
 	//グラフィックシステム終了
 	gsFinishGraphics();
 }

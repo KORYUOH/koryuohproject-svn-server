@@ -83,7 +83,7 @@
     <ClInclude Include="GameApplication\GameApplication.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
-    <ClInclude Include="Rect.h" />
+    <ClInclude Include="Type\Rect.h" />
     <ClInclude Include="Type\Color4.h" />
     <ClInclude Include="Type\Math.h" />
     <ClInclude Include="Type\Matrix4.h" />
