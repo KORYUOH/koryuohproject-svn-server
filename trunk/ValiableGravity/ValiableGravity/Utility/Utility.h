@@ -13,6 +13,7 @@
 #define	_UTILITY_H_
 /**===File Include=========================================*/
 #include	<Type/Vector3.h>
+#include	<Type/Rect.h>
 /**===Class Definition=====================================*/
 namespace KORYUOH{
 	/**
@@ -33,6 +34,20 @@ namespace KORYUOH{
 	 *	@return	‚ ‚½‚Á‚Ä‚¢‚ê‚Î^
 	 */
 	const bool isCollision(const Vector3& t1,float r1,const Vector3& t2,float r2);
+	/**
+	 *	@brief	Õ“Ë”»’è
+	 *	@param[in]	‰~î•ñ1
+	 *	@param[in]	‰~î•ñ2
+	 *	@author	<ìÒ–¼>
+	 *	@return	‚ ‚½‚Á‚Ä‚¢‚ê‚Î^
+	 */
+	const bool isCollision(const Rect& t1,const Rect& t2);
+
+
+
+
+
+
 };
 /**===End Class Definition=================================*/
 #endif

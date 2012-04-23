@@ -100,7 +100,7 @@
     <ClCompile Include="Type\Matrix4.cpp" />
     <ClCompile Include="Type\Vector2.cpp" />
     <ClCompile Include="Type\Vector3.cpp" />
-    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="Utility\Utility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

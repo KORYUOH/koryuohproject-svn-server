@@ -97,8 +97,6 @@
     <ClCompile Include="GameApplication\GameApplication.cpp">
       <Filter>GameApplication</Filter>
     </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>Utility</Filter>
-    </ClCompile>
+    <ClCompile Include="Utility\Utility.cpp" />
   </ItemGroup>
 </Project>
