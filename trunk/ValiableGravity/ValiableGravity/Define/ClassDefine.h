@@ -13,11 +13,12 @@
 #define	_CLASSDEFINE_H_
 /**===File Include=========================================*/
 #include	<memory>
+#include	<Type/Vector3.h>
 class	IGameSystem;
 /**===Class Definition=====================================*/
 
 typedef	std::shared_ptr<IGameSystem>	GameSystem_ptr_t;
-
+typedef	Vector3 Circle_t;
 
 
 /**===End Class Definition=================================*/
