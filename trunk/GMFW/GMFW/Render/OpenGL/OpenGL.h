@@ -10,6 +10,11 @@
 /**===Include Guard========================================*/
 #pragma once
 /**===File Include=========================================*/
-#include	<GL/glut.h>
 #include	<GLee/GLee.h>
+#include	<GL/glut.h>
+#pragma comment (lib,"cg/lib/cg.lib")
+#pragma comment (lib,"cg/lib/cgGL.lib")
+
+
+
 /**===End Of File==========================================*/
