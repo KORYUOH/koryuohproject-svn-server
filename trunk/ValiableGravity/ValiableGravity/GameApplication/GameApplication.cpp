@@ -4,7 +4,7 @@
  *
  *	@brief	ゲームアプリケーションクラス実装
  *
- *	@author	<作者名>
+ *	@author	KORYUOH
  *
  *	@date	2012/04/23
  */
@@ -17,7 +17,7 @@
 /**
  *	@brief	コールバック関数用の静的メンバ変数
  *	@note	<メモ書き>
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 GameApplication* GameApplication::mInstance = 0;
@@ -26,7 +26,7 @@ GameApplication* GameApplication::mInstance = 0;
  *	@brief	コンストラクタ
  *	@param[in]	引数の数
  *	@param[in]	コマンドライン引数
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 GameApplication::GameApplication(int argc, char* argv[]):
@@ -48,7 +48,7 @@ GameApplication::GameApplication(int argc, char* argv[]):
 /**========================================================*/
 /**
  *	@brief	実行
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::run(){
@@ -107,7 +107,7 @@ void GameApplication::run(){
 /**========================================================*/
 /**
  *	@brief	OpenGL初期化関数
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::initializeGL(void){
@@ -152,7 +152,7 @@ void GameApplication::initializeGL(void){
 /**========================================================*/
 /**
  *	@brief	コールバック関数Destroy
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::destroy( void ){
@@ -171,7 +171,7 @@ void GameApplication::destroy( void ){
  *	@brief	ウィンドウサイズ変更時に呼ばれるコールバック関数
  *	@param[in]	幅
  *	@param[in]	高さ
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::reshape(int width,int height){
@@ -199,7 +199,7 @@ void GameApplication::reshape(int width,int height){
 /**========================================================*/
 /**
  *	@brief	何もイベントがないときに呼び出される関数
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::idle(void){
@@ -230,7 +230,7 @@ void GameApplication::idle(void){
 /**========================================================*/
 /**
  *	@brief	描画時コールバック関数
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::display(void){
@@ -249,7 +249,7 @@ void GameApplication::display(void){
 /**========================================================*/
 /**
  *	@brief	ウィンドウがアクティブになったときに呼び出されるコールバック
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::activate(int state){
@@ -262,7 +262,7 @@ void GameApplication::activate(int state){
 /**
  *	@brief	ダブルバッファ切り替えインターバル
  *	@param[in]	インターバル
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setSwapInterval(int interval){
@@ -279,7 +279,7 @@ void GameApplication::setSwapInterval(int interval){
 /**========================================================*/
 /**
  *	@brief	ウィンドウタイトル取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	ウィンドウタイトル
  */
 /**========================================================*/
@@ -289,7 +289,7 @@ const std::string& GameApplication::getWindowTitle()const{
 /**========================================================*/
 /**
  *	@brief	ウィンドウのX座標取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	x座標
  */
 /**========================================================*/
@@ -299,7 +299,7 @@ int GameApplication::getWindowPositionX()const{
 /**========================================================*/
 /**
  *	@brief	ウィンドウのY座標取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	Y座標
  */
 /**========================================================*/
@@ -309,7 +309,7 @@ int GameApplication::getWindowPositionY()const{
 /**========================================================*/
 /**
  *	@brief	ウィンドウの幅取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	幅
  */
 /**========================================================*/
@@ -319,7 +319,7 @@ int GameApplication::getWindowWidth()const{
 /**========================================================*/
 /**
  *	@brief	ウィンドウの高さ取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	高さ
  */
 /**========================================================*/
@@ -329,7 +329,7 @@ int GameApplication::getWindowHeight()const{
 /**========================================================*/
 /**
  *	@brief	視野角取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	視野角
  */
 /**========================================================*/
@@ -339,7 +339,7 @@ float GameApplication::getPerspectiveFov()const{
 /**========================================================*/
 /**
  *	@brief	近クリップ面取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	近クリップ面
  */
 /**========================================================*/
@@ -349,7 +349,7 @@ float GameApplication::getPerspectiveNear()const{
 /**========================================================*/
 /**
  *	@brief	遠クリップ面取得
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	遠クリップ面
  */
 /**========================================================*/
@@ -360,7 +360,7 @@ float GameApplication::getPerspectiveFar()const{
 /**
  *	@brief	ウィンドウタイトル設定
  *	@param[in]	タイトル
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setWindowTitle(const std::string& title){
@@ -370,7 +370,7 @@ void GameApplication::setWindowTitle(const std::string& title){
 /**
  *	@brief	X座標設定
  *	@param[in]	X座標
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setWindowPositionX(int x){
@@ -380,7 +380,7 @@ void GameApplication::setWindowPositionX(int x){
 /**
  *	@brief	Y座標設定
  *	@param[in]	Y座標
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setWindowPositionY(int y){
@@ -390,7 +390,7 @@ void GameApplication::setWindowPositionY(int y){
 /**
  *	@brief	幅設定
  *	@param[in]	幅
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setWindowWidth(int width){
@@ -400,7 +400,7 @@ void GameApplication::setWindowWidth(int width){
 /**
  *	@brief	高さ設定
  *	@param[in]	高さ
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setWindowHeight(int height){
@@ -410,7 +410,7 @@ void GameApplication::setWindowHeight(int height){
 /**
  *	@brief	視野角設定
  *	@param[in]	視野角
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setPerspectiveFov(float fov){
@@ -420,7 +420,7 @@ void GameApplication::setPerspectiveFov(float fov){
 /**
  *	@brief	近クリップ面設定
  *	@param[in]	近クリップ面
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setPerspectiveNear(float znear){
@@ -430,7 +430,7 @@ void GameApplication::setPerspectiveNear(float znear){
 /**
  *	@brief	遠クリップ面設定
  *	@param[in]	遠クリップ面
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setPerspectiveFar(float zfar){
@@ -440,7 +440,7 @@ void GameApplication::setPerspectiveFar(float zfar){
 /**
  *	@brief	フルスクリーンモード設定設定
  *	@param[in]	モード
- *	@author	<作者名>
+ *	@author	KORYUOH
  */
 /**========================================================*/
 void GameApplication::setFullScreenMode(bool mode){
@@ -449,7 +449,7 @@ void GameApplication::setFullScreenMode(bool mode){
 /**========================================================*/
 /**
  *	@brief	フルスクリーンモードか調べる
- *	@author	<作者名>
+ *	@author	KORYUOH
  *	@return	FullScreenMode
  */
 /**========================================================*/

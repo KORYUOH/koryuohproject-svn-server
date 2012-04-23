@@ -4,7 +4,7 @@
  *
  *	@brief	矩形情報
  *
- *	@author	<作者名>
+ *	@author	KORYUOH
  *
  *	@date	2012/04/23
  */
@@ -22,7 +22,7 @@ struct Rect{
 	 *	@brief	<要約>
 	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
 	 *	@note	<メモ書き>
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	<戻り値>
 	 */
 	Rect():mPos(0,0),mSize(0,0){

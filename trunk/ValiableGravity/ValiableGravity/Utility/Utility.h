@@ -4,7 +4,7 @@
  *
  *	@brief	ゲーム用ユーティリティー
  *
- *	@author	<作者名>
+ *	@author	KORYUOH
  *
  *	@date	2012/04/23
  */
@@ -20,7 +20,7 @@ namespace KORYUOH{
 	 *	@brief	衝突判定
 	 *	@param[in]	円情報1
 	 *	@param[in]	円情報2
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	あたっていれば真
 	 */
 	const bool isCollision(const Vector3& t1,const Vector3& t2);
@@ -30,7 +30,7 @@ namespace KORYUOH{
 	 *	@param[in]	半径
 	 *	@param[in]	球情報2
 	 *	@param[in]	半径
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	あたっていれば真
 	 */
 	const bool isCollision(const Vector3& t1,float r1,const Vector3& t2,float r2);
@@ -38,7 +38,7 @@ namespace KORYUOH{
 	 *	@brief	衝突判定
 	 *	@param[in]	円情報1
 	 *	@param[in]	円情報2
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	あたっていれば真
 	 */
 	const bool isCollision(const Rect& t1,const Rect& t2);
