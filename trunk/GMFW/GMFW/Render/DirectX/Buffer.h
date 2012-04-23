@@ -85,7 +85,7 @@ private:
 
 private:
 	/**	ディスクプリタ*/
-	BufferDesc	m_desc;
+	BufferDesc	 m_desc;
 	/**	バッファクラス*/
 	ID3D10Buffer*	m_Buffer;
 };

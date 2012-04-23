@@ -70,6 +70,20 @@ const BufferDesc& Buffer::desc()const{
 ID3D10Buffer * Buffer::buffer() const{
 	return m_Buffer;
 }
+/**========================================================*/
+/**
+ *	@brief	データ設定
+ *	@param[in]	データ
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void Buffer::setData(const void* data){
+	assert(m_desc._usage ==BUFFER_USAGE_DYNAMIC);
+	void* mapData = 0;
+	m_Buffer->Map(D3D10_MAP_WRITE_DISCARD, 0 ,&mapData);
+	std::memcpy(mapData,data,m_desc._size);
+	m_Buffer->Unmap();
+}
 
 /**========================================================*/
 /**
@@ -118,9 +132,9 @@ UINT Buffer::bindFlag() const{
 }
 /**========================================================*/
 /**
- *	@brief	バインドフラグ取得
+ *	@brief	バッファ使用法取得
  *	@author	KORYUOH
- *	@return	UINT バインドフラグ
+ *	@return	UINT 使用法
  */
 /**========================================================*/
 D3D10_USAGE	Buffer::Usage()const{
@@ -131,7 +145,21 @@ D3D10_USAGE	Buffer::Usage()const{
 	};
 	return usages[m_desc._usage];
 }
-
+/**========================================================*/
+/**
+ *	@brief	CPUアクセスフラグ取得
+ *	@author	KORYUOH
+ *	@return	CPUアクセスフラグ
+ */
+/**========================================================*/
+UINT Buffer::cpuAccessFlag()const{
+	static const UINT cpuAccessFlags[]={
+		0,				//BUFFER_USAGE_DEFAULT
+		0,				//BUFFER_USAGE_IMMUTABE
+		D3D10_CPU_ACCESS_WRITE,
+	};
+	return cpuAccessFlags[m_desc._usage];
+}
 
 
 
