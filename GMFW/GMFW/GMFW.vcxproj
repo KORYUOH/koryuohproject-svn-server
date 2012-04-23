@@ -126,6 +126,10 @@
     <ClCompile Include="Type\Vector2.cpp" />
     <ClCompile Include="Type\Vector3.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="Cg\lib\cg.lib" />
+    <Library Include="Cg\lib\cgGL.lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -187,4 +187,8 @@
       <Filter>Render\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="Cg\lib\cg.lib" />
+    <Library Include="Cg\lib\cgGL.lib" />
+  </ItemGroup>
 </Project>
