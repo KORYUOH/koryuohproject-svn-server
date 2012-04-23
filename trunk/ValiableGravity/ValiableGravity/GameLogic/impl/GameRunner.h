@@ -14,15 +14,16 @@
 /**===File Include=========================================*/
 #include	<list>
 #include	<GameLogic/Interface/IGameSystem.h>
+#include	<GameApplication/GameApplication.h>
 #include	<Define/ClassDefine.h>
 /**===Class Definition=====================================*/
-class GameRunner:public IGameSystem{
+class GameRunner:public IGameSystem,public GameApplication{
 public:
 	/**
 	 *	@brief	コンストラクタ
 	 *	@author	KORYUOH
 	 */
-	GameRunner(GameSystem_ptr_t& ptr);
+	GameRunner(int argc,char* argv[]);
 	/**
 	 *	@brief	仮想デストラクタ
 	 *	@author	KORYUOH

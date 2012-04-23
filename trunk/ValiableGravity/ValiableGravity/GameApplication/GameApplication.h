@@ -18,13 +18,14 @@
 #include	<memory>
 #include	<string>
 /**===Class Definition=====================================*/
-class GameApplication:public IGameSystem{
+class GameApplication{
 public:
 	/**
 	 *	@brief	実行
 	 *	@author	KORYUOH
 	 */
 	void run();
+protected:
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	引数の数
@@ -42,22 +43,22 @@ protected:
 	 *	@brief	初期化
 	 *	@author	KORYUOH
 	 */
-	virtual void initialize();
+	virtual void initialize(){};
 	/**
 	 *	@brief	ゲームメイン
 	 *	@author	KORYUOH
 	 */
-	virtual void update(float f);
+	virtual void update(float f){};
 	/**
 	 *	@brief	描画
 	 *	@author	KORYUOH
 	 */
-	virtual void draw();
+	virtual void draw(){};
 	/**
 	 *	@brief	終了
 	 *	@author	KORYUOH
 	 */
-	virtual void finish();
+	virtual void finish(){};
 	/**
 	 *	@brief	ウィンドウタイトルの取得
 	 *	@author	KORYUOH
@@ -111,7 +112,7 @@ protected:
 	 *	@param[in]	ウィンドウタイトル
 	 *	@author	KORYUOH
 	 */
-	void setWindowTitle(std::string& title);
+	void setWindowTitle(const std::string& title);
 	/**
 	 *	@brief	ウィンドウ位置の設定
 	 *	@param[in]	X位置

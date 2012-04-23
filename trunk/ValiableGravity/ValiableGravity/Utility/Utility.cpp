@@ -10,17 +10,8 @@
 */
 /**===File Include=========================================*/
 #include	<Type/Vector3.h>
-#include	<Type/Rect.h>
 /**===Class Implementation=================================*/
 namespace KORYUOH{
-	namespace{
-		bool LRCheck(const Rect& box1,const Rect& box2){
-			return (box1.getLeft()<box2.getRight()) ? true:false;
-		}
-		bool TBCheck(const Rect& box1,const Rect& box2){
-			return (box1.getTop()<box2.getBottom()) ? true:false;
-		}
-	}
 	/**========================================================*/
 	/**
 	*	@brief	Õ“Ë”»’è
@@ -54,19 +45,6 @@ namespace KORYUOH{
 		float R = r1+r2;
 		return (X*X+Y*Y+Z*Z<R*R)? true:false;
 	}
-	/**
-	*	@brief	Õ“Ë”»’è
-	*	@param[in]	‹éŒ`î•ñ1
-	*	@param[in]	‹éŒ`î•ñ2
-	*	@author	<ìŽÒ–¼>
-	*	@return	“–‚½‚è”»’è
-	*/
-	/**========================================================*/
-	const bool isCollision(const Rect& v1,const Rect& v2){
-		if(LRCheck(v1,v2)||LRCheck(v2,v1))
-			if(TBCheck(v1,v2)||TBCheck(v2,v1))
-				return true;
-		return false;
-	}
+
 };
 /**===End Of File==========================================*/

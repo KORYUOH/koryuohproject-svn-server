@@ -20,8 +20,7 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-GameRunner::GameRunner(GameSystem_ptr_t& ptr){
-	m_system.push_back(ptr);
+GameRunner::GameRunner(int argc,char* argv[]):GameApplication(argc,argv){
 }
 /**========================================================*/
 /**

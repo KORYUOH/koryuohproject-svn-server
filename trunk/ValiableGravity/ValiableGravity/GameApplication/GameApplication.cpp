@@ -324,7 +324,7 @@ int GameApplication::getWindowWidth()const{
  */
 /**========================================================*/
 int GameApplication::getWindowHeight()const{
-	return mWindowHwight;
+	return mWindowHeight;
 }
 /**========================================================*/
 /**
@@ -355,6 +355,106 @@ float GameApplication::getPerspectiveNear()const{
 /**========================================================*/
 float GameApplication::getPerspectiveFar()const{
 	return mPerspectiveFar;
+}
+/**========================================================*/
+/**
+ *	@brief	ウィンドウタイトル設定
+ *	@param[in]	タイトル
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setWindowTitle(const std::string& title){
+	mWindowTitle = title;
+}
+/**========================================================*/
+/**
+ *	@brief	X座標設定
+ *	@param[in]	X座標
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setWindowPositionX(int x){
+	mWindowPositionX = x;
+}
+/**========================================================*/
+/**
+ *	@brief	Y座標設定
+ *	@param[in]	Y座標
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setWindowPositionY(int y){
+	mWindowPositionY = y;
+}
+/**========================================================*/
+/**
+ *	@brief	幅設定
+ *	@param[in]	幅
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setWindowWidth(int width){
+	mWindowWidth = width;
+}
+/**========================================================*/
+/**
+ *	@brief	高さ設定
+ *	@param[in]	高さ
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setWindowHeight(int height){
+	mWindowHeight = height;
+}
+/**========================================================*/
+/**
+ *	@brief	視野角設定
+ *	@param[in]	視野角
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setPerspectiveFov(float fov){
+	mPerspectiveFov = fov;
+}
+/**========================================================*/
+/**
+ *	@brief	近クリップ面設定
+ *	@param[in]	近クリップ面
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setPerspectiveNear(float znear){
+	mPerspectiveNear = znear;
+}
+/**========================================================*/
+/**
+ *	@brief	遠クリップ面設定
+ *	@param[in]	遠クリップ面
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setPerspectiveFar(float zfar){
+	mPerspectiveFar = zfar;
+}
+/**========================================================*/
+/**
+ *	@brief	フルスクリーンモード設定設定
+ *	@param[in]	モード
+ *	@author	<作者名>
+ */
+/**========================================================*/
+void GameApplication::setFullScreenMode(bool mode){
+	mIsFullScreenMode = mode;
+}
+/**========================================================*/
+/**
+ *	@brief	フルスクリーンモードか調べる
+ *	@author	<作者名>
+ *	@return	FullScreenMode
+ */
+/**========================================================*/
+bool GameApplication::isFullScreenMode()const{
+	return mIsFullScreenMode;
 }
 
 
