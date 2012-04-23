@@ -25,7 +25,7 @@ public:
 	 *	@brief	ƒQ[ƒ€ƒƒCƒ“
 	 *	@author	KORYUOH
 	 */
-	virtual void update() =0;
+	virtual void update(float f) =0;
 	/**
 	 *	@brief	•`‰æ
 	 *	@author	KORYUOH

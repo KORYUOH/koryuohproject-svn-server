@@ -29,11 +29,6 @@ public:
 	 */
 	virtual ~GameRunner(){};
 	/**
-	 *	@brief	Runner
-	 *	@author	KORYUOH
-	 */
-	void run();
-	/**
 	 *	@brief	Œã‚ë’Ç‰Á
 	 *	@author	KORYUOH
 	 */
@@ -50,7 +45,7 @@ private:
 	 *	@brief	ƒQ[ƒ€ƒƒCƒ“
 	 *	@author	KORYUOH
 	 */
-	virtual void update();
+	virtual void update(float f);
 	/**
 	 *	@brief	•`‰æ
 	 *	@author	KORYUOH

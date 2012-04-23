@@ -83,10 +83,21 @@
     <ClInclude Include="GameApplication\GameApplication.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
+    <ClInclude Include="Type\Color4.h" />
+    <ClInclude Include="Type\Math.h" />
+    <ClInclude Include="Type\Matrix4.h" />
+    <ClInclude Include="Type\Vector2.h" />
+    <ClInclude Include="Type\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameApplication\GameApplication.cpp" />
     <ClCompile Include="GameLogic\impl\GameRunner.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Type\Color4.cpp" />
+    <ClCompile Include="Type\Math.cpp" />
+    <ClCompile Include="Type\Matrix4.cpp" />
+    <ClCompile Include="Type\Vector2.cpp" />
+    <ClCompile Include="Type\Vector3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
