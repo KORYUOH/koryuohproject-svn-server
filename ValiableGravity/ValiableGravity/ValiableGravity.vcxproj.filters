@@ -70,7 +70,7 @@
     <ClInclude Include="Utility\Utility.h">
       <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Rect.h">
+    <ClInclude Include="Type\Rect.h">
       <Filter>Type</Filter>
     </ClInclude>
   </ItemGroup>
