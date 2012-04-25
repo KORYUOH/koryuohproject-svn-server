@@ -32,6 +32,10 @@ struct Rect{
 	}
 	Rect(const Vector2& pos,const Vector2& size):
 	mPos(pos),mSize(size){};
+	
+	Vector2 top()const{
+		return mPos;
+	}
 };
 /**===End Class Definition=================================*/
 #endif
