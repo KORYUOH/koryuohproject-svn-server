@@ -11,7 +11,7 @@
  *	@date	2012/02/22
  */
 /**===File Include=========================================*/
-#include	<Render/OpenGL/Texture.h>
+#include	<Render/OpenGL/TextureGL.h>
 /**===Class Implementation=================================*/
 
 /**========================================================*/
@@ -22,7 +22,7 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-Texture::Texture(const TextureDesc& desc,const void* data)
+TextureGL::TextureGL(const TextureDesc& desc,const void* data)
 	:m_desc(desc),
 	m_type(toType(desc.type_)),
 	m_texture(0)
@@ -36,7 +36,7 @@ Texture::Texture(const TextureDesc& desc,const void* data)
  *	@author	KORYUOH
  */
 /**========================================================*/
-Texture::~Texture(){
+TextureGL::~TextureGL(){
 	glDeleteTextures(1,&m_texture);
 }
 /**========================================================*/
@@ -46,7 +46,7 @@ Texture::~Texture(){
  *	@return	ディスクプリタ
  */
 /**========================================================*/
-const TextureDesc& Texture::desc()const{
+const TextureDesc& TextureGL::desc()const{
 	return m_desc;
 }
 /**========================================================*/
@@ -56,7 +56,7 @@ const TextureDesc& Texture::desc()const{
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Texture::setData(const void* data){
+void TextureGL::setData(const void* data){
 	glBindTexture(target(),m_texture);
 	glTexSubImage2D(
 		target(),
@@ -75,7 +75,7 @@ void Texture::setData(const void* data){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Texture::getData(void* data){
+void TextureGL::getData(void* data){
 	glBindTexture(target(),texture());
 	glGetTexImage(
 		target(),
@@ -93,7 +93,7 @@ void Texture::getData(void* data){
  *	@return	サイズ
  */
 /**========================================================*/
-unsigned int Texture::size()const{
+unsigned int TextureGL::size()const{
 	return desc().width * desc().height * pixel().size;
 }
 /**========================================================*/
@@ -103,7 +103,7 @@ unsigned int Texture::size()const{
  *	@return	テクスチャ
  */
 /**========================================================*/
-GLuint Texture::texture() const{
+GLuint TextureGL::texture() const{
 	return m_texture;
 }
 /**========================================================*/
@@ -113,7 +113,7 @@ GLuint Texture::texture() const{
  *	@return	ターゲット
  */
 /**========================================================*/
-GLenum Texture::target() const{
+GLenum TextureGL::target() const{
 	return m_type.target;
 }
 /**========================================================*/
@@ -123,7 +123,7 @@ GLenum Texture::target() const{
  *	@return	変換結果
  */
 /**========================================================*/
-const Texture::Pixel& Texture::pixel() const {
+const TextureGL::Pixel& TextureGL::pixel() const {
 	static const Pixel pixelFormat[] = {
 		{GL_RGBA8,GL_RGBA,GL_UNSIGNED_BYTE,sizeof(GLubyte)*4,false,false,false}
 	};
@@ -136,7 +136,7 @@ const Texture::Pixel& Texture::pixel() const {
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Texture::initialize(const void* data){
+void TextureGL::initialize(const void* data){
 	glBindTexture(target() , m_texture);
 	glTexImage2D(
 		target(),
@@ -159,7 +159,7 @@ void Texture::initialize(const void* data){
  *	@return	変換結果
  */
 /**========================================================*/
-const Texture::Type& Texture::toType(TextureType type){
+const TextureGL::Type& TextureGL::toType(TextureType type){
 	static const Type types[] = {
 		{GL_TEXTURE_2D,GL_TEXTURE_2D}
 	};

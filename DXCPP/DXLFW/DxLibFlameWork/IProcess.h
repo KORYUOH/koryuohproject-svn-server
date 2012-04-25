@@ -25,7 +25,7 @@ public:
 	 *	@brief	<要約>
 	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
 	 *	@note	<メモ書き>
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	<戻り値>
 	 */
 	virtual void update()	=0;
@@ -33,7 +33,7 @@ public:
 	 *	@brief	<要約>
 	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
 	 *	@note	<メモ書き>
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	<戻り値>
 	 */
 	virtual void draw()	=0;
@@ -41,7 +41,7 @@ public:
 	 *	@brief	<要約>
 	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
 	 *	@note	<メモ書き>
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 *	@return	<戻り値>
 	 */
 	virtual void finish()	=0;

@@ -95,6 +95,7 @@
     <ClInclude Include="Define\Mode_Define.h" />
     <ClInclude Include="Define\Orig_def.h" />
     <ClInclude Include="Define\Structure.h" />
+    <ClInclude Include="Device\Device.h" />
     <ClInclude Include="DxLibFlameWork\DxLibFW.h" />
     <ClInclude Include="DxLibFlameWork\DxLibInterFace.h" />
     <ClInclude Include="DxLibFlameWork\IProcess.h" />
@@ -109,6 +110,8 @@
     <ClInclude Include="XML\XmlWriter.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Cording Rule\Header_Rules.txt" />
+    <None Include="..\..\Cording Rule\Source_Rules.txt" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

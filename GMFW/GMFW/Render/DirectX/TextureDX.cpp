@@ -9,7 +9,7 @@
  *	@date	2012/02/21
  */
 /**===File Include=========================================*/
-#include	<Render/DirectX/Texture.h>
+#include	<Render/DirectX/TextureDX.h>
 #include	<memory>
 #include	<cassert>
 /**===Class Implementation=================================*/
@@ -23,7 +23,7 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-Texture::Texture( ID3D10Device*	device,const TextureDesc& desc, const void* data):
+TextureDX::TextureDX( ID3D10Device*	device,const TextureDesc& desc, const void* data):
 m_desc(desc),
 	m_resource(NULL),
 	m_shaderResouseView(NULL){
@@ -64,7 +64,7 @@ m_desc(desc),
  *	@author	KORYUOH
  */
 /**========================================================*/
-Texture::~Texture(){
+TextureDX::~TextureDX(){
 	m_shaderResouseView->Release();
 	m_resource->Release();
 }
@@ -75,7 +75,7 @@ Texture::~Texture(){
  *	@return	ディスクプリタ
  */
 /**========================================================*/
-const TextureDesc& Texture::desc() const{
+const TextureDesc& TextureDX::desc() const{
 	return m_desc;
 }
 /**========================================================*/
@@ -85,7 +85,7 @@ const TextureDesc& Texture::desc() const{
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Texture::setData(const void* data){
+void TextureDX::setData(const void* data){
 	assert(m_desc.usage_ == TEXTURE_USAGE_DYNAMIC);
 	ID3D10Texture2D* texture2D = static_cast<ID3D10Texture2D*>(resource());
 	D3D10_MAPPED_TEXTURE2D mapped;
@@ -107,7 +107,7 @@ void Texture::setData(const void* data){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Texture::getData(void* data){
+void TextureDX::getData(void* data){
 	//デバイス取得
 	ID3D10Device* device = NULL;
 	m_resource->GetDevice(&device);
@@ -151,7 +151,7 @@ void Texture::getData(void* data){
  *	@return	データサイズ
  */
 /**========================================================*/
-unsigned int Texture::size()const{
+unsigned int TextureDX::size()const{
 	return desc().width*desc().height*pixel().size;
 }
 /**========================================================*/
@@ -161,7 +161,7 @@ unsigned int Texture::size()const{
  *	@return	リソース
  */
 /**========================================================*/
-ID3D10Resource* Texture::resource(){
+ID3D10Resource* TextureDX::resource(){
 	return m_resource;
 }
 /**========================================================*/
@@ -171,7 +171,7 @@ ID3D10Resource* Texture::resource(){
  *	@return	シェーダーリソースビュー
  */
 /**========================================================*/
-ID3D10ShaderResourceView* Texture::shaderResourceView(){
+ID3D10ShaderResourceView* TextureDX::shaderResourceView(){
 	return m_shaderResouseView;
 }
 /**========================================================*/
@@ -181,7 +181,7 @@ ID3D10ShaderResourceView* Texture::shaderResourceView(){
  *	@return	ピクセルフォーマット
  */
 /**========================================================*/
-const Texture::Pixel&  Texture::pixel() const{
+const TextureDX::Pixel&  TextureDX::pixel() const{
 	static const Pixel pixelFormat[] = {
 		//TEXTURE_FORMAT_RGBA8
 		{ DXGI_FORMAT_R8G8B8A8_TYPELESS, DXGI_FORMAT_R10G10B10A2_UNORM, DXGI_FORMAT_UNKNOWN, sizeof(BYTE)*4,false,false}
@@ -195,7 +195,7 @@ const Texture::Pixel&  Texture::pixel() const{
  *	@return	テクスチャ使用法
  */
 /**========================================================*/
-D3D10_USAGE Texture::usage() const{
+D3D10_USAGE TextureDX::usage() const{
 	static const D3D10_USAGE usages[] ={
 		D3D10_USAGE_DEFAULT,
 		D3D10_USAGE_IMMUTABLE,
@@ -210,7 +210,7 @@ D3D10_USAGE Texture::usage() const{
  *	@return	CPUアクセスフラグ
  */
 /**========================================================*/
-UINT Texture::cpuAccessFlags() const{
+UINT TextureDX::cpuAccessFlags() const{
 	static const UINT cpuAccessFlags[] = {
 		0,										//TEXTURE_USAGE_DEFALT
 		0,										//TEXTURE_USAGE_IMMUTABLE
@@ -225,7 +225,7 @@ UINT Texture::cpuAccessFlags() const{
  *	@return	バインドフラグ
  */
 /**========================================================*/
-UINT Texture::bindFlags() const{
+UINT TextureDX::bindFlags() const{
 	UINT bindFlags = D3D10_BIND_SHADER_RESOURCE;
 	if(pixel().depthStencilFormat){
 		bindFlags |= D3D10_BIND_DEPTH_STENCIL;
@@ -241,7 +241,7 @@ UINT Texture::bindFlags() const{
  *	@return	オプションフラグ
  */
 /**========================================================*/
-UINT Texture::miscFlags() const{
+UINT TextureDX::miscFlags() const{
 	UINT miscFlag = 0;
 	if(m_desc.type_ == TEXTURE_TYPE_CUBE){
 		miscFlag |= D3D10_RESOURCE_MISC_TEXTURECUBE;

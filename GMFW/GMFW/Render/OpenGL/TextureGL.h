@@ -17,7 +17,7 @@
 #include	<Render/Texture/ITexture.h>
 #include	<GLee/GLee.h>
 /**===Class Definition=====================================*/
-class Texture:public ITexture{
+class TextureGL:public ITexture{
 public:
 	/**
 	 *	@brief	コンストラクタ
@@ -25,12 +25,12 @@ public:
 	 *	@param[in]	データ
 	 *	@author	KORYUOH
 	 */
-	Texture(const TextureDesc& desc, const void * data);
+	TextureGL(const TextureDesc& desc, const void * data);
 	/**
 	 *	@brief	デストラクタ
 	 *	@author	KORYUOH
 	 */
-	virtual ~Texture();
+	virtual ~TextureGL();
 	/**
 	 *	@brief	ディスクプリタ取得
 	 *	@author	KORYUOH
@@ -111,8 +111,8 @@ private:
 	 *	@brief	コピー禁止
 	 *	@author	KORYUOH
 	 */
-	Texture(const Texture& other);
-	Texture& operator = (const Texture& other);
+	TextureGL(const TextureGL& other);
+	TextureGL& operator = (const TextureGL& other);
 	
 private:
 	/** ディスクプリタ */
