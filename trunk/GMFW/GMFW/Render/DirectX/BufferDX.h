@@ -17,7 +17,7 @@
 #include	<d3d10.h>
 #include	<Render/Buffer/IBuffer.h>
 /**===Class Definition=====================================*/
-class Buffer:public IBuffer{
+class BufferDX:public IBuffer{
 public:
 	/**
 	 *	@brief	コンストラクタ
@@ -25,12 +25,12 @@ public:
 	 *	@param[in]	データ
 	 *	@author	KORYUOH
 	 */
-	Buffer(ID3D10Device* devise, const BufferDesc& desc,const void* data=0);
+	BufferDX(ID3D10Device* devise, const BufferDesc& desc,const void* data=0);
 	/**
 	 *	@brief	デストラクタ
 	 *	@author	KORYUOH
 	 */
-	virtual ~Buffer();
+	virtual ~BufferDX();
 		/**
 	 *	@brief	ディスクプリタの取得
 	 *	@author	KORYUOH
@@ -79,8 +79,8 @@ private:
 	 *	@brief	コピー禁止
 	 *	@author	KORYUOH
 	 */
-	Buffer (const Buffer& other);
-	Buffer& operator = (const Buffer& other);
+	BufferDX (const BufferDX& other);
+	BufferDX& operator = (const BufferDX& other);
 
 
 private:

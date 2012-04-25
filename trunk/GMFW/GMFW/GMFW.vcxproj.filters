@@ -66,9 +66,6 @@
     <ClInclude Include="Render\IRender.h">
       <Filter>Render</Filter>
     </ClInclude>
-    <ClInclude Include="Render\OpenGL\OpenGL.h">
-      <Filter>Render\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="Render\Render.h">
       <Filter>Render</Filter>
     </ClInclude>
@@ -77,12 +74,6 @@
     </ClInclude>
     <ClInclude Include="Render\Buffer\IBuffer.h">
       <Filter>Render\Buffer</Filter>
-    </ClInclude>
-    <ClInclude Include="Render\DirectX\Buffer.h">
-      <Filter>Render\DirectX</Filter>
-    </ClInclude>
-    <ClInclude Include="Render\OpenGL\Buffer.h">
-      <Filter>Render\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="GLee\GLee.h">
       <Filter>Glee</Filter>
@@ -96,29 +87,17 @@
     <ClInclude Include="DXUT\Core\DXUTenum.h">
       <Filter>DXUT\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Render\DirectX\DirectX10.h">
-      <Filter>Render\DirectX</Filter>
-    </ClInclude>
     <ClInclude Include="Render\Texture\Texture_Desc.h">
       <Filter>Render\Texture</Filter>
     </ClInclude>
     <ClInclude Include="Render\Texture\ITexture.h">
       <Filter>Render\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="Render\DirectX\Texture.h">
-      <Filter>Render\DirectX</Filter>
-    </ClInclude>
-    <ClInclude Include="Render\OpenGL\Texture.h">
-      <Filter>Render\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="Render\Effect\InputSignatureDesc.h">
       <Filter>Render\Effect</Filter>
     </ClInclude>
     <ClInclude Include="Render\Effect\IEffect.h">
       <Filter>Render\Effect</Filter>
-    </ClInclude>
-    <ClInclude Include="Render\OpenGL\Effect.h">
-      <Filter>Render\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="Cg\include\Cg\cgGL.h">
       <Filter>Cg\Cg</Filter>
@@ -135,11 +114,32 @@
     <ClInclude Include="Cg\include\Cg\cgD3D9.h">
       <Filter>Cg\Cg</Filter>
     </ClInclude>
+    <ClInclude Include="Cg\include\GL\glut.h">
+      <Filter>Cg\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\DirectX\BufferDX.h">
+      <Filter>Render\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\DirectX\DirectX10.h">
+      <Filter>Render\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\DirectX\TextureDX.h">
+      <Filter>Render\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\OpenGL\BufferGL.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="Render\OpenGL\CgInc.h">
       <Filter>Render\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="Cg\include\GL\glut.h">
-      <Filter>Cg\GL</Filter>
+    <ClInclude Include="Render\OpenGL\EffectGL.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\OpenGL\OpenGL.h">
+      <Filter>Render\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\OpenGL\TextureGL.h">
+      <Filter>Render\OpenGL</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -171,19 +171,19 @@
     <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
       <Filter>DXUT\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Render\DirectX\Buffer.cpp">
+    <ClCompile Include="Render\DirectX\BufferDX.cpp">
       <Filter>Render\DirectX</Filter>
     </ClCompile>
-    <ClCompile Include="Render\OpenGL\Buffer.cpp">
-      <Filter>Render\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="Render\DirectX\Texture.cpp">
+    <ClCompile Include="Render\DirectX\TextureDX.cpp">
       <Filter>Render\DirectX</Filter>
     </ClCompile>
-    <ClCompile Include="Render\OpenGL\Texture.cpp">
+    <ClCompile Include="Render\OpenGL\BufferGL.cpp">
       <Filter>Render\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="Render\OpenGL\Effect.cpp">
+    <ClCompile Include="Render\OpenGL\EffectGL.cpp">
+      <Filter>Render\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\OpenGL\TextureGL.cpp">
       <Filter>Render\OpenGL</Filter>
     </ClCompile>
   </ItemGroup>

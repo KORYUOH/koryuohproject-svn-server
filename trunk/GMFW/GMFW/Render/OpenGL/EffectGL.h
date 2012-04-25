@@ -18,19 +18,19 @@
 #include	<GLee/GLee.h>
 #include	<Render/OpenGL/CgInc.h>
 /**===Class Definition=====================================*/
-class Effect:public IEffect{
+class EffectGL:public IEffect{
 public:
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	ファイル名
 	 *	@author	KORYUOH
 	 */
-	Effect ( const char* fileName);
+	EffectGL ( const char* fileName);
 	/**
 	 *	@brief	デストラクタ
 	 *	@author	KORYUOH
 	 */
-	virtual ~Effect();
+	virtual ~EffectGL();
 	/**
 	 *	@brief	テクニック開始
 	 *	@param[in]	テクニック名

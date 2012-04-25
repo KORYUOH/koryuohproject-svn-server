@@ -17,7 +17,7 @@
 #include	<GLee/GLee.h>
 #include	<Render/Buffer/IBuffer.h>
 /**===Class Definition=====================================*/
-class Buffer:public IBuffer{
+class BufferGL:public IBuffer{
 public:
 	/**
 	 *	@brief	コンストラクタ
@@ -25,12 +25,12 @@ public:
 	 *	@param[in]	データ
 	 *	@author	KORYUOH
 	 */
-	Buffer(const BufferDesc& desc,const void* data=0);
+	BufferGL(const BufferDesc& desc,const void* data=0);
 	/**
 	 *	@brief	デストラクタ
 	 *	@author	KORYUOH
 	 */
-	virtual ~Buffer();
+	virtual ~BufferGL();
 		/**
 	 *	@brief	ディスクプリタの取得
 	 *	@author	KORYUOH
@@ -61,8 +61,8 @@ private:
 	/**	バッファの使用法を交換*/
 	static GLenum toUsage(BufferUsage usage);
 	/**	コピー禁止*/
-	Buffer (const Buffer& other);
-	Buffer& operator = (const Buffer& other);
+	BufferGL (const BufferGL& other);
+	BufferGL& operator = (const BufferGL& other);
 
 private:
 	/**	ディスクプリタ*/

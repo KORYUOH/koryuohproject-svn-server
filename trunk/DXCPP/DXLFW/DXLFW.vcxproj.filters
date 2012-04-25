@@ -31,6 +31,12 @@
     <Filter Include="Singleton">
       <UniqueIdentifier>{5eff94ca-7bd7-4082-ae55-dd663086281b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Device">
+      <UniqueIdentifier>{d8646e12-aebc-4a2c-b71b-21f380c80bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CordingRule">
+      <UniqueIdentifier>{4778e5d2-b067-49c9-919e-542163a12bce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -114,8 +120,17 @@
     <ClInclude Include="Define\Orig_def.h">
       <Filter>Define</Filter>
     </ClInclude>
+    <ClInclude Include="Device\Device.h">
+      <Filter>Device</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="..\..\Cording Rule\Header_Rules.txt">
+      <Filter>CordingRule</Filter>
+    </None>
+    <None Include="..\..\Cording Rule\Source_Rules.txt">
+      <Filter>CordingRule</Filter>
+    </None>
   </ItemGroup>
 </Project>

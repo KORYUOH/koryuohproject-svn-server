@@ -17,7 +17,7 @@
 #include	<Render/Texture/ITexture.h>
 #include	<d3d10.h>
 /**===Class Definition=====================================*/
-class Texture:public ITexture{
+class TextureDX:public ITexture{
 public:
 	/**
 	 *	@brief	コンストラクタ
@@ -26,12 +26,12 @@ public:
 	 *	@param[in]	データ
 	 *	@author	KORYUOH
 	 */
-	Texture( ID3D10Device* device	,const TextureDesc& desc, const void* data);
+	TextureDX( ID3D10Device* device	,const TextureDesc& desc, const void* data);
 	/**
 	 *	@brief	デストラクタ
 	 *	@author	KORYUOH
 	 */
-	virtual ~Texture();
+	virtual ~TextureDX();
 	/**
 	 *	@brief	ディスクプリタ取得
 	 *	@author	KORYUOH
@@ -113,8 +113,8 @@ private:
 	 *	@brief	コピー禁止
 	 *	@author	KORYUOH
 	 */
-	Texture( const Texture& other);
-	Texture& operator = (const Texture& other );
+	TextureDX( const TextureDX& other);
+	TextureDX& operator = (const TextureDX& other );
 
 private:
 	/**	ディスクプリタ*/

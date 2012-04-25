@@ -42,7 +42,7 @@ void XmlWriter::writer(const std::string xmlName,boost::property_tree::ptree& pt
  *	@param[in]	<ˆø”>
  *	@attention	<’ˆÓ‘‚«>
  *	@note	<ƒƒ‚‘‚«>
- *	@author	<ìŽÒ–¼>
+ *	@author	KORYUOH
  *	@return	<–ß‚è’l>
  */
 /**========================================================*/

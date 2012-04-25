@@ -11,7 +11,7 @@
  *	@date	2012/02/20
  */
 /**===File Include=========================================*/
-#include	<Render/OpenGL/Buffer.h>
+#include	<Render/OpenGL/BufferGL.h>
 #include	<memory>
 /**===Class Implementation=================================*/
 
@@ -23,7 +23,7 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-Buffer::Buffer(const BufferDesc& desc, const void* data):
+BufferGL::BufferGL(const BufferDesc& desc, const void* data):
 m_desc(desc),
 	m_target(toTarget(desc._type)),
 	m_usage(toUsage(desc._usage)){
@@ -39,7 +39,7 @@ m_desc(desc),
  *	@author	KORYUOH
  */
 /**========================================================*/
-Buffer::~Buffer(){
+BufferGL::~BufferGL(){
 	//バッファ削除
 	glDeleteBuffersARB(1,&m_buffer);
 }
@@ -50,7 +50,7 @@ Buffer::~Buffer(){
  *	@return	ディスクプリタ
  */
 /**========================================================*/
-const BufferDesc& Buffer::desc()const{
+const BufferDesc& BufferGL::desc()const{
 	return m_desc;
 }
 /**========================================================*/
@@ -60,7 +60,7 @@ const BufferDesc& Buffer::desc()const{
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Buffer::setData(const void* data){
+void BufferGL::setData(const void* data){
 	glBindBufferARB(m_target,m_buffer);
 	void* buf = glMapBufferARB(m_target,GL_WRITE_ONLY_ARB);
 	std::memcpy(buf,data,m_desc._size);
@@ -74,7 +74,7 @@ void Buffer::setData(const void* data){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Buffer::getData(void* data)const {
+void BufferGL::getData(void* data)const {
 	glBindBufferARB(m_target,m_buffer);
 	void* buf = glMapBufferARB(m_target,GL_READ_ONLY_ARB);
 	std::memcpy(buf,data,m_desc._size);
@@ -88,7 +88,7 @@ void Buffer::getData(void* data)const {
  *	@return	バッファ
  */
 /**========================================================*/
-GLuint Buffer::buffer()const{
+GLuint BufferGL::buffer()const{
 	return m_buffer;
 }
 /**========================================================*/
@@ -99,7 +99,7 @@ GLuint Buffer::buffer()const{
  *	@return	バッファタイプ
  */
 /**========================================================*/
-GLenum	Buffer::toTarget(BufferType type){
+GLenum	BufferGL::toTarget(BufferType type){
 	static const GLenum targets[] = {
 		GL_ARRAY_BUFFER_ARB,		// BUFFER_TYPE_VERTEX		=0
 		GL_ELEMENT_ARRAY_BUFFER_ARB		// BUFFER_TYPE_INDEX		=1
@@ -115,7 +115,7 @@ GLenum	Buffer::toTarget(BufferType type){
  *	@return	使用法
  */
 /**========================================================*/
-GLenum Buffer::toUsage(BufferUsage usage){
+GLenum BufferGL::toUsage(BufferUsage usage){
 	static const GLenum usages[] = {
 		GL_STREAM_DRAW,		//BUFFER_USAGE_DEFAULT		 = 0
 		GL_STATIC_DRAW,		//BUFFER_USAGE_IMMUTABLE	 = 1

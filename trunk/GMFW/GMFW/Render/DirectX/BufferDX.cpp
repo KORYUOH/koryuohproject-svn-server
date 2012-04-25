@@ -11,7 +11,7 @@
 *	@date	2012/02/20
 */
 /**===File Include=========================================*/
-#include	<Render/DirectX/Buffer.h>
+#include	<Render/DirectX/BufferDX.h>
 #include	<memory>
 #include	<cassert>
 /**===Class Implementation=================================*/
@@ -23,7 +23,7 @@
 *	@author	KORYUOH
 */
 /**========================================================*/
-Buffer::Buffer(ID3D10Device* device,const BufferDesc& desc,const void* data):
+BufferDX::BufferDX(ID3D10Device* device,const BufferDesc& desc,const void* data):
 m_desc(desc),
 	m_Buffer(NULL)
 {
@@ -45,7 +45,7 @@ m_desc(desc),
  *	@author	KORYUOH
  */
 /**========================================================*/
-Buffer::~Buffer(){
+BufferDX::~BufferDX(){
 	m_Buffer->Release();
 }
 
@@ -56,7 +56,7 @@ Buffer::~Buffer(){
  *	@return	ディスクプリタ
  */
 /**========================================================*/
-const BufferDesc& Buffer::desc()const{
+const BufferDesc& BufferDX::desc()const{
 	return m_desc;
 }
 
@@ -67,7 +67,7 @@ const BufferDesc& Buffer::desc()const{
  *	@return	バッファ
  */
 /**========================================================*/
-ID3D10Buffer * Buffer::buffer() const{
+ID3D10Buffer * BufferDX::buffer() const{
 	return m_Buffer;
 }
 /**========================================================*/
@@ -77,7 +77,7 @@ ID3D10Buffer * Buffer::buffer() const{
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Buffer::setData(const void* data){
+void BufferDX::setData(const void* data){
 	assert(m_desc._usage ==BUFFER_USAGE_DYNAMIC);
 	void* mapData = 0;
 	m_Buffer->Map(D3D10_MAP_WRITE_DISCARD, 0 ,&mapData);
@@ -92,7 +92,7 @@ void Buffer::setData(const void* data){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Buffer::getData(void* data)const{
+void BufferDX::getData(void* data)const{
 	//デバイス取得
 	ID3D10Device*	device	= NULL;
 	m_Buffer->GetDevice(&device);
@@ -123,7 +123,7 @@ void Buffer::getData(void* data)const{
  *	@return	UINT バインドフラグ
  */
 /**========================================================*/
-UINT Buffer::bindFlag() const{
+UINT BufferDX::bindFlag() const{
 	static const UINT bindFlags[]={
 		D3D10_BIND_VERTEX_BUFFER,	//BUFFER_TYPE_VERTEX	= 0
 		D3D10_BIND_INDEX_BUFFER	//BUFFER_TYPE_INDEX	= 1
@@ -137,7 +137,7 @@ UINT Buffer::bindFlag() const{
  *	@return	UINT 使用法
  */
 /**========================================================*/
-D3D10_USAGE	Buffer::Usage()const{
+D3D10_USAGE	BufferDX::Usage()const{
 	static const D3D10_USAGE usages[] ={
 		D3D10_USAGE_DEFAULT,		//BUFFER_USAGE_DEFAULT		=0
 		D3D10_USAGE_IMMUTABLE,	//BUFFER_USAGE_IMMUTABLE	=1
@@ -152,7 +152,7 @@ D3D10_USAGE	Buffer::Usage()const{
  *	@return	CPUアクセスフラグ
  */
 /**========================================================*/
-UINT Buffer::cpuAccessFlag()const{
+UINT BufferDX::cpuAccessFlag()const{
 	static const UINT cpuAccessFlags[]={
 		0,				//BUFFER_USAGE_DEFAULT
 		0,				//BUFFER_USAGE_IMMUTABE

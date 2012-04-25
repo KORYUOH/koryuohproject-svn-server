@@ -11,8 +11,8 @@
  *	@date	2012/02/23
  */
 /**===File Include=========================================*/
-#include	<Render/OpenGL/Effect.h>
-#include	<Render/OpenGL/Texture.h>
+#include	<Render/OpenGL/EffectGL.h>
+#include	<Render/OpenGL/TextureGL.h>
 #include	<cassert>
 #include	<iostream>
 /**===Class Implementation=================================*/
@@ -24,7 +24,7 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-Effect::Effect(const char* fileName)
+EffectGL::EffectGL(const char* fileName)
 	:m_context(0)
 	,m_effect(0)
 	,m_tecnique(0)
@@ -49,7 +49,7 @@ Effect::Effect(const char* fileName)
  *	@author	KORYUOH
  */
 /**========================================================*/
-Effect::~Effect(){
+EffectGL::~EffectGL(){
 	//エフェクト削除
 	if( cgIsEffect( m_effect) == CG_TRUE)
 		cgDestroyEffect(m_effect);
@@ -67,7 +67,7 @@ Effect::~Effect(){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::technique(const char* techniqueName){
+void EffectGL::technique(const char* techniqueName){
 	//テクニック取得
 	m_tecnique = cgGetNamedTechnique(m_effect,techniqueName);
 }
@@ -78,7 +78,7 @@ void Effect::technique(const char* techniqueName){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::begin(int passNo){
+void EffectGL::begin(int passNo){
 	//最初のパス
 	m_pass = cgGetFirstPass( m_tecnique);
 	for(int n=0;n < passNo ;++n){
@@ -93,7 +93,7 @@ void Effect::begin(int passNo){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::end(){
+void EffectGL::end(){
 	//リセット
 	cgResetPassState( m_pass );
 	//無効化
@@ -107,7 +107,7 @@ void Effect::end(){
  *	@return	テクニック名
  */
 /**========================================================*/
-const char* Effect::getTechniqueName(int techniqueNo ){
+const char* EffectGL::getTechniqueName(int techniqueNo ){
 	CGtechnique t = cgGetFirstTechnique(m_effect);
 	for(int n =0;n < techniqueNo;++n){
 		t = cgGetNextTechnique( t );
@@ -121,7 +121,7 @@ const char* Effect::getTechniqueName(int techniqueNo ){
  *	@return	テクニック番号
  */
 /**========================================================*/
-int Effect::getNumTechnique(){
+int EffectGL::getNumTechnique(){
 	int numTechnique = 0;
 	for(CGpass p = cgGetFirstPass(m_tecnique);cgIsPass(p);p=cgGetNextPass(p)){
 		numTechnique++;
@@ -134,7 +134,7 @@ int Effect::getNumTechnique(){
  *	@author	KORYUOH
  */
 /**========================================================*/
-int Effect::getNumPass(){
+int EffectGL::getNumPass(){
 	int numPass =0;
 	for(CGpass p = cgGetFirstPass(m_tecnique); cgIsPass(p);p = cgGetNextPass(p)){
 		numPass++;
@@ -149,7 +149,7 @@ int Effect::getNumPass(){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setScalar(const char* name,float v){
+void EffectGL::setScalar(const char* name,float v){
 	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
 	cgSetParameter1f(param,v);
 }
@@ -164,7 +164,7 @@ void Effect::setScalar(const char* name,float v){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setVector(const char* name,float x,float y, float z,float w){
+void EffectGL::setVector(const char* name,float x,float y, float z,float w){
 	CGparameter param= cgGetNamedEffectParameter(m_effect,name);
 	float v[4] = {x,y,z,w};
 	cgSetParameterValuefc(param,cgGetParameterColumns(param),v);
@@ -177,7 +177,7 @@ void Effect::setVector(const char* name,float x,float y, float z,float w){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setMatrix(const char* name,float* matrix){
+void EffectGL::setMatrix(const char* name,float* matrix){
 	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
 	cgSetMatrixParameterfr(param,matrix);
 }
@@ -190,7 +190,7 @@ void Effect::setMatrix(const char* name,float* matrix){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setScalarArray(const char* name, float* array,unsigned int count){
+void EffectGL::setScalarArray(const char* name, float* array,unsigned int count){
 	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
 	cgSetParameterValuefc(param,count,array);
 }
@@ -203,7 +203,7 @@ void Effect::setScalarArray(const char* name, float* array,unsigned int count){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setVectorArray(const char* name, float* array,unsigned int count){
+void EffectGL::setVectorArray(const char* name, float* array,unsigned int count){
 	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
 	cgSetParameterValuefc(param,cgGetParameterColumns(param)+count,array);
 }
@@ -216,7 +216,7 @@ void Effect::setVectorArray(const char* name, float* array,unsigned int count){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setMatrixArray(const char* name,float* array,unsigned int count){
+void EffectGL::setMatrixArray(const char* name,float* array,unsigned int count){
 	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
 	cgSetParameterValuefr(param,cgGetParameterColumns(param)*cgGetParameterRows(param),array);
 }
@@ -228,9 +228,9 @@ void Effect::setMatrixArray(const char* name,float* array,unsigned int count){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Effect::setTexture(const char* name,ITexture* texture){
+void EffectGL::setTexture(const char* name,ITexture* texture){
 	CGparameter param = cgGetNamedEffectParameter(m_effect,name);
-	cgGLSetupSampler(param,static_cast<Texture*>(texture)->texture() );
+	cgGLSetupSampler(param,static_cast<TextureGL*>(texture)->texture() );
 }
 /**========================================================*/
 /**
@@ -241,7 +241,7 @@ void Effect::setTexture(const char* name,ITexture* texture){
  *	@return	シェーダー入力記述子
  */
 /**========================================================*/
-InputSignatureDesc Effect::inputSignature(const char* techniqueName,int passNo)const{
+InputSignatureDesc EffectGL::inputSignature(const char* techniqueName,int passNo)const{
 	(void)techniqueName;
 	(void)passNo;
 	//DirectX10との互換を持たせるダミー
