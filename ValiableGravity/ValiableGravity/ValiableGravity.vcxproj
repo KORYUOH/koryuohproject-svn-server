@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define\ClassDefine.h" />
+    <ClInclude Include="Device\IDevice.h" />
+    <ClInclude Include="Device\Impl\Mouse.h" />
     <ClInclude Include="GameApplication\GameApplication.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
@@ -93,6 +95,7 @@
     <ClInclude Include="Utility\Utility.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Device\Impl\Mouse.cpp" />
     <ClCompile Include="GameApplication\GameApplication.cpp" />
     <ClCompile Include="GameLogic\impl\GameRunner.cpp" />
     <ClCompile Include="main.cpp" />
