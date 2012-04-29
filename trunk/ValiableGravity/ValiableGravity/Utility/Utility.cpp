@@ -9,9 +9,27 @@
 *	@date	2012/04/23
 */
 /**===File Include=========================================*/
+#include	<Utility/Utility.h>
 #include	<Type/Vector3.h>
+#include	<Type/Rect.h>
 /**===Class Implementation=================================*/
 namespace KORYUOH{
+	/**========================================================*/
+	/**
+	*	@brief	判定
+	*	@param[in]	矩形情報1
+	*	@param[in]	矩形情報2
+	*	@author	KORYUOH
+	*	@return	当たり判定
+	*/
+	/**========================================================*/
+	namespace{
+		bool rectCheck(const Rect& t1,const Rect& t2){
+			if(t1.top()<t2.bottom()&&t1.left()<t2.right())
+					return true;
+			return false;
+		}
+	}
 	/**========================================================*/
 	/**
 	*	@brief	衝突判定
@@ -44,6 +62,20 @@ namespace KORYUOH{
 		float Z = v1.z - v2.z;
 		float R = r1+r2;
 		return (X*X+Y*Y+Z*Z<R*R)? true:false;
+	}
+	/**========================================================*/
+	/**
+	*	@brief	衝突判定
+	*	@param[in]	矩形情報1
+	*	@param[in]	矩形情報2
+	*	@author	KORYUOH
+	*	@return	当たり判定
+	*/
+	/**========================================================*/
+	const bool isCollision(const Rect& t1,const Rect& t2){
+		if(rectCheck(t1,t2)&&rectCheck(t2,t1))
+			return true;
+		return false;
 	}
 
 };

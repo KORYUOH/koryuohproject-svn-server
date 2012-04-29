@@ -47,7 +47,6 @@ namespace KORYUOH{
 
 
 
-
 };
 /**===End Class Definition=================================*/
 #endif
