@@ -1,5 +1,6 @@
-/*	DirectX (VistaˆÈ~‚Å‚È‚¢‚Æ‹N“®‚µ‚È‚¢)
+//	DirectX (VistaˆÈ~‚Å‚È‚¢‚Æ‹N“®‚µ‚È‚¢)
 #include	<Render/DirectX/DirectX10.h>
+/*
 //‰Šú‰»
 HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* device, const DXGI_SURFACE_DESC *surfaceDesc, void* userContext){
 	return S_OK;
