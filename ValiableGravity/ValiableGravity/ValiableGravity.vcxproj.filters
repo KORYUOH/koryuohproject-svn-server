@@ -29,6 +29,9 @@
     <Filter Include="Utility">
       <UniqueIdentifier>{7647d05e-a01f-427f-abca-63a11728dd43}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sprite">
+      <UniqueIdentifier>{476ddf94-97a5-422e-9122-0ad26f9be5c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -73,6 +76,9 @@
     <ClInclude Include="Type\Rect.h">
       <Filter>Type</Filter>
     </ClInclude>
+    <ClInclude Include="Sprite\Sprite3D.h">
+      <Filter>Sprite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">
@@ -99,6 +105,9 @@
     </ClCompile>
     <ClCompile Include="Utility\Utility.cpp">
       <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite\Sprite3D.cpp">
+      <Filter>Sprite</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
