@@ -32,6 +32,12 @@
     <Filter Include="Sprite">
       <UniqueIdentifier>{476ddf94-97a5-422e-9122-0ad26f9be5c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Device">
+      <UniqueIdentifier>{540934e9-ffde-4127-a1f7-0ed1f102a971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\Impl">
+      <UniqueIdentifier>{a992c3c2-3adc-40f0-bc2b-c040098d9d80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -79,6 +85,12 @@
     <ClInclude Include="Sprite\Sprite3D.h">
       <Filter>Sprite</Filter>
     </ClInclude>
+    <ClInclude Include="Device\IDevice.h">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\Impl\Mouse.h">
+      <Filter>Device\Impl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">
@@ -108,6 +120,9 @@
     </ClCompile>
     <ClCompile Include="Sprite\Sprite3D.cpp">
       <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\Impl\Mouse.cpp">
+      <Filter>Device\Impl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
