@@ -82,7 +82,9 @@
     <ClInclude Include="Define\ClassDefine.h" />
     <ClInclude Include="Device\IDevice.h" />
     <ClInclude Include="Device\Impl\Mouse.h" />
+    <ClInclude Include="Factory\Factory.h" />
     <ClInclude Include="GameApplication\GameApplication.h" />
+    <ClInclude Include="GameLogic\Impl\GameTest.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
     <ClInclude Include="Sprite\Sprite3D.h" />
@@ -98,6 +100,7 @@
     <ClCompile Include="Device\Impl\Mouse.cpp" />
     <ClCompile Include="GameApplication\GameApplication.cpp" />
     <ClCompile Include="GameLogic\impl\GameRunner.cpp" />
+    <ClCompile Include="GameLogic\Impl\GameTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sprite\Sprite3D.cpp" />
     <ClCompile Include="Type\Color4.cpp" />

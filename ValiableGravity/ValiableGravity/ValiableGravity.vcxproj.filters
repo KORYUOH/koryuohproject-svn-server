@@ -38,6 +38,9 @@
     <Filter Include="Device\Impl">
       <UniqueIdentifier>{a992c3c2-3adc-40f0-bc2b-c040098d9d80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Factory">
+      <UniqueIdentifier>{62133d3d-84c8-4cff-b1cb-4ef4e81e2bad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -91,6 +94,12 @@
     <ClInclude Include="Device\Impl\Mouse.h">
       <Filter>Device\Impl</Filter>
     </ClInclude>
+    <ClInclude Include="GameLogic\Impl\GameTest.h">
+      <Filter>GameLogic\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Factory.h">
+      <Filter>Factory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">
@@ -123,6 +132,9 @@
     </ClCompile>
     <ClCompile Include="Device\Impl\Mouse.cpp">
       <Filter>Device\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic\Impl\GameTest.cpp">
+      <Filter>GameLogic\impl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
  *
  *	@brief	3D描画クラス
  *
- *	@author	<作者名>
+ *	@author	KORYUOH
  *
  *	@date	2012/04/29
  */
@@ -19,48 +19,48 @@ public:
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	テクスチャID
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	Sprite3D(unsigned int textureID);
 	/**
 	 *	@brief	位置の設定
 	 *	@param[in]	位置
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void setPosition(const GSvector3& positon);
 	/**
 	 *	@brief	拡縮の設定
 	 *	@param[in]	拡大率
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void setScale(const GSvector2& scale);
 	/**
 	 *	@brief	回転の設定
 	 *	@param[in]	回転角
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void setRotate(float rotate);
 	/**
 	 *	@brief	矩形
 	 *	@param[in]	矩形
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void setRect(const GSrect& rect);
 	/**
 	 *	@brief	色の設定
 	 *	@param[in]	色情報
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void setColor(const GScolor& color);
 	/**
 	 *	@brief	描画範囲設定
 	 *	@param[in]	描画範囲
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void setImageRect(const GSrect& rect);
 	/**
 	 *	@brief	描画
-	 *	@author	<作者名>
+	 *	@author	KORYUOH
 	 */
 	void draw();
 
