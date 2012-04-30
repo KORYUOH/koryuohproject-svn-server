@@ -1,34 +1,47 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	IDevice.h
+ *	@file	GameTest.h
  *
- *	@brief	デバイスインターフェース
+ *	@brief	テスト用ゲームヘッダ
  *
  *	@author	KORYUOH
  *
  *	@date	2012/04/30
  */
 /**===Include Guard========================================*/
-#ifndef	_IDEVICE_H_
-#define	_IDEVICE_H_
+#ifndef	_GAMETEST_H_
+#define	_GAMETEST_H_
 /**===File Include=========================================*/
+#include	<GameLogic/Interface/IGameSystem.h>
+#include	<Device/Impl/Mouse.h>
+#include	<memory>
 /**===Class Definition=====================================*/
-class IDevice{
+class GameTest:public IGameSystem{
 public:
 	/**
-	 *	@brief	更新
+	 *	@brief	初期化
 	 *	@author	KORYUOH
 	 */
-	virtual void update() = 0;
+	virtual void initialize();
 	/**
-	 *	@brief	自身のインスタンスの取得
+	 *	@brief	ゲームメイン
 	 *	@author	KORYUOH
-	 *	@return	自身
 	 */
-	virtual IDevice& getInstance() = 0; 
+	virtual void update(float f);
+	/**
+	 *	@brief	描画
+	 *	@author	KORYUOH
+	 */
+	virtual void draw();
+	/**
+	 *	@brief	終了
+	 *	@author	KORYUOH
+	 */
+	virtual void finish();
+
 private:
 	/**	メンバー変数*/
-
+	GLMouse mMouse;
 };
 /**===End Class Definition=================================*/
 #endif

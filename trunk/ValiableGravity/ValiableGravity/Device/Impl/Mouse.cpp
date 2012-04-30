@@ -13,7 +13,23 @@
 #include	<Device/Impl/Mouse.h>
 #include	<cassert>
 /**===Class Implementation=================================*/
-
+/**========================================================*/
+/**
+ *	@brief	静的メンバ変数の初期化
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+int GLMouse::mButton = 0;
+int GLMouse::mState = 0;
+int GLMouse::mX = 0;
+int GLMouse::mY = 0;
+/**========================================================*/
+/**
+ *	@brief	コンストラクタ
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+GLMouse::GLMouse(){};
 /**========================================================*/
 /**
  *	@brief	更新
@@ -81,8 +97,8 @@ bool GLMouse::MouseCollision(GSrect& rect,int button,int state)const{
 	if(MouseClick(button,state)){
 		if(rectCheck(rect,GSrect(mX,mY)))
 			return true;
-		return false;
 	}
+	return false;
 }
 /**========================================================*/
 /**
@@ -117,7 +133,16 @@ void GLMouse::toDrag(int button,int state){
 		assert(false);
 	}
 }
-
+/**========================================================*/
+/**
+ *	@brief	マウス位置の取得
+ *	@author	KORYUOH
+ *	@return	マウス座標
+ */
+/**========================================================*/
+GSvector2 GLMouse::getMousePosition()const{
+	return GSvector2(mX,mY);
+}
 
 
 
