@@ -75,8 +75,11 @@
     <ClInclude Include="Koryuoh\StringSplitter\StringSplitter.h" />
     <ClInclude Include="Koryuoh\Matrix\Matrix2\Matrix2.h" />
     <ClInclude Include="Koryuoh\Matrix\Matrix3\Matrix3.h" />
+    <ClInclude Include="OpenGL\Mouse\GL_Mouse.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Cording Rule\Header_Rules.txt" />
+    <None Include="..\..\Cording Rule\Source_Rules.txt" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

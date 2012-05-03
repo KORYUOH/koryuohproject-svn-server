@@ -32,6 +32,18 @@
     <Filter Include="Class\Matrix\Matrix3">
       <UniqueIdentifier>{6971d5af-bf50-4a97-8aff-ded372bf64fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{7d40eb54-4d1e-4408-9581-8b722fa5b071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL\Mouse">
+      <UniqueIdentifier>{091f3fdf-2f8f-4228-b67e-6dd06960ebcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL\InterFace">
+      <UniqueIdentifier>{557d56c5-2f40-4233-be01-8af346befda2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cording Rules">
+      <UniqueIdentifier>{e486d06a-9a52-442f-8d54-e4bd23b57aa1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Koryuoh\Dice\dice.cpp">
@@ -75,8 +87,17 @@
     <ClInclude Include="Koryuoh\Matrix\Matrix3\Matrix3.h">
       <Filter>Class\Matrix\Matrix3</Filter>
     </ClInclude>
+    <ClInclude Include="OpenGL\Mouse\GL_Mouse.h">
+      <Filter>OpenGL\Mouse</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="..\..\Cording Rule\Header_Rules.txt">
+      <Filter>Cording Rules</Filter>
+    </None>
+    <None Include="..\..\Cording Rule\Source_Rules.txt">
+      <Filter>Cording Rules</Filter>
+    </None>
   </ItemGroup>
 </Project>
