@@ -4,7 +4,7 @@
  *
  *	@brief	ゲーム実行ヘッダーファイル
  *
- *	@author	<作者名>
+ *	@author	KORYUOH
  *
  *	@date	2012/04/22
  */
@@ -31,9 +31,17 @@ public:
 	virtual ~GameRunner(){};
 	/**
 	 *	@brief	後ろ追加
+	 *	@param[in]	GameSystem_ptr_t;
 	 *	@author	KORYUOH
 	 */
 	void push_back(GameSystem_ptr_t& ptr);
+	/**
+	 *	@brief	押し込む
+	 *	@param[in]	GameSystem_ptr_t;
+	 *	@param[in]	position;
+	 *	@author	KORYUOH
+	 */
+	void insert(GameSystem_ptr_t& ptr,unsigned int num);
 
 
 private:

@@ -68,5 +68,24 @@ void GameRunner::finish(){
 void GameRunner::push_back(GameSystem_ptr_t& ptr){
 	m_system.push_back(ptr);
 }
+/**========================================================*/
+/**
+ *	@brief	場所追加
+ *	@param[in]	ゲームロジックptr
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void GameRunner::insert(GameSystem_ptr_t& ptr,unsigned int pos){
+	if(m_system.size()<pos)
+		m_system.push_back(ptr);
 
+	if(pos == 0)
+		m_system.push_front(ptr);
+
+	auto x = m_system.begin();
+	for(unsigned int i=0;i<pos;i++)
+		x++;
+
+	m_system.insert(x,ptr);
+}
 /**===End Of File==========================================*/
