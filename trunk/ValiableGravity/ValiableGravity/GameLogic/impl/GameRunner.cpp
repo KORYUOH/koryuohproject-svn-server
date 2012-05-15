@@ -76,12 +76,14 @@ void GameRunner::push_back(GameSystem_ptr_t& ptr){
  */
 /**========================================================*/
 void GameRunner::insert(GameSystem_ptr_t& ptr,unsigned int pos){
-	if(m_system.size()<pos)
+	if(m_system.size()<pos){
 		m_system.push_back(ptr);
-
-	if(pos == 0)
+		return ;
+	}
+	if(pos == 0){
 		m_system.push_front(ptr);
-
+		return;
+	}
 	auto x = m_system.begin();
 	for(unsigned int i=0;i<pos;i++)
 		x++;

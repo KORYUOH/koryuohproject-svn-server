@@ -44,6 +44,12 @@
     <Filter Include="Cording Rules">
       <UniqueIdentifier>{e486d06a-9a52-442f-8d54-e4bd23b57aa1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{d0f8ef53-cc4c-41a0-bcc8-bfdb812097c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\ClassCheck">
+      <UniqueIdentifier>{e6ee26ec-3502-4067-b13c-96de65769d4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Koryuoh\Dice\dice.cpp">
@@ -63,6 +69,9 @@
     </ClCompile>
     <ClCompile Include="Koryuoh\Matrix\Matrix2\Matrix2.cpp">
       <Filter>Class\Matrix\Matrix2</Filter>
+    </ClCompile>
+    <ClCompile Include="Koryuoh\Utility\ClassCheck\Utility.cpp">
+      <Filter>Utility\ClassCheck</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="OpenGL\Mouse\GL_Mouse.h">
       <Filter>OpenGL\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Koryuoh\Utility\ClassCheck\Utility.h">
+      <Filter>Utility\ClassCheck</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

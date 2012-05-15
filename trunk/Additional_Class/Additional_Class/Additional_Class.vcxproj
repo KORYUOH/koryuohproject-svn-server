@@ -66,6 +66,7 @@
     <ClCompile Include="Koryuoh\Dice\dice.cpp" />
     <ClCompile Include="Koryuoh\StringSplitter\StringSplit.cpp" />
     <ClCompile Include="Koryuoh\Matrix\Matrix2\Matrix2.cpp" />
+    <ClCompile Include="Koryuoh\Utility\ClassCheck\Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Koryuoh\Ball\Ball.h" />
@@ -76,6 +77,7 @@
     <ClInclude Include="Koryuoh\Matrix\Matrix2\Matrix2.h" />
     <ClInclude Include="Koryuoh\Matrix\Matrix3\Matrix3.h" />
     <ClInclude Include="OpenGL\Mouse\GL_Mouse.h" />
+    <ClInclude Include="Koryuoh\Utility\ClassCheck\Utility.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Cording Rule\Header_Rules.txt" />
