@@ -3,5 +3,14 @@ C:\Documents and Settings\（ユーザー名）\Local Settings\Application Data\Microso
 Vista/7
 C:\Users\（ユーザー名）\AppData\Local\Microsoft\MSBuild\v4.0\Microsoft.Cpp.Win32.user.props
 
-<IncludePath>$(IncludePath)</IncludePath>
-<LibraryPath>&(LibraryPath)</LibraryPath>
+<?xml version="1.0" encoding="utf-8"?> 
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<IncludePath>
+			$(IncludePath)
+		</IncludePath>
+		<LibraryPath>
+			$(LibraryPath)
+		</LibraryPath>
+	</PropertyGroup>
+</Project>

@@ -4,7 +4,7 @@
  *
  *	@brief	ゲームメインクラス実装
  *
- *	@author	<作者名>
+ *	@author	KORYUOH
  *
  *	@date	2012/05/01
  */
