@@ -136,13 +136,7 @@ public:
 		}
 		return *this;
 	}
-
-<<<<<<< .mine
 	virtual ~Matrix2(){}
-
-=======
-	}
->>>>>>> .r75
 };
 /**===End Class Definition=================================*/
 #endif // _MATRIX2_H_
