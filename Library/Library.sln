@@ -10,12 +10,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSVLoader", "CSVLoader\CSVL
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{6E0788A2-83FE-4E99-A0C6-820F7742D632}"
 	ProjectSection(ProjectDependencies) = postProject
-		{0C03D618-E79C-4EEA-BEF1-55C4D153617D} = {0C03D618-E79C-4EEA-BEF1-55C4D153617D}
 		{C69D823C-4DD7-47B3-BB36-74727623E18F} = {C69D823C-4DD7-47B3-BB36-74727623E18F}
 		{ADDC48D1-5500-41EA-8768-5E8785978ABA} = {ADDC48D1-5500-41EA-8768-5E8785978ABA}
 	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tools", "tools\tools.vcxproj", "{0C03D618-E79C-4EEA-BEF1-55C4D153617D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +32,6 @@ Global
 		{6E0788A2-83FE-4E99-A0C6-820F7742D632}.Debug|Win32.Build.0 = Debug|Win32
 		{6E0788A2-83FE-4E99-A0C6-820F7742D632}.Release|Win32.ActiveCfg = Release|Win32
 		{6E0788A2-83FE-4E99-A0C6-820F7742D632}.Release|Win32.Build.0 = Release|Win32
-		{0C03D618-E79C-4EEA-BEF1-55C4D153617D}.Debug|Win32.ActiveCfg = Debug|Win32
-		{0C03D618-E79C-4EEA-BEF1-55C4D153617D}.Debug|Win32.Build.0 = Debug|Win32
-		{0C03D618-E79C-4EEA-BEF1-55C4D153617D}.Release|Win32.ActiveCfg = Release|Win32
-		{0C03D618-E79C-4EEA-BEF1-55C4D153617D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
