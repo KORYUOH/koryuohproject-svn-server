@@ -39,7 +39,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Documents and Settings\虚龍王\My Documents\その他\Subversion\Library\Debug;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Documents and Settings\虚龍王\My Documents\その他\Subversion\Library\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
