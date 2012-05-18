@@ -29,7 +29,7 @@ void main(){
 	cout << "std::for_each" << endl;
 	std::for_each(box.begin(),box.end(),[&](BOX& p){p.print();});
 	cout <<"Tool::for_each"<< endl<<endl;
-	Tools::for_each(box,mem_fun_ref(&BOX::print));
+	for_each(box,mem_fun_ref(&BOX::print));
 	//for_each(box,mem_fun_ref(&BOX::print));
 
 }
