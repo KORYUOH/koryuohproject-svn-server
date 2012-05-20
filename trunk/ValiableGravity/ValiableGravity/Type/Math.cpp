@@ -11,7 +11,7 @@
 #include	"Math.h"
 #include	<cmath>		// namespace std•t‚ÌV‚µ‚¢‚b{{ƒwƒbƒ_‚Å‚·I
 
-const float Math::PI = 3.1415926535897932f;	// ‰~ü—¦
+const float Math::PI = 3.141592653589793238f;	// ‰~ü—¦
 
 float Math::sqrt( float x )
 {
