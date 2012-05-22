@@ -78,6 +78,7 @@
     <ClInclude Include="Koryuoh\Matrix\Matrix3\Matrix3.h" />
     <ClInclude Include="OpenGL\Mouse\GL_Mouse.h" />
     <ClInclude Include="Koryuoh\Utility\ClassCheck\Utility.h" />
+    <ClInclude Include="Split\Split.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Cording Rule\Header_Rules.txt" />

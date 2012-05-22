@@ -38,6 +38,7 @@ void XmlReader::read(std::string name){
  //   read_xml(filename, pt);
 	//	tree.get<Type> return Type
 	//	tree.get<>()	return exception xml_parser_error
+	////foreach defined BOOST_FOREACH
  //   foreach (const ptree::value_type& child_, pt.get_child("bookList")) {
  //       const ptree& child = child_.second;
  //       const std::string title     = child.get<std::string>("<xmlattr>.title");
