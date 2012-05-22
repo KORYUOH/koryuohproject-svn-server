@@ -50,6 +50,9 @@
     <Filter Include="Utility\ClassCheck">
       <UniqueIdentifier>{e6ee26ec-3502-4067-b13c-96de65769d4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\Split">
+      <UniqueIdentifier>{eeb983f8-6ea2-4600-9eed-b624834c919c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Koryuoh\Dice\dice.cpp">
@@ -101,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="Koryuoh\Utility\ClassCheck\Utility.h">
       <Filter>Utility\ClassCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="Split\Split.h">
+      <Filter>Class\Split</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
