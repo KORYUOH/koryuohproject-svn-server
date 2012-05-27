@@ -16,11 +16,73 @@
 #include	<Device/IDevice.h>
 /**===Class Definition=====================================*/
 class GLMouse:public IDevice{
-public
+public:
 	/**
 	 *	@brief	コンストラクタ
 	 *	@author	KORYUOH
-	 */:
+	 */
+	struct Position{
+		int x_,y_;
+		
+		Position()
+			:x_(0)
+			,y_(0)
+		{}
+		Position(int x,int y)
+			:x_(x)
+			,y_(y)
+		{}
+		Position operator - (){
+			return Position(-this->x_,-this->y_);
+		}
+		/**=== Operator Overload ===*/
+		Position& operator += (const Position& pos1){
+			this->x_ += pos1.x_;
+			this->y_ += pos1.y_;
+			return *this;
+		}
+		Position& operator -= (const Position& pos1){
+			this->x_ -= pos1.x_;
+			this->y_ -= pos1.y_;
+			return *this;
+		}
+		Position& operator /= (const Position& pos1){
+			if(pos1.x_ != 0)
+			this->x_ /= pos1.x_;
+			if(pos1.y_ != 0)
+			this->y_ /= pos1.y_;
+			return *this;
+		}
+		Position& operator *= (const Position& pos1){
+			this->x_ *= pos1.x_;
+			this->y_ *= pos1.y_;
+			return *this;
+		}
+		Position operator + (const Position& pos){
+			Position tmp = *this;
+			tmp += pos;
+			return tmp;
+		}
+		Position operator - (const Position& pos){
+			Position tmp = *this;
+			tmp -= pos;
+			return tmp;
+		}
+		Position operator / (const Position& pos){
+			Position tmp = *this;
+			tmp /= pos;
+			return tmp;
+		}
+		Position operator * (const Position& pos){
+			Position tmp = *this;
+			tmp *= pos;
+			return tmp;
+		}
+	};
+	/**
+	 *	@brief	コンストラクタ
+	 *	@author	KORYUOH
+	 */
 	GLMouse();
 	/**
 	 *	@brief	デストラクタ
@@ -60,7 +122,7 @@ public
 	 *	@author	KORYUOH
 	 *	@return	マウスの位置
 	 */
-	GSvector2 getMousePosition()const;
+	Position getMousePosition()const;
 private:
 	/**
 	 *	@brief	コールバック関数
@@ -88,6 +150,23 @@ private:
 	 *	@author	KORYUOH
 	 */
 	static void drug(int x,int y);
+	/**
+	 *	@brief	ドラッグ時コールバック関数
+	 *	@param[in]	x座標
+	 *	@param[in]	y座標
+	 *	@author	KORYUOH
+	 */
+	static void positionUpdate(int x,int y);
+
+	/**
+	 *	@brief	MotionCall
+	 *	@param[in]	ボタン
+	 *	@param[in]	状態
+	 *	@author	KORYUOH
+	 */
+	void motionCall(int button,int state);
+
+
 public:
 	/**
 	 *	@brief	ドラッグ状態
@@ -102,14 +181,37 @@ public:
 	 *	@author	KORYUOH
 	 *	@return	X座標
 	 */
-	int getMousePositionX()const{return mX;};
+	int getMousePositionX()const{return mPos.x_;};
 	/**
 	 *	@brief	Y座標取得
 	 *	@author	KORYUOH
 	 *	@return	Y座標
 	 */
-	int getMousePositionY()const{return mY;};
-
+	int getMousePositionY()const{return mPos.y_;};
+	/**
+	 *	@brief	X座標取得
+	 *	@author	KORYUOH
+	 *	@return	X座標
+	 */
+	int getDragMousePositionX()const{return mDrag.x_;};
+	/**
+	 *	@brief	Y座標取得
+	 *	@author	KORYUOH
+	 *	@return	Y座標
+	 */
+	int getDragMousePositionY()const{return mDrag.y_;};
+	/**
+	 *	@brief	ドラッグ線の長さ取得
+	 *	@author	KORYUOH
+	 *	@return	長さ
+	 */
+	float length();
+	/**
+	 *	@brief	ドラッグ線の角度取得
+	 *	@author	KORYUOH
+	 *	@return	角度
+	 */
+	float angle();
 private:
 	/**	メンバー変数*/
 	/**
@@ -123,7 +225,8 @@ private:
   GLUT_UP：「ボタン」が「離れた」
  */
 	//座標
-	static int	mX,mY;
+	static Position mPos;
+	static Position mDrag;
 	//ボタンの種類
 	static int mButton;
 	//状態

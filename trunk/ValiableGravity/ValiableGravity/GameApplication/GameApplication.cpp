@@ -214,12 +214,8 @@ void GameApplication::idle(void){
 
 		//Escが押された？
 		if(GetAsyncKeyState(VK_ESCAPE)!=0){
-			if(mInstance->isFullScreenMode())
-				glutLeaveGameMode();
 			
-			else
-				//終了処理呼び出し
-				mInstance->destroy();
+			mInstance->finishCheck();
 
 			std::exit(0);
 		}
@@ -456,7 +452,22 @@ void GameApplication::setFullScreenMode(bool mode){
 bool GameApplication::isFullScreenMode()const{
 	return mIsFullScreenMode;
 }
+/**========================================================*/
+/**
+ *	@brief	終了処理動作チェック
+ *	@author	KORYUOH
+ *	@return	FullScreenMode
+ */
+/**========================================================*/
 
+void GameApplication::finishCheck(){
+	if(mInstance->isFullScreenMode())
+		glutLeaveGameMode();
+
+	else
+		//終了処理呼び出し
+		mInstance->destroy();
+}
 
 
 

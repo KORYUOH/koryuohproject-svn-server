@@ -11,6 +11,7 @@
 /**===File Include=========================================*/
 #include	<Define/ClassDefine.h>
 #include	<Device/Impl/Mouse.h>
+#include	<cmath>
 #include	<cassert>
 /**===Class Implementation=================================*/
 /**========================================================*/
@@ -19,10 +20,10 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-int GLMouse::mButton = 0;
+int GLMouse::mButton = -1;
 int GLMouse::mState = 0;
-int GLMouse::mX = 0;
-int GLMouse::mY = 0;
+GLMouse::Position GLMouse::mPos	=	GLMouse::Position();
+GLMouse::Position GLMouse::mDrag	=	GLMouse::Position();
 /**========================================================*/
 /**
  *	@brief	コンストラクタ
@@ -37,6 +38,7 @@ GLMouse::GLMouse(){};
  */
 /**========================================================*/
 void GLMouse::update(void){
+	glutPassiveMotionFunc(positionUpdate);
 	glutMouseFunc(callBack);	
 }
 /**========================================================*/
@@ -50,8 +52,8 @@ void GLMouse::update(void){
 void GLMouse::callBack(int button,int state, int x, int y){
 	mButton = button;
 	mState = state;
-	mX = x;
-	mY = y;
+	mPos.x_ = x;
+	mPos.y_ = y;
 }
 /**========================================================*/
 /**
@@ -95,7 +97,7 @@ namespace{
 /**========================================================*/
 bool GLMouse::MouseCollision(GSrect& rect,int button,int state)const{
 	if(MouseClick(button,state)){
-		if(rectCheck(rect,GSrect(mX,mY)))
+		if(rectCheck(rect,GSrect(mPos.x_,mPos.y_)))
 			return true;
 	}
 	return false;
@@ -109,8 +111,8 @@ bool GLMouse::MouseCollision(GSrect& rect,int button,int state)const{
  */
 /**========================================================*/
 void GLMouse::drug(int x,int y){
-	mX = x;
-	mY = y;
+	mDrag.x_ = x;
+	mDrag.y_ = y;
 }
 /**========================================================*/
 /**
@@ -126,8 +128,7 @@ void GLMouse::toDrag(int button,int state){
 		glutPassiveMotionFunc(drug);
 		break;
 	case MOUSE_STATE_DOWN:
-		if(MouseClick(button,state))
-			glutMotionFunc(drug);
+		motionCall(button,state);
 		break;
 	default:
 		assert(false);
@@ -140,10 +141,47 @@ void GLMouse::toDrag(int button,int state){
  *	@return	マウス座標
  */
 /**========================================================*/
-GSvector2 GLMouse::getMousePosition()const{
-	return GSvector2(mX,mY);
+GLMouse::Position GLMouse::getMousePosition()const{
+	return mPos;
 }
-
+/**========================================================*/
+/**
+ *	@brief	マウス位置の更新コールバック
+ *	@author	KORYUOH
+ */
+/**========================================================*/
+void GLMouse::positionUpdate(int x,int y){
+	mPos.x_ = x;
+	mPos.y_ = y;
+}
+/**========================================================*/
+/**
+ *	@brief	長さの取得
+ *	@author	KORYUOH
+ *	@return	長さ
+ */
+/**========================================================*/
+float GLMouse::length(){
+	Position tmp = mPos - mDrag;
+	return std::sqrt((float)(tmp.x_*tmp.x_+tmp.y_*tmp.y_));
+}
+/**========================================================*/
+/**
+ *	@brief	長さの取得
+ *	@author	KORYUOH
+ *	@return	長さ
+ */
+/**========================================================*/
+float GLMouse::angle(){
+	Position tmp = mPos - mDrag;
+	return std::atan2f(tmp.y_,tmp.x_);
+}
+void GLMouse::motionCall(int button,int state){
+	if(MouseClick(button,state))
+		glutMotionFunc(drug);
+	else
+		glutMotionFunc(NULL);
+}
 
 
 /**===End Of File==========================================*/
