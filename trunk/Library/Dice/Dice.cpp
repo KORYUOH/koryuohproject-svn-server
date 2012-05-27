@@ -12,6 +12,7 @@
 #include	"Dice.h"
 #include	<cstdlib>
 #include	<ctime>
+#include	<iostream>
 /**===Class Implementation=================================*/
 
 /**========================================================*/
@@ -70,8 +71,31 @@ bool Dice::coin(){
 /**========================================================*/
 int Dice::XdY_S(int x,int y,int s){
 	int sum=0;
-	for(int i=0;i<y;i++)
-		sum+=getRandom(1,x);
+	for(int i=0;i<x;i++){
+		sum+=getRandom(1,y);
+	}
+	return sum+s;
+}
+
+/**========================================================*/
+/**
+ *	@brief	nDnダイスを振る
+ *	@param[in]	面
+ *	@param[in]	個数
+ *	@param[in]	最小追加値
+ *	@param[in]	数値表示フラグ
+ *	@return	出目の合計
+ */
+/**========================================================*/
+int Dice::XdY_S(int x,int y,int s,bool dispFlag){
+	if( !dispFlag )
+		return XdY_S(x,y,s);
+	int sum=0;
+	for(int i=0;i<x;i++){
+		int temp = getRandom(1,y);
+		std::cout <<"Roll "<< i+1 << " " << temp<<std::endl;
+		sum+=temp;
+	}
 	return sum+s;
 }
 /**========================================================*/
