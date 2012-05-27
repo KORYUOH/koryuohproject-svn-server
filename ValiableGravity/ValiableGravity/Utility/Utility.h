@@ -14,6 +14,7 @@
 /**===File Include=========================================*/
 #include	<Type/Vector3.h>
 #include	<Type/Rect.h>
+#include	<algorithm>
 /**===Class Definition=====================================*/
 namespace KORYUOH{
 	/**
@@ -43,7 +44,10 @@ namespace KORYUOH{
 	 */
 	const bool isCollision(const Rect& t1,const Rect& t2);
 
-
+	template<typename Container,typename Function>
+	Function for_each(Container& container,Function function){
+		return std::for_each(container.begin(),container.end(),function);
+	}
 
 
 

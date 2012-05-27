@@ -12,6 +12,7 @@
 #include	<GameLogic/impl/GameTest.h>
 #include	<Define/ClassDefine.h>
 #include	<Device/Impl/Mouse.h>
+#include	<Type/Math.h>
 /**===Class Implementation=================================*/
 
 /**========================================================*/
@@ -31,7 +32,7 @@ void GameTest::initialize(void){
 /**========================================================*/
 void GameTest::update(float f){
 	mMouse.update();
-	mMouse.toDrag(MOUSE_LEFT,MOUSE_STATE_UP);
+	mMouse.toDrag(MOUSE_LEFT,MOUSE_STATE_DOWN);
 }
 /**========================================================*/
 /**
@@ -40,7 +41,14 @@ void GameTest::update(float f){
  */
 /**========================================================*/
 void GameTest::draw(){
-	gsDrawText("%d,%d",mMouse.getMousePositionX(),mMouse.getMousePositionY());
+	gsDrawText("MPos[%3d,%3d] DPos[%3d,%3d] length[%.2f] angle[%.2f]"
+		,mMouse.getMousePositionX()
+		,mMouse.getMousePositionY()
+		,mMouse.getDragMousePositionX()
+		,mMouse.getDragMousePositionY()
+		,mMouse.length(),
+		Math::toDegree(mMouse.angle())
+		);
 }
 /**========================================================*/
 /**

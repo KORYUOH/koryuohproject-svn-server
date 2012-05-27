@@ -182,6 +182,13 @@ private:
 	void setSwapInterval(int interval);
 
 	/**
+	 *	@brief	終了時挙動チェック
+	 *	@author	KORYUOH
+	 */
+	void finishCheck();
+
+
+	/**
 	 *	@brief	アクティベート
 	 *	@param[in]	状態
 	 *	@author	KORYUOH
