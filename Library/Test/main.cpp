@@ -1,35 +1,42 @@
-#include	"../Lib/KORYUOH_LIB.h"
+//#include	"../Lib/KORYUOH_LIB.h"
+#include	"../Lib/Dice.h"
+#ifdef _DEBUG
+#pragma comment(lib,"../Lib/Dice_d.lib")
+#else
+#pragma comment(lib,"../Lib/Dice_r.lib")
+#endif
 #include	<iostream>
 #include	<vector>
 #include	<string>
+#include	<cstdlib>
 #include	<algorithm>
-#include	<functional>
-class BOX{
-private:
-	std::string mName;
+class Tools{
 public:
-	BOX(const std::string& name):mName(name){
-	}
-	void print()const{
-		std::cout<<mName<<std::endl;
+	template<typename Vec,typename Func>
+	static Func for_each(Vec& v,Func fn){
+		return std::for_each(v.begin(),v.end(),fn);
 	}
 };
-//template <typename T_container, typename T_function>
-//T_function for_each(T_container& rcontainer, T_function function) {
-//    return for_each(rcontainer.begin(), rcontainer.end(), function);
-//}
+
 void main(){
 	using namespace std;
-	vector<BOX> box;
-	box.push_back(BOX("承太郎"));
-	box.push_back(BOX("花京院"));
-	box.push_back(BOX("ジョセフ"));
-	box.push_back(BOX("アヴドゥル"));
-	box.push_back(BOX("ポルナレフ"));
-	cout << "std::for_each" << endl;
-	std::for_each(box.begin(),box.end(),[&](BOX& p){p.print();});
-	cout <<"Tool::for_each"<< endl<<endl;
-	for_each(box,mem_fun_ref(&BOX::print));
-	//for_each(box,mem_fun_ref(&BOX::print));
+	string tmp;
+	Dice d;
+	cin >> tmp;
+	cin.sync();
+	string xd = tmp.substr(0,tmp.find("d"));
+	string dy = tmp.substr(xd.size()+1);
+	string ps = tmp.substr(tmp.find("+"));
+	int x = atoi(xd.c_str());
+	int y = atoi(dy.c_str());
+	int s = atoi(ps.c_str());;
+	cout << xd<<endl;
+	cout << dy << endl;
+	cout << ps <<endl;
+	cout << x << ","<<y<<","<<s<<endl;
+	cout << d.XdY_S(x,y,s);
+
+	system("pause");
+
 
 }

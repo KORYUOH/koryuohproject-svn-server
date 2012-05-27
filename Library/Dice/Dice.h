@@ -40,6 +40,16 @@ public:
 	 *	@param[in]	面
 	 *	@param[in]	個数
 	 *	@param[in]	最小追加値
+	 *	@param[in]	表示フラグ
+	 *	@return	合計値
+	 */
+	int XdY_S(int x,int y,int s,bool dispFlag);
+	/**
+	 *	@brief	nDnサイコロを振る
+	 *	@param[in]	面
+	 *	@param[in]	個数
+	 *	@param[in]	最小追加値
+	 *	@param[in]	表示フラグ
 	 *	@return	合計値
 	 */
 	int XdY_S(int x,int y,int s=0);
