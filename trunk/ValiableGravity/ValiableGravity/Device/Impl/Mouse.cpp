@@ -73,6 +73,7 @@ bool GLMouse::MouseClick(int button,int state)const{
  *	@brief	矩形内チェック
  *	@param[in]	比較範囲
  *	@param[in]	マウス位置
+ *	@attention 無記名名前空間内
  *	@author	KORYUOH
  *	@return	入っていれば真
  */

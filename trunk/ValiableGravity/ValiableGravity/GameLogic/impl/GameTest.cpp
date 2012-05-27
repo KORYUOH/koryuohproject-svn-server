@@ -33,6 +33,8 @@ void GameTest::initialize(void){
 void GameTest::update(float f){
 	mMouse.update();
 	mMouse.toDrag(MOUSE_LEFT,MOUSE_STATE_DOWN);
+
+	
 }
 /**========================================================*/
 /**
