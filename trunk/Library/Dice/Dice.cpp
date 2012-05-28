@@ -11,8 +11,9 @@
 /**===File Include=========================================*/
 #include	"Dice.h"
 #include	<cstdlib>
+#include	<string>
 #include	<ctime>
-#include	<iostream>
+#include	<vector>
 /**===Class Implementation=================================*/
 
 /**========================================================*/
@@ -90,10 +91,13 @@ int Dice::XdY_S(int x,int y,int s){
 int Dice::XdY_S(int x,int y,int s,bool dispFlag){
 	if( !dispFlag )
 		return XdY_S(x,y,s);
+	mStrBox.clear();
 	int sum=0;
 	for(int i=0;i<x;i++){
 		int temp = getRandom(1,y);
-		std::cout <<"Roll "<< i+1 << " " << temp<<std::endl;
+		std::string str = "Roll ";
+		str += i+1 +":"+ temp;
+		mStrBox.push_back(str);
 		sum+=temp;
 	}
 	return sum+s;
@@ -107,7 +111,15 @@ int Dice::XdY_S(int x,int y,int s,bool dispFlag){
 unsigned int Dice::getSeed()const{
 	return mSeed;
 }
-
+/**========================================================*/
+/**
+ *	@brief	Ží‚ÌŽæ“¾
+ *	@return	Ží
+ */
+/**========================================================*/
+Dice::strBox Dice::getStrBox()const{
+	return mStrBox;
+}
 
 
 

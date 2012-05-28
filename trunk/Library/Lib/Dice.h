@@ -12,10 +12,15 @@
 #ifndef	_DICE_H_
 #define	_DICE_H_
 /**===File Include=========================================*/
-
+#include	<string>
+#include	<vector>
 /**===Class Definition=====================================*/
 class Dice{
 public:
+	/**
+	 *	@brief	タイプ宣言
+	 */
+	typedef std::vector<std::string> strBox;
 	/**
 	 *	@brief	コンストラクタ
 	 */
@@ -43,7 +48,16 @@ public:
 	 *	@param[in]	表示フラグ
 	 *	@return	合計値
 	 */
-	int XdY_S(int x,int y,int s=0,bool dispFlag = false);
+	int XdY_S(int x,int y,int s,bool dispFlag);
+	/**
+	 *	@brief	nDnサイコロを振る
+	 *	@param[in]	面
+	 *	@param[in]	個数
+	 *	@param[in]	最小追加値
+	 *	@param[in]	表示フラグ
+	 *	@return	合計値
+	 */
+	int XdY_S(int x,int y,int s=0);
 	/**
 	 *	@brief	ランダムな値を取得
 	 *	@param[in]	最小値
@@ -56,9 +70,15 @@ public:
 	 *	@return	種
 	 */
 	unsigned int getSeed()const;
+	/**
+	 *	@brief	種の取得
+	 *	@return	種
+	 */
+	strBox getStrBox()const;
 private:
 	/**	メンバー変数*/
 	unsigned int mSeed;
+	strBox mStrBox;
 };
 /**===End Class Definition=================================*/
 #endif

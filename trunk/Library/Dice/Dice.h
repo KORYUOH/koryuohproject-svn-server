@@ -12,10 +12,15 @@
 #ifndef	_DICE_H_
 #define	_DICE_H_
 /**===File Include=========================================*/
-
+#include	<string>
+#include	<vector>
 /**===Class Definition=====================================*/
 class Dice{
 public:
+	/**
+	 *	@brief	タイプ宣言
+	 */
+	typedef std::vector<std::string> strBox;
 	/**
 	 *	@brief	コンストラクタ
 	 */
@@ -65,9 +70,15 @@ public:
 	 *	@return	種
 	 */
 	unsigned int getSeed()const;
+	/**
+	 *	@brief	種の取得
+	 *	@return	種
+	 */
+	strBox getStrBox()const;
 private:
 	/**	メンバー変数*/
 	unsigned int mSeed;
+	strBox mStrBox;
 };
 /**===End Class Definition=================================*/
 #endif

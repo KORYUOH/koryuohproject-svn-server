@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{79144205-3196-4ac9-ba6a-645c2f2150f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Socket">
+      <UniqueIdentifier>{842692ff-2a6b-4d01-842b-149a2e465000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\InetSocketAddress">
+      <UniqueIdentifier>{bc7e7d10-f50d-4a25-a36a-3ac2b959c05f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\InetAddress">
+      <UniqueIdentifier>{95ecd87c-df8d-407d-bf8f-df479551130e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Socket\Socket">
+      <UniqueIdentifier>{d6014c38-4f6e-44a4-912d-fc97cb3ddc84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Socket\ServerSocket">
+      <UniqueIdentifier>{8b33a1b9-69e2-42cc-8d6e-32f29486142f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\SocketException">
+      <UniqueIdentifier>{9895c1b5-c8ae-4e74-8671-238e9dd026ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\SocketImpl">
+      <UniqueIdentifier>{a73519cd-5879-46d3-8268-30e477711588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameApplication">
+      <UniqueIdentifier>{fd87f238-b71e-48ba-b646-e47120e14345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{7821f4a4-19b4-4265-af42-0c5e1bacdf65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread\CriticalSection">
+      <UniqueIdentifier>{6163176b-ad02-4a7d-a426-35d5aaad2d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device">
+      <UniqueIdentifier>{0bc303dd-927b-4986-b8b6-b7d155c0f849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Device\impl">
+      <UniqueIdentifier>{9e2b7886-2e20-4606-8ef3-1159c32373ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Define">
+      <UniqueIdentifier>{73c0b0e2-106a-4f8a-8a8d-c167e97dd250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{4f9572eb-de72-4555-a569-95d52292bf83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type">
+      <UniqueIdentifier>{a958f454-a78f-4017-9b4a-4739e9dbb511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite">
+      <UniqueIdentifier>{4d152ed9-80db-4593-82cb-eedf7162e91e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic">
+      <UniqueIdentifier>{149f90f6-e862-4bdf-a4d9-cc780bf01c0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Interface">
+      <UniqueIdentifier>{c1806d1f-da33-4663-a67f-d602d4bf2cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic\Impl">
+      <UniqueIdentifier>{7edbc132-f592-4e84-af2e-6bf02eca2731}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Network\InetAddress\InetAddress.cpp">
+      <Filter>Network\InetAddress</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\InetSocketAddress\InetSocketAddress.cpp">
+      <Filter>Network\InetSocketAddress</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Socket\ServerSocket\ServerSocket.cpp">
+      <Filter>Network\Socket\ServerSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Socket\Socket\Socket.cpp">
+      <Filter>Network\Socket\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\SocketImpl\SocketImpl.cpp">
+      <Filter>Network\SocketImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApplication\GameApplication.cpp">
+      <Filter>GameApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\CriticalSection\CriticalSection.cpp">
+      <Filter>Thread\CriticalSection</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\Thread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\Impl\Mouse.cpp">
+      <Filter>Device\impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Utility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Color4.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Math.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Matrix4.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector2.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector3.cpp">
+      <Filter>Type</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite\Sprite3D.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic\impl\GameMain.cpp">
+      <Filter>GameLogic\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic\impl\GameRunner.cpp">
+      <Filter>GameLogic\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Network\InetAddress\InetAddress.h">
+      <Filter>Network\InetAddress</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\InetSocketAddress\InetSocketAddress.h">
+      <Filter>Network\InetSocketAddress</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Socket\ServerSocket\ServerSocket.h">
+      <Filter>Network\Socket\ServerSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Socket\Socket\Socket.h">
+      <Filter>Network\Socket\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\SocketException\SocketException.h">
+      <Filter>Network\SocketException</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\SocketImpl\SocketImpl.h">
+      <Filter>Network\SocketImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApplication\GameApplication.h">
+      <Filter>GameApplication</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\CriticalSection\CriticalSection.h">
+      <Filter>Thread\CriticalSection</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IRunnable.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\Thread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\Impl\Mouse.h">
+      <Filter>Device\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\IDevice.h">
+      <Filter>Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\ClassDefine.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Color4.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Math.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Matrix4.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Rect.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector2.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector3.h">
+      <Filter>Type</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite\Sprite3D.h">
+      <Filter>Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\Interface\IGameSystem.h">
+      <Filter>GameLogic\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\impl\GameMain.h">
+      <Filter>GameLogic\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic\impl\GameRunner.h">
+      <Filter>GameLogic\Impl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
