@@ -1,72 +1,68 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	GameRunner.cpp
+ *	@file	CriticalSection.cpp
  *
- *	@brief	ゲーム実行基礎クラス
+ *	@brief	クリティカルセクションクラス
  *
  *	@author	KORYUOH
  *
- *	@date	2012/04/22
+ *	@date	2012/05/22
  */
 /**===File Include=========================================*/
-#include	<GameLogic/impl/GameRunner.h>
-#include	<algorithm>
+#include	<Thread/CriticalSection/CriticalSection.h>
 /**===Class Implementation=================================*/
+
 /**========================================================*/
 /**
  *	@brief	コンストラクタ
- *	@param[in]	ゲームシステムポインタ
- *	@note	IGameSystemを継承したもの
- *	@author	KORYUOH
  */
 /**========================================================*/
-GameRunner::GameRunner(int argc,char* argv[]):GameApplication(argc,argv){
+CriticalSection::CriticalSection(){
+	::InitializeCriticalSection(&mCriticalSection);
 }
 /**========================================================*/
 /**
- *	@brief	初期化
- *	@author	KORYUOH
+ *	@brief	デストラクタ
  */
 /**========================================================*/
-void GameRunner::initialize(){
-	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->initialize();});
+CriticalSection::~CriticalSection(){
+	::DeleteCriticalSection(&mCriticalSection);
 }
 /**========================================================*/
 /**
- *	@brief	メイン処理
- *	@author	KORYUOH
+ *	@brief	クリティカルセクション開始
  */
 /**========================================================*/
-void GameRunner::update(float f){
-	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->update(f);});
+void CriticalSection::enter(){
+	::EnterCriticalSection(&mCriticalSection);
 }
 /**========================================================*/
 /**
- *	@brief	描画処理
- *	@author	KORYUOH
+ *	@brief	クリティカルセクション終了
  */
 /**========================================================*/
-void GameRunner::draw(){
-	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->draw();});
+void CriticalSection::leave(){
+	::LeaveCriticalSection(&mCriticalSection);
+}
+
+/**========================================================*/
+/**
+ *	@brief	ロックコンストラクタ
+ *	@param[in]	クリティカルセクション
+ */
+/**========================================================*/
+CriticalSection::Lock::Lock(CriticalSection& cs)
+	:mCriticalSection(cs){
+		mCriticalSection.enter();
 }
 /**========================================================*/
 /**
- *	@brief	終了処理
- *	@author	KORYUOH
+ *	@brief	デストラクタ
  */
 /**========================================================*/
-void GameRunner::finish(){
-	std::for_each(m_system.begin(),m_system.end(),[&](GameSystem_ptr_t &p){p->finish();});
+CriticalSection::Lock::~Lock(){
+	mCriticalSection.leave();
 }
-/**========================================================*/
-/**
- *	@brief	後ろ追加
- *	@param[in]	ゲームロジックptr
- *	@author	KORYUOH
- */
-/**========================================================*/
-void GameRunner::push_back(GameSystem_ptr_t& ptr){
-	m_system.push_back(ptr);
-}
+
 
 /**===End Of File==========================================*/

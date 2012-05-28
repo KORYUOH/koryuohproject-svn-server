@@ -1,0 +1,238 @@
+/**===File Commentary=======================================*/
+/**
+ *	@file	GL_Mouse.h
+ *
+ *	@brief	OpenGLマウスクラス
+ *
+ *	@author	KORYUOH
+ *
+ *	@date	2012/04/29
+ */
+/**===Include Guard========================================*/
+#ifndef	_GL_MOUSE_H_
+#define	_GL_MOUSE_H_
+/**===File Include=========================================*/
+#include	<gslib.h>
+#include	<Device/IDevice.h>
+/**===Class Definition=====================================*/
+class GLMouse:public IDevice{
+public:
+	/**
+	 *	@brief	コンストラクタ
+	 *	@author	KORYUOH
+	 */
+	struct Position{
+		int x_,y_;
+		
+		Position()
+			:x_(0)
+			,y_(0)
+		{}
+		Position(int x,int y)
+			:x_(x)
+			,y_(y)
+		{}
+		Position operator - (){
+			return Position(-this->x_,-this->y_);
+		}
+		/**=== Operator Overload ===*/
+		Position& operator += (const Position& pos1){
+			this->x_ += pos1.x_;
+			this->y_ += pos1.y_;
+			return *this;
+		}
+		Position& operator -= (const Position& pos1){
+			this->x_ -= pos1.x_;
+			this->y_ -= pos1.y_;
+			return *this;
+		}
+		Position& operator /= (const Position& pos1){
+			if(pos1.x_ != 0)
+			this->x_ /= pos1.x_;
+			if(pos1.y_ != 0)
+			this->y_ /= pos1.y_;
+			return *this;
+		}
+		Position& operator *= (const Position& pos1){
+			this->x_ *= pos1.x_;
+			this->y_ *= pos1.y_;
+			return *this;
+		}
+		Position operator + (const Position& pos){
+			Position tmp = *this;
+			tmp += pos;
+			return tmp;
+		}
+		Position operator - (const Position& pos){
+			Position tmp = *this;
+			tmp -= pos;
+			return tmp;
+		}
+		Position operator / (const Position& pos){
+			Position tmp = *this;
+			tmp /= pos;
+			return tmp;
+		}
+		Position operator * (const Position& pos){
+			Position tmp = *this;
+			tmp *= pos;
+			return tmp;
+		}
+	};
+	/**
+	 *	@brief	コンストラクタ
+	 *	@author	KORYUOH
+	 */
+	GLMouse();
+	/**
+	 *	@brief	デストラクタ
+	 *	@author	KORYUOH
+	 */
+	virtual ~GLMouse(){};
+	/**
+	 *	@brief	更新処理
+	 *	@author	KORYUOH
+	 */
+	virtual void update(void);
+	/**
+	 *	test
+	 */
+	virtual GLMouse& getInstance(){
+		return *this;
+	}
+	/**
+	 *	@brief	クリックされているか？
+	 *	@param[in]	ボタン
+	 *	@param[in]	状態
+	 *	@author	KORYUOH
+	 *	@return	buttonがstateならば真
+	 */
+	bool MouseClick(int button,int state)const;
+	/**
+	 *	@brief	衝突判定
+	 *	@param[in]	判定範囲
+	 *	@param[in]	ボタン
+	 *	@param[in]	状態
+	 *	@author	KORYUOH
+	 *	@return	判定内でボタンが判定状態なら真
+	 */
+	bool MouseCollision(GSrect& rect,int button,int state)const;
+	/**
+	 *	@brief	マウス位置の取得
+	 *	@author	KORYUOH
+	 *	@return	マウスの位置
+	 */
+	Position getMousePosition()const;
+private:
+	/**
+	 *	@brief	コールバック関数
+	 *	@param[in]	ボタン
+	 *	@param[in]	状態
+	 *	@param[in]	x座標
+	 *	@param[in]	y座標
+	 *	@note	
+	 *	[ button ]
+	 *	GLUT_LEFT_BUTTON：「左ボタン」
+	 *	GLUT_MIDDLE_BUTTON：「中央ボタン」
+	 *	GLUT_RIGHT_BUTTON：「右ボタン」
+	 *	
+	 *	[ state ]
+	 *	GLUT_DOWN：「ボタン」が「押された」
+	 *	GLUT_UP：「ボタン」が「離れた」
+	 *	
+	 *	@author	KORYUOH
+	 */
+	static void callBack(int button,int state,int x,int y);
+	/**
+	 *	@brief	ドラッグ時コールバック関数
+	 *	@param[in]	x座標
+	 *	@param[in]	y座標
+	 *	@author	KORYUOH
+	 */
+	static void drug(int x,int y);
+	/**
+	 *	@brief	ドラッグ時コールバック関数
+	 *	@param[in]	x座標
+	 *	@param[in]	y座標
+	 *	@author	KORYUOH
+	 */
+	static void positionUpdate(int x,int y);
+
+	/**
+	 *	@brief	MotionCall
+	 *	@param[in]	ボタン
+	 *	@param[in]	状態
+	 *	@author	KORYUOH
+	 */
+	void motionCall(int button,int state);
+
+
+public:
+	/**
+	 *	@brief	ドラッグ状態
+	 *	@param[in]	ボタン
+	 *	@param[in]	状態
+	 *	@author	KORYUOH
+	 *	@return	状態
+	 */
+	void toDrag(int button,int state);
+	/**
+	 *	@brief	X座標取得
+	 *	@author	KORYUOH
+	 *	@return	X座標
+	 */
+	int getMousePositionX()const{return mPos.x_;};
+	/**
+	 *	@brief	Y座標取得
+	 *	@author	KORYUOH
+	 *	@return	Y座標
+	 */
+	int getMousePositionY()const{return mPos.y_;};
+	/**
+	 *	@brief	X座標取得
+	 *	@author	KORYUOH
+	 *	@return	X座標
+	 */
+	int getDragMousePositionX()const{return mDrag.x_;};
+	/**
+	 *	@brief	Y座標取得
+	 *	@author	KORYUOH
+	 *	@return	Y座標
+	 */
+	int getDragMousePositionY()const{return mDrag.y_;};
+	/**
+	 *	@brief	ドラッグ線の長さ取得
+	 *	@author	KORYUOH
+	 *	@return	長さ
+	 */
+	float length();
+	/**
+	 *	@brief	ドラッグ線の角度取得
+	 *	@author	KORYUOH
+	 *	@return	角度
+	 */
+	float angle();
+private:
+	/**	メンバー変数*/
+	/**
+	[ button ]
+  GLUT_LEFT_BUTTON：「左ボタン」
+  GLUT_MIDDLE_BUTTON：「中央ボタン」
+  GLUT_RIGHT_BUTTON：「右ボタン」
+ 
+	[ state ]
+  GLUT_DOWN：「ボタン」が「押された」
+  GLUT_UP：「ボタン」が「離れた」
+ */
+	//座標
+	static Position mPos;
+	static Position mDrag;
+	//ボタンの種類
+	static int mButton;
+	//状態
+	static int mState;
+
+};
+/**===End Class Definition=================================*/
+#endif
+/**===End Of File==========================================*/

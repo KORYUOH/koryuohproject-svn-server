@@ -1,42 +1,21 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	GameRunner.h
+ *	@file	GameMain.h
  *
- *	@brief	ゲーム実行ヘッダーファイル
+ *	@brief	ゲームメインクラス
  *
  *	@author	<作者名>
  *
- *	@date	2012/04/22
+ *	@date	2012/05/01
  */
 /**===Include Guard========================================*/
-#ifndef	_GAMERUNNER_H_
-#define	_GAMERUNNER_H_
+#ifndef	_GAMEMAIN_H_
+#define	_GAMEMAIN_H_
 /**===File Include=========================================*/
-#include	<list>
 #include	<GameLogic/Interface/IGameSystem.h>
-#include	<GameApplication/GameApplication.h>
-#include	<Define/ClassDefine.h>
 /**===Class Definition=====================================*/
-class GameRunner:public IGameSystem,public GameApplication{
+class GameMain:public IGameSystem{
 public:
-	/**
-	 *	@brief	コンストラクタ
-	 *	@author	KORYUOH
-	 */
-	GameRunner(int argc,char* argv[]);
-	/**
-	 *	@brief	仮想デストラクタ
-	 *	@author	KORYUOH
-	 */
-	virtual ~GameRunner(){};
-	/**
-	 *	@brief	後ろ追加
-	 *	@author	KORYUOH
-	 */
-	void push_back(GameSystem_ptr_t& ptr);
-
-
-private:
 	/**
 	 *	@brief	初期化
 	 *	@author	KORYUOH
@@ -58,9 +37,15 @@ private:
 	 */
 	virtual void finish();
 
+
 private:
 	/**	メンバー変数*/
-	std::list<GameSystem_ptr_t> m_system;
+	enum GameImg{
+		TITLE=0,
+		BALL,
+		BAR,
+		RESULT_BG,
+	};
 };
 /**===End Class Definition=================================*/
 #endif

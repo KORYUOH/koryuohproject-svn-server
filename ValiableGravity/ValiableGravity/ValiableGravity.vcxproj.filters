@@ -103,6 +103,9 @@
     <ClInclude Include="GameLogic\impl\GameMain.h">
       <Filter>GameLogic\impl</Filter>
     </ClInclude>
+    <ClInclude Include="Define\Enums.h">
+      <Filter>Define</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLogic\impl\GameRunner.cpp">

@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define\ClassDefine.h" />
+    <ClInclude Include="Define\Enums.h" />
     <ClInclude Include="Device\IDevice.h" />
     <ClInclude Include="Device\Impl\Mouse.h" />
     <ClInclude Include="Factory\Factory.h" />
