@@ -36,7 +36,7 @@ public:
 	 *	@brief	ソケット受入れ
 	 *	@return	ソケットポインタ
 	 */
-	std::auto_ptr<Socket> accept();
+	std::unique_ptr<Socket> accept();
 	/**
 	 *	@brief	バインド
 	 *	@param[in]	ポート番号
@@ -65,7 +65,7 @@ private:
 	ServerSocket& operator = (const ServerSocket& other);
 private:
 	/**	ソケット実装クラス*/
-	std::auto_ptr<SocketImpl> mImpl;
+	std::unique_ptr<SocketImpl> mImpl;
 };
 /**===End Class Definition=================================*/
 #endif

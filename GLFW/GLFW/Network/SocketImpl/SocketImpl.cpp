@@ -128,7 +128,7 @@ int SocketImpl::receive(void *buffer,int size){
  */
 /**========================================================*/
 SocketImpl*	SocketImpl::accept(){
-	std::auto_ptr<SocketImpl> cliant(new SocketImpl());
+	std::unique_ptr<SocketImpl> cliant(new SocketImpl());
 
 	// conect accept
 	SOCKADDR_IN saddr;

@@ -142,7 +142,7 @@ private:
 
 private:
 	/**	ソケット実装クラス　*/
-	std::auto_ptr<SocketImpl> mImpl;
+	std::unique_ptr<SocketImpl> mImpl;
 };
 /**===End Class Definition=================================*/
 #endif
