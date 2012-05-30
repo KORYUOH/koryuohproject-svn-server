@@ -43,8 +43,8 @@ ServerSocket::~ServerSocket(){
  *	@return	ソケット
  */
 /**========================================================*/
-std::auto_ptr<Socket> ServerSocket::accept(){
-	return std::auto_ptr<Socket>(new Socket( mImpl->accept() ) );
+std::unique_ptr<Socket> ServerSocket::accept(){
+	return std::unique_ptr<Socket>(new Socket( mImpl->accept() ) );
 }
 /**========================================================*/
 /**
