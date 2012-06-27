@@ -11,6 +11,13 @@
 /**===File Include=========================================*/
 #include	<Mouse/Mouce.h>
 /**===Class Implementation=================================*/
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
+const int Mouse::MOUSE_BUTTON_LEFT = MOUSE_INPUT_LEFT;
+const int Mouse::MOUSE_BUTTON_RIGHT = MOUSE_INPUT_RIGHT;
+const int Mouse::MOUSE_BUTTON_MIDDLE = MOUSE_INPUT_MIDDLE;
+//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+
 /**========================================================*/
 /**
  *	@brief	マウス表示設定
@@ -114,3 +121,4 @@ bool Mouse::onClickM(Circle accept){
 		return accept.Collision(Circle((float)m_pos_x,(float)m_pos_y,1.0f) );
 	return false;
 }
+
