@@ -42,38 +42,43 @@ bool Mouse::CheckRect(Rect accept){
 }
 /**========================================================*/
 /**
- *	@brief	マウスの位置を更新する
+ *	@brief	マウスの情報を更新する
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Mouse::MousePositionUpdate(){
+void Mouse::MouseUpdate(){
 	GetMousePoint(&m_pos_x,&m_pos_y);
+	m_beforeInput = m_input;
+	m_input = GetMouseInput();
 }
 //<!-----作り直し-----!>
 bool Mouse::onClick(){
-	if((GetMouseInput() & MOUSE_INPUT_LEFT) != 0){
-		GetMousePoint(&m_pos_x,&m_pos_y);
+	if((m_input & MOUSE_INPUT_LEFT) != 0){
+//		GetMousePoint(&m_pos_x,&m_pos_y);
 		return true;
 	}
 
 	return false;
 }
+
 bool Mouse::onClickR(){
-	if((GetMouseInput() & MOUSE_INPUT_RIGHT) != 0){
-		GetMousePoint(&m_pos_x,&m_pos_y);
+	if((m_input & MOUSE_INPUT_RIGHT) != 0){
+//		GetMousePoint(&m_pos_x,&m_pos_y);
 		return true;
 	}
 
 	return false;
 }
+
 bool Mouse::onClickM(){
-	if((GetMouseInput() & MOUSE_INPUT_MIDDLE) != 0){
-		GetMousePoint(&m_pos_x,&m_pos_y);
+	if((m_input & MOUSE_INPUT_MIDDLE) != 0){
+//		GetMousePoint(&m_pos_x,&m_pos_y);
 		return true;
 	}
 
 	return false;
 }
+
 bool Mouse::onClick(Rect accept){
 	if(onClick())
 		return CheckRect(accept);
@@ -97,6 +102,7 @@ bool Mouse::onClickR(Circle accept){
 		return accept.Collision(Circle((float)m_pos_x,(float)m_pos_y,1.0f) );
 	return false;
 }
+
 bool Mouse::onClickM(Rect accept){
 	if(onClickM())
 		return CheckRect(accept);
