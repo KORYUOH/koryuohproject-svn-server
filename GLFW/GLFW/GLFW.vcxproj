@@ -81,6 +81,8 @@
     <ClCompile Include="GameLogic\impl\GameMain.cpp" />
     <ClCompile Include="GameLogic\impl\GameRunner.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Network\DatagranSocketImpl\DatagramSocketImpl.cpp" />
+    <ClCompile Include="Network\DatagranSocket\DatagramSocket.cpp" />
     <ClCompile Include="Network\InetAddress\InetAddress.cpp" />
     <ClCompile Include="Network\InetSocketAddress\InetSocketAddress.cpp" />
     <ClCompile Include="Network\SocketImpl\SocketImpl.cpp" />
@@ -104,6 +106,8 @@
     <ClInclude Include="GameLogic\impl\GameMain.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
+    <ClInclude Include="Network\DatagranSocketImpl\DatagramSocketImpl.h" />
+    <ClInclude Include="Network\DatagranSocket\DatagramSocket.h" />
     <ClInclude Include="Network\InetAddress\InetAddress.h" />
     <ClInclude Include="Network\InetSocketAddress\InetSocketAddress.h" />
     <ClInclude Include="Network\SocketException\SocketException.h" />

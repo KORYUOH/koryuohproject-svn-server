@@ -4,9 +4,9 @@
  *
  *	@brief	—ñ‹“Œ^W‡ƒwƒbƒ_
  *
- *	@author	<ìÒ–¼>
+ *	@author	KORYUOH
  *
- *	@date	yyyy/mm/dd
+ *	@date	2012/06/12
  */
 /**===Include Guard========================================*/
 #ifndef	_ENUMS_H_

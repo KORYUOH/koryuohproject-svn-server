@@ -65,6 +65,12 @@
     <Filter Include="GameLogic\Impl">
       <UniqueIdentifier>{7edbc132-f592-4e84-af2e-6bf02eca2731}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Network\DatagramSocket">
+      <UniqueIdentifier>{14f3094e-89f3-42a5-b9b3-3504b2537ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\DatagramSocketImpl">
+      <UniqueIdentifier>{79bc5bd6-fd83-40ea-84aa-d60970a0ba5d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\InetAddress\InetAddress.cpp">
@@ -122,6 +128,12 @@
       <Filter>GameLogic\Impl</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Network\DatagranSocket\DatagramSocket.cpp">
+      <Filter>Network\DatagramSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\DatagranSocketImpl\DatagramSocketImpl.cpp">
+      <Filter>Network\DatagramSocketImpl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Network\InetAddress\InetAddress.h">
@@ -195,6 +207,12 @@
     </ClInclude>
     <ClInclude Include="GameLogic\impl\GameRunner.h">
       <Filter>GameLogic\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\DatagranSocket\DatagramSocket.h">
+      <Filter>Network\DatagramSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\DatagranSocketImpl\DatagramSocketImpl.h">
+      <Filter>Network\DatagramSocketImpl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
