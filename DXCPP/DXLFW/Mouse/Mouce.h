@@ -31,6 +31,13 @@ private:
 	int m_pos_x,m_pos_y;
 	int m_input,m_beforeInput;
 public:
+	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
+
+	const static int MOUSE_BUTTON_LEFT;
+	const static int MOUSE_BUTTON_RIGHT;
+	const static int MOUSE_BUTTON_MIDDLE;
+
+	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 	/**
 	 *	@brief	実体を得る
 	 *	@author	KORYUOH
@@ -129,6 +136,14 @@ public:
 	int getMousePositionY()const{
 		return m_pos_y;
 	}
+
+	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
+	bool getMouseStateTrigger();
+
+
+
+	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
 private:
 	/**
 	 *	@brief	矩形チェック
