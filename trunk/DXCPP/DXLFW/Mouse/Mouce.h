@@ -17,7 +17,7 @@
 /**===Class Definition=====================================*/
 class Mouse{
 private:
-	Mouse():m_Dispflag(false),m_pos_x(0),m_pos_y(0){};
+	Mouse():m_Dispflag(false),m_pos_x(0),m_pos_y(0),m_input(0),m_beforeInput(0){};
 	Mouse(const Mouse& it);
 	Mouse&  operator = (const Mouse& are);
 public:
@@ -29,6 +29,7 @@ public:
 private:
 	bool m_Dispflag;
 	int m_pos_x,m_pos_y;
+	int m_input,m_beforeInput;
 public:
 	/**
 	 *	@brief	実体を得る
@@ -48,10 +49,10 @@ public:
 	 */
 	void setMouseCursolDispFlag(bool flag);
 	/**
-	 *	@brief	マウスの位置の更新
+	 *	@brief	マウスの情報の更新
 	 *	@author	KORYUOH
 	 */
-	void MousePositionUpdate();
+	void MouseUpdate();
 	/**
 	 *	@brief	クリックされたかのチェック
 	 *	@author	KORYUOH
