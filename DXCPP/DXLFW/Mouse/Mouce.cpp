@@ -122,3 +122,15 @@ bool Mouse::onClickM(Circle accept){
 	return false;
 }
 
+//!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
+bool Mouse::getMouseStateTrigger(int mouseButton){
+	if(m_input &mouseButton == 0)
+			if(m_beforeInput != m_input)
+				return true;
+		return false;
+}
+
+
+
+
+//!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/

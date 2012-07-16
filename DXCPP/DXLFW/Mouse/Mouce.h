@@ -31,13 +31,13 @@ private:
 	int m_pos_x,m_pos_y;
 	int m_input,m_beforeInput;
 public:
-	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
+	//!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
 
 	const static int MOUSE_BUTTON_LEFT;
 	const static int MOUSE_BUTTON_RIGHT;
 	const static int MOUSE_BUTTON_MIDDLE;
 
-	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+	//!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 	/**
 	 *	@brief	ŽÀ‘Ì‚ð“¾‚é
 	 *	@author	KORYUOH
@@ -137,12 +137,12 @@ public:
 		return m_pos_y;
 	}
 
-	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
-	bool getMouseStateTrigger();
+	//!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
+	bool getMouseStateTrigger(int mouseButton);
 
 
 
-	//_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+	//!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
 private:
 	/**
