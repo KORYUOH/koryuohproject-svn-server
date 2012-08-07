@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Close\Close.cpp" />
     <ClCompile Include="Container\ImgContainer.cpp" />
     <ClCompile Include="DxLibFlameWork\DxLibFW.cpp" />
     <ClCompile Include="Fps\Fps.cpp" />
@@ -89,6 +90,7 @@
     <ClCompile Include="XML\XmlWriter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Close\Close.h" />
     <ClInclude Include="Container\ImgContainer.h" />
     <ClInclude Include="Define\Define.h" />
     <ClInclude Include="Define\DefineManager.h" />

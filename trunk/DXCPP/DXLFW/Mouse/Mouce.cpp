@@ -124,7 +124,7 @@ bool Mouse::onClickM(Circle accept){
 
 //!++_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/test code
 bool Mouse::getMouseStateTrigger(int mouseButton){
-	if(m_input &mouseButton == 0)
+	if((m_input &mouseButton) == 0)
 			if(m_beforeInput != m_input)
 				return true;
 		return false;
