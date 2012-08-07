@@ -2,6 +2,7 @@
 #include	<Key/Key.h>
 #include	<Pad/Pad.h>
 #include	<Fps/Fps.h>
+#include	<Close/Close.h>
 #include	<algorithm>
 
 int DXFW::init(){
@@ -54,6 +55,7 @@ void DXFW::run(){
 int DXFW::ProcessLoop(){
 	if(ProcessMessage() != 0) return -1;
 	if(ClearDrawScreen() != 0) return -1;
+	if(Close::getInstance().isClose()) return -1;
 	Key::getInstance().GetHitKeyStateAll_2();
 	Pad::getInstance().GetHitPadStateAll();
 	return 0; 
