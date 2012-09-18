@@ -14,6 +14,11 @@ int DXFW::init(){
 	SetMainWindowText(m_WindowTitle.c_str());
 
 	SetOutApplicationLogValidFlag(m_isOutLog);
+
+	SetWindowSize(WINDOW_SIZE_X,WINDOW_SIZE_Y);
+
+	SetGraphMode(WINDOW_SIZE_X,WINDOW_SIZE_Y,16);
+
 	return (DxLib_Init() == -1 || SetDrawScreen( DX_SCREEN_BACK )!=0)? -1:0;
 }
 
