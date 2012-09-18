@@ -1,6 +1,10 @@
 #ifndef __DEFINED
 #define __DEFINED
 #define	PAD_MAX						16
+
+#define WINDOW_SIZE_X			640
+#define WINDOW_SIZE_Y			480
+
 #ifndef WINDOW_MODE
 	#ifdef USE_WINDOW_MODE
 		#define WINDOW_MODE		true
