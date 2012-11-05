@@ -71,6 +71,27 @@
     <Filter Include="Network\DatagramSocketImpl">
       <UniqueIdentifier>{79bc5bd6-fd83-40ea-84aa-d60970a0ba5d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Type\Vector2">
+      <UniqueIdentifier>{476bad32-5626-45ae-8956-aa972feed3c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Vector3">
+      <UniqueIdentifier>{0f23fae1-dd2b-4db1-b567-6cdff9dd09b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Matrix4">
+      <UniqueIdentifier>{3ea7a157-9cce-44a8-b2c6-44194cbd3728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Color4">
+      <UniqueIdentifier>{c68bb371-7377-42db-b6ea-673936dd2774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Rect">
+      <UniqueIdentifier>{2f29e2f9-a3f3-4086-a390-a4de5210e5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite\Sprite3D">
+      <UniqueIdentifier>{88a4fdda-76ed-48b9-8210-6cd1a784ec2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite\Sprite2D">
+      <UniqueIdentifier>{dd62f855-b704-4706-9acd-1dbbf4dce2d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\InetAddress\InetAddress.cpp">
@@ -103,24 +124,6 @@
     <ClCompile Include="Utility\Utility.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
-    <ClCompile Include="Type\Color4.cpp">
-      <Filter>Type</Filter>
-    </ClCompile>
-    <ClCompile Include="Type\Math.cpp">
-      <Filter>Type</Filter>
-    </ClCompile>
-    <ClCompile Include="Type\Matrix4.cpp">
-      <Filter>Type</Filter>
-    </ClCompile>
-    <ClCompile Include="Type\Vector2.cpp">
-      <Filter>Type</Filter>
-    </ClCompile>
-    <ClCompile Include="Type\Vector3.cpp">
-      <Filter>Type</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite\Sprite3D.cpp">
-      <Filter>Sprite</Filter>
-    </ClCompile>
     <ClCompile Include="GameLogic\impl\GameMain.cpp">
       <Filter>GameLogic\Impl</Filter>
     </ClCompile>
@@ -133,6 +136,27 @@
     </ClCompile>
     <ClCompile Include="Network\DatagranSocketImpl\DatagramSocketImpl.cpp">
       <Filter>Network\DatagramSocketImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector2\Vector2.cpp">
+      <Filter>Type\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector3\Vector3.cpp">
+      <Filter>Type\Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Matrix4\Matrix4.cpp">
+      <Filter>Type\Matrix4</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Color4\Color4.cpp">
+      <Filter>Type\Color4</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite\Sprite3D\Sprite3D.cpp">
+      <Filter>Sprite\Sprite3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite\Sprite2D\Sprite2D.cpp">
+      <Filter>Sprite\Sprite2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Math_Utility.cpp">
+      <Filter>Utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,27 +202,6 @@
     <ClInclude Include="Utility\Utility.h">
       <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Type\Color4.h">
-      <Filter>Type</Filter>
-    </ClInclude>
-    <ClInclude Include="Type\Math.h">
-      <Filter>Type</Filter>
-    </ClInclude>
-    <ClInclude Include="Type\Matrix4.h">
-      <Filter>Type</Filter>
-    </ClInclude>
-    <ClInclude Include="Type\Rect.h">
-      <Filter>Type</Filter>
-    </ClInclude>
-    <ClInclude Include="Type\Vector2.h">
-      <Filter>Type</Filter>
-    </ClInclude>
-    <ClInclude Include="Type\Vector3.h">
-      <Filter>Type</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite\Sprite3D.h">
-      <Filter>Sprite</Filter>
-    </ClInclude>
     <ClInclude Include="GameLogic\Interface\IGameSystem.h">
       <Filter>GameLogic\Interface</Filter>
     </ClInclude>
@@ -213,6 +216,33 @@
     </ClInclude>
     <ClInclude Include="Network\DatagranSocketImpl\DatagramSocketImpl.h">
       <Filter>Network\DatagramSocketImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="Define\Define.h">
+      <Filter>Define</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector2\Vector2.h">
+      <Filter>Type\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector3\Vector3.h">
+      <Filter>Type\Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Matrix4\Matrix4.h">
+      <Filter>Type\Matrix4</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Color4\Color4.h">
+      <Filter>Type\Color4</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Rect\Rect.h">
+      <Filter>Type\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite\Sprite3D\Sprite3D.h">
+      <Filter>Sprite\Sprite3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite\Sprite2D\Sprite2D.h">
+      <Filter>Sprite\Sprite2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Math_Utility.h">
+      <Filter>Utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@
 #ifndef	_RECT_H_
 #define	_RECT_H_
 /**===File Include=========================================*/
-#include	<Type/Vector2.h>
+#include	<Type/Vector2/Vector2.h>
 /**===Class Definition=====================================*/
 struct Rect{
 	
@@ -49,7 +49,7 @@ struct Rect{
 	 *	@return	上端
 	 */
 	float top()const{
-		return mPos.y;
+		return mPos.y_;
 	}
 	/**
 	 *	@brief	左
@@ -57,7 +57,7 @@ struct Rect{
 	 *	@return	左端
 	 */
 	float left()const{
-		return mPos.x;
+		return mPos.x_;
 	}
 	/**
 	 *	@brief	右端
@@ -65,7 +65,7 @@ struct Rect{
 	 *	@return	右端
 	 */
 	float right()const{
-		return (mPos.x+mSize.x);
+		return (mSize.x_);
 	}
 	/**
 	 *	@brief	下端
@@ -73,8 +73,9 @@ struct Rect{
 	 *	@return	下端
 	 */
 	float bottom()const{
-		return (mPos.y+mSize.y);
+		return (mSize.y_);
 	}
+
 };
 /**===End Class Definition=================================*/
 #endif

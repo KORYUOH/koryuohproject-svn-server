@@ -10,8 +10,8 @@
 */
 /**===File Include=========================================*/
 #include	<Utility/Utility.h>
-#include	<Type/Vector3.h>
-#include	<Type/Rect.h>
+#include	<Type/Vector3/Vector3.h>
+#include	<Type/Rect/Rect.h>
 /**===Class Implementation=================================*/
 namespace KORYUOH{
 	/**========================================================*/
@@ -40,9 +40,9 @@ namespace KORYUOH{
 	*/
 	/**========================================================*/
 	const bool isCollision(const Vector3& v1,const Vector3& v2){
-		float X = v1.x - v2.x;
-		float Y = v1.y - v2.y;
-		float R = v1.z + v2.z;
+		float X = v1.x_ - v2.x_;
+		float Y = v1.y_ - v2.y_;
+		float R = v1.z_ + v2.z_;
 		return (X*X+Y*Y<R*R)? true:false;
 	}
 	/**========================================================*/
@@ -57,9 +57,9 @@ namespace KORYUOH{
 	*/
 	/**========================================================*/
 	const bool isCollision(const Vector3& v1,float r1,const Vector3& v2,float r2){
-		float X = v1.x - v2.x;
-		float Y = v1.y - v2.y;
-		float Z = v1.z - v2.z;
+		float X = v1.x_ - v2.x_;
+		float Y = v1.y_ - v2.y_;
+		float Z = v1.z_ - v2.z_;
 		float R = r1+r2;
 		return (X*X+Y*Y+Z*Z<R*R)? true:false;
 	}

@@ -12,73 +12,12 @@
 #ifndef	_GL_MOUSE_H_
 #define	_GL_MOUSE_H_
 /**===File Include=========================================*/
-#include	<gslib.h>
 #include	<Device/IDevice.h>
+#include	<Type/Vector2/Vector2.h>
+#include	<Type/Rect/Rect.h>
 /**===Class Definition=====================================*/
 class GLMouse:public IDevice{
 public:
-	/**
-	 *	@brief	コンストラクタ
-	 *	@author	KORYUOH
-	 */
-	struct Position{
-		int x_,y_;
-		
-		Position()
-			:x_(0)
-			,y_(0)
-		{}
-		Position(int x,int y)
-			:x_(x)
-			,y_(y)
-		{}
-		Position operator - (){
-			return Position(-this->x_,-this->y_);
-		}
-		/**=== Operator Overload ===*/
-		Position& operator += (const Position& pos1){
-			this->x_ += pos1.x_;
-			this->y_ += pos1.y_;
-			return *this;
-		}
-		Position& operator -= (const Position& pos1){
-			this->x_ -= pos1.x_;
-			this->y_ -= pos1.y_;
-			return *this;
-		}
-		Position& operator /= (const Position& pos1){
-			if(pos1.x_ != 0)
-			this->x_ /= pos1.x_;
-			if(pos1.y_ != 0)
-			this->y_ /= pos1.y_;
-			return *this;
-		}
-		Position& operator *= (const Position& pos1){
-			this->x_ *= pos1.x_;
-			this->y_ *= pos1.y_;
-			return *this;
-		}
-		Position operator + (const Position& pos){
-			Position tmp = *this;
-			tmp += pos;
-			return tmp;
-		}
-		Position operator - (const Position& pos){
-			Position tmp = *this;
-			tmp -= pos;
-			return tmp;
-		}
-		Position operator / (const Position& pos){
-			Position tmp = *this;
-			tmp /= pos;
-			return tmp;
-		}
-		Position operator * (const Position& pos){
-			Position tmp = *this;
-			tmp *= pos;
-			return tmp;
-		}
-	};
 	/**
 	 *	@brief	コンストラクタ
 	 *	@author	KORYUOH
@@ -116,13 +55,13 @@ public:
 	 *	@author	KORYUOH
 	 *	@return	判定内でボタンが判定状態なら真
 	 */
-	bool MouseCollision(GSrect& rect,int button,int state)const;
+	bool MouseCollision(Rect& rect,int button,int state)const;
 	/**
 	 *	@brief	マウス位置の取得
 	 *	@author	KORYUOH
 	 *	@return	マウスの位置
 	 */
-	Position getMousePosition()const;
+	Vector2 getMousePosition()const;
 private:
 	/**
 	 *	@brief	コールバック関数
@@ -225,12 +164,22 @@ private:
   GLUT_UP：「ボタン」が「離れた」
  */
 	//座標
-	static Position mPos;
-	static Position mDrag;
+	static Vector2 mPos;
+	static Vector2 mDrag;
 	//ボタンの種類
 	static int mButton;
 	//状態
 	static int mState;
+
+	public:
+		const static int UP;
+		const static int DOWN;
+
+		const static int LEFT;
+		const static int RIGHT;
+		const static int MIDDLE;
+
+
 
 };
 /**===End Class Definition=================================*/

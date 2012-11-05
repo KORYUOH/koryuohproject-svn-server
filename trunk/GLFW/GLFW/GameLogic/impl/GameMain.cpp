@@ -10,7 +10,7 @@
  */
 /**===File Include=========================================*/
 #include	<GameLogic/impl/GameMain.h>
-#include	<Sprite/Sprite3D.h>
+#include	<Sprite/Sprite3D/Sprite3D.h>
 #include	<gslib.h>
 /**===Class Implementation=================================*/
 
@@ -41,7 +41,7 @@ void GameMain::initialize(void){
 /**========================================================*/
 void GameMain::update(float f){
 	Sprite3D titele(TITLE);
-	titele.setPosition(GSvector3(0.0,0.0,0.0));
+	titele.setPosition(Vector3(0.0,0.0,0.0));
 	titele.draw();
 }
 /**========================================================*/

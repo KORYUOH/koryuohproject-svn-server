@@ -88,18 +88,20 @@
     <ClCompile Include="Network\SocketImpl\SocketImpl.cpp" />
     <ClCompile Include="Network\Socket\ServerSocket\ServerSocket.cpp" />
     <ClCompile Include="Network\Socket\Socket\Socket.cpp" />
-    <ClCompile Include="Sprite\Sprite3D.cpp" />
+    <ClCompile Include="Sprite\Sprite2D\Sprite2D.cpp" />
+    <ClCompile Include="Sprite\Sprite3D\Sprite3D.cpp" />
     <ClCompile Include="Thread\CriticalSection\CriticalSection.cpp" />
     <ClCompile Include="Thread\Thread.cpp" />
-    <ClCompile Include="Type\Color4.cpp" />
-    <ClCompile Include="Type\Math.cpp" />
-    <ClCompile Include="Type\Matrix4.cpp" />
-    <ClCompile Include="Type\Vector2.cpp" />
-    <ClCompile Include="Type\Vector3.cpp" />
+    <ClCompile Include="Type\Color4\Color4.cpp" />
+    <ClCompile Include="Type\Matrix4\Matrix4.cpp" />
+    <ClCompile Include="Type\Vector2\Vector2.cpp" />
+    <ClCompile Include="Type\Vector3\Vector3.cpp" />
+    <ClCompile Include="Utility\Math_Utility.cpp" />
     <ClCompile Include="Utility\Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define\ClassDefine.h" />
+    <ClInclude Include="Define\Define.h" />
     <ClInclude Include="Device\IDevice.h" />
     <ClInclude Include="Device\Impl\Mouse.h" />
     <ClInclude Include="GameApplication\GameApplication.h" />
@@ -114,16 +116,17 @@
     <ClInclude Include="Network\SocketImpl\SocketImpl.h" />
     <ClInclude Include="Network\Socket\ServerSocket\ServerSocket.h" />
     <ClInclude Include="Network\Socket\Socket\Socket.h" />
-    <ClInclude Include="Sprite\Sprite3D.h" />
+    <ClInclude Include="Sprite\Sprite2D\Sprite2D.h" />
+    <ClInclude Include="Sprite\Sprite3D\Sprite3D.h" />
     <ClInclude Include="Thread\CriticalSection\CriticalSection.h" />
     <ClInclude Include="Thread\IRunnable.h" />
     <ClInclude Include="Thread\Thread.h" />
-    <ClInclude Include="Type\Color4.h" />
-    <ClInclude Include="Type\Math.h" />
-    <ClInclude Include="Type\Matrix4.h" />
-    <ClInclude Include="Type\Rect.h" />
-    <ClInclude Include="Type\Vector2.h" />
-    <ClInclude Include="Type\Vector3.h" />
+    <ClInclude Include="Type\Color4\Color4.h" />
+    <ClInclude Include="Type\Matrix4\Matrix4.h" />
+    <ClInclude Include="Type\Rect\Rect.h" />
+    <ClInclude Include="Type\Vector2\Vector2.h" />
+    <ClInclude Include="Type\Vector3\Vector3.h" />
+    <ClInclude Include="Utility\Math_Utility.h" />
     <ClInclude Include="Utility\Utility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
