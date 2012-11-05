@@ -9,7 +9,8 @@
  *	@date	2012/04/29
  */
 /**===File Include=========================================*/
-#include	<Sprite/Sprite3D.h>
+#include	<Sprite/Sprite3D/Sprite3D.h>
+#include	<Type/Vector3/Vector3.h>
 #include	<gslib.h>
 /**===Class Implementation=================================*/
 
@@ -20,7 +21,7 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-Sprite3D::Sprite3D(GLuint textureID)
+Sprite3D::Sprite3D(unsigned int textureID)
 	:mTextureID(textureID)
 	,mPosition(0.0f,0.0f,0.0f)
 	,mScale(1.0f,1.0f)
@@ -36,7 +37,7 @@ Sprite3D::Sprite3D(GLuint textureID)
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Sprite3D::setPosition(const GSvector3& position){
+void Sprite3D::setPosition(const Vector3& position){
 	mPosition = position;
 }
 /**========================================================*/
@@ -46,7 +47,7 @@ void Sprite3D::setPosition(const GSvector3& position){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Sprite3D::setScale(const GSvector2& scale){
+void Sprite3D::setScale(const Vector2& scale){
 	mScale = scale;
 }
 /**========================================================*/
@@ -66,7 +67,7 @@ void Sprite3D::setRotate(float rotate){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Sprite3D::setRect(const GSrect& rect){
+void Sprite3D::setRect(const Rect& rect){
 	mRect = rect;
 }
 /**========================================================*/
@@ -76,7 +77,7 @@ void Sprite3D::setRect(const GSrect& rect){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Sprite3D::setColor(const GScolor& color){
+void Sprite3D::setColor(const Color4& color){
 	mColor = color;
 }
 /**========================================================*/
@@ -86,7 +87,7 @@ void Sprite3D::setColor(const GScolor& color){
  *	@author	KORYUOH
  */
 /**========================================================*/
-void Sprite3D::setImageRect(const GSrect& rect){
+void Sprite3D::setImageRect(const Rect& rect){
 	//イメージをバインド
 	gsBindTexture(mTextureID);
 
@@ -96,10 +97,10 @@ void Sprite3D::setImageRect(const GSrect& rect){
 	glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_HEIGHT,&height);
 
 	//テクスチャ座標の計算
-	mTexCoord.top = rect.top/height;
-	mTexCoord.bottom = rect.bottom /height;
-	mTexCoord.left = rect.left / width;
-	mTexCoord.right = rect.right/width;
+	mTexCoord.mPos.y_ = rect.top()/height;
+	mTexCoord.mSize.y_ = rect.bottom() /height;
+	mTexCoord.mPos.x_ = rect.left() / width;
+	mTexCoord.mSize.x_ = rect.right()/width;
 }
 
 /**========================================================*/
@@ -129,7 +130,7 @@ void Sprite3D::draw(){
 	billborad.transpose();
 
 	//平行移動量の設定
-	glTranslatef(mPosition.x,mPosition.y,mPosition.z);
+	glTranslatef(mPosition.x_,mPosition.y_,mPosition.z_);
 
 	//ビルボードの変換行列設定
 	glMultMatrixf((GLfloat*)&billborad);
@@ -143,17 +144,17 @@ void Sprite3D::draw(){
 	//四角形の描画
 	glBegin(GL_QUADS);
 		glNormal3f(0.0f,0.0f,1.0f);
-		glTexCoord2f(mTexCoord.left,mTexCoord.top);
-		glVertex2f(mRect.left,mRect.top);
+		glTexCoord2f(mTexCoord.left(),mTexCoord.top());
+		glVertex2f(mRect.left(),mRect.top());
 
-		glTexCoord2f(mTexCoord.left,mTexCoord.bottom);
-		glVertex2f(mRect.left,mRect.bottom);
+		glTexCoord2f(mTexCoord.left(),mTexCoord.bottom());
+		glVertex2f(mRect.left(),mRect.bottom());
 		
-		glTexCoord2f(mTexCoord.right,mTexCoord.bottom);
-		glVertex2f(mRect.right,mRect.bottom);
+		glTexCoord2f(mTexCoord.right(),mTexCoord.bottom());
+		glVertex2f(mRect.right(),mRect.bottom());
 		
-		glTexCoord2f(mTexCoord.right,mTexCoord.top);
-		glVertex2f(mRect.right,mRect.top);
+		glTexCoord2f(mTexCoord.right(),mTexCoord.top());
+		glVertex2f(mRect.right(),mRect.top());
 
 	glEnd();
 

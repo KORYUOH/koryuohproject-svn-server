@@ -9,10 +9,11 @@
  *	@date	2012/04/29
  */
 /**===File Include=========================================*/
-#include	<Define/ClassDefine.h>
 #include	<Device/Impl/Mouse.h>
+#include	<Type/Vector2/Vector2.h>
 #include	<cmath>
 #include	<cassert>
+#include	<gslib.h>
 /**===Class Implementation=================================*/
 /**========================================================*/
 /**
@@ -22,8 +23,13 @@
 /**========================================================*/
 int GLMouse::mButton = -1;
 int GLMouse::mState = 0;
-GLMouse::Position GLMouse::mPos	=	GLMouse::Position();
-GLMouse::Position GLMouse::mDrag	=	GLMouse::Position();
+Vector2 GLMouse::mPos	=	Vector2();
+Vector2 GLMouse::mDrag	=	Vector2();
+const int GLMouse::UP = GLUT_UP;
+const int GLMouse::DOWN = GLUT_DOWN;
+const int GLMouse::LEFT = GLUT_LEFT_BUTTON;
+const int GLMouse::RIGHT = GLUT_RIGHT_BUTTON;
+const int GLMouse::MIDDLE = GLUT_MIDDLE_BUTTON;
 /**========================================================*/
 /**
  *	@brief	コンストラクタ
@@ -79,9 +85,9 @@ bool GLMouse::MouseClick(int button,int state)const{
  */
 /**========================================================*/
 namespace{
-	bool rectCheck(GSrect& rect,GSrect& mou){
-		if(rect.top<mou.top&&mou.top<rect.bottom)
-			if(rect.left<mou.left&& mou.left <rect.right)
+	bool rectCheck(Rect& rect,Rect& mou){
+		if(rect.top()<mou.top()&&mou.top()<rect.bottom())
+			if(rect.left()<mou.left()&& mou.left() <rect.right())
 				return true;
 		return false;
 	}
@@ -96,9 +102,9 @@ namespace{
  *	@return	入っている状態でstateなら真
  */
 /**========================================================*/
-bool GLMouse::MouseCollision(GSrect& rect,int button,int state)const{
+bool GLMouse::MouseCollision(Rect& rect,int button,int state)const{
 	if(MouseClick(button,state)){
-		if(rectCheck(rect,GSrect(mPos.x_,mPos.y_)))
+		if(rectCheck(rect,Rect(mPos.x_,mPos.y_,1,1)))
 			return true;
 	}
 	return false;
@@ -125,10 +131,10 @@ void GLMouse::drug(int x,int y){
 /**========================================================*/
 void GLMouse::toDrag(int button,int state){
 	switch(state){
-	case MOUSE_STATE_UP:
+	case GLMouse::UP:
 		glutPassiveMotionFunc(drug);
 		break;
-	case MOUSE_STATE_DOWN:
+	case GLMouse::DOWN:
 		motionCall(button,state);
 		break;
 	default:
@@ -142,7 +148,7 @@ void GLMouse::toDrag(int button,int state){
  *	@return	マウス座標
  */
 /**========================================================*/
-GLMouse::Position GLMouse::getMousePosition()const{
+Vector2 GLMouse::getMousePosition()const{
 	return mPos;
 }
 /**========================================================*/
@@ -163,7 +169,7 @@ void GLMouse::positionUpdate(int x,int y){
  */
 /**========================================================*/
 float GLMouse::length(){
-	Position tmp = mPos - mDrag;
+	Vector2 tmp = mPos - mDrag;
 	return std::sqrt((float)(tmp.x_*tmp.x_+tmp.y_*tmp.y_));
 }
 /**========================================================*/
@@ -174,7 +180,7 @@ float GLMouse::length(){
  */
 /**========================================================*/
 float GLMouse::angle(){
-	Position tmp = mPos - mDrag;
+	Vector2 tmp = mPos - mDrag;
 	return std::atan2f(tmp.y_,tmp.x_);
 }
 void GLMouse::motionCall(int button,int state){

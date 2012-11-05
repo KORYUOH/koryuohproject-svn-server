@@ -10,6 +10,7 @@
  */
 /**===File Include=========================================*/
 #include	<GameApplication/Gameapplication.h>
+#include	<Define/Define.h>
 #include	<gslib.h>
 #include	<sstream>
 /**===Class Implementation=================================*/
@@ -30,12 +31,12 @@ GameApplication* GameApplication::mInstance = 0;
  */
 /**========================================================*/
 GameApplication::GameApplication(int argc, char* argv[]):
-	mWindowTitle("GameWindow"),
-	mWindowPositionX( 0 ),
-	mWindowPositionY( 0 ),
-	mWindowWidth( 640 ),
-	mWindowHeight( 480 ),
-	mIsFullScreenMode( false ),
+	mWindowTitle(APPLICATION_TITLE),
+	mWindowPositionX( WINDOW_CREATE_POSITION_X ),
+	mWindowPositionY( WINDOW_CREATE_POSITION_Y ),
+	mWindowWidth( WINDW_SIZE_X ),
+	mWindowHeight( WINDW_SIZE_Y ),
+	mIsFullScreenMode( SCREENMODE ),
 	mPerspectiveFov(50.0f),
 	mPerspectiveNear(0.5f),
 	mPerspectiveFar(100.0f)

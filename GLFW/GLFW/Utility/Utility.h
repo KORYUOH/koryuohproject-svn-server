@@ -12,8 +12,8 @@
 #ifndef	_UTILITY_H_
 #define	_UTILITY_H_
 /**===File Include=========================================*/
-#include	<Type/Vector3.h>
-#include	<Type/Rect.h>
+#include	<Type/Vector3/Vector3.h>
+#include	<Type/Rect/Rect.h>
 #include	<algorithm>
 /**===Class Definition=====================================*/
 namespace KORYUOH{

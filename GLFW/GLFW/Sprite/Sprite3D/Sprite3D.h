@@ -12,7 +12,10 @@
 #ifndef	_SPRITE3D_H_
 #define	_SPRITE3D_H_
 /**===File Include=========================================*/
-#include	<gslib.h>
+#include	<Type/Vector3/Vector3.h>
+#include	<Type/Vector2/Vector2.h>
+#include	<Type/Rect/Rect.h>
+#include	<Type/Color4/Color4.h>
 /**===Class Definition=====================================*/
 class Sprite3D{
 public:
@@ -27,13 +30,13 @@ public:
 	 *	@param[in]	ˆÊ’u
 	 *	@author	KORYUOH
 	 */
-	void setPosition(const GSvector3& positon);
+	void setPosition(const Vector3& positon);
 	/**
 	 *	@brief	Šgk‚Ìİ’è
 	 *	@param[in]	Šg‘å—¦
 	 *	@author	KORYUOH
 	 */
-	void setScale(const GSvector2& scale);
+	void setScale(const Vector2& scale);
 	/**
 	 *	@brief	‰ñ“]‚Ìİ’è
 	 *	@param[in]	‰ñ“]Šp
@@ -45,19 +48,19 @@ public:
 	 *	@param[in]	‹éŒ`
 	 *	@author	KORYUOH
 	 */
-	void setRect(const GSrect& rect);
+	void setRect(const Rect& rect);
 	/**
 	 *	@brief	F‚Ìİ’è
 	 *	@param[in]	Fî•ñ
 	 *	@author	KORYUOH
 	 */
-	void setColor(const GScolor& color);
+	void setColor(const Color4& color);
 	/**
 	 *	@brief	•`‰æ”ÍˆÍİ’è
 	 *	@param[in]	•`‰æ”ÍˆÍ
 	 *	@author	KORYUOH
 	 */
-	void setImageRect(const GSrect& rect);
+	void setImageRect(const Rect& rect);
 	/**
 	 *	@brief	•`‰æ
 	 *	@author	KORYUOH
@@ -68,12 +71,12 @@ public:
 private:
 	/**	ƒƒ“ƒo[•Ï”*/
 	unsigned int		mTextureID;
-	GSvector3			mPosition;
-	GSvector2			mScale;
+	Vector3			mPosition;
+	Vector2			mScale;
 	float			mRotate;
-	GScolor			mColor;
-	GSrect			mRect;
-	GSrect			mTexCoord;
+	Color4			mColor;
+	Rect			mRect;
+	Rect			mTexCoord;
 
 };
 /**===End Class Definition=================================*/
