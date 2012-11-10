@@ -54,6 +54,8 @@ void GLMouse::callBack(int button,int state, int x, int y){
 	mState = state;
 	mPos.x_ = x;
 	mPos.y_ = y;
+	mDrag.x_ = x;
+	mDrag.y_ = y;
 }
 /**========================================================*/
 /**
@@ -154,6 +156,7 @@ GLMouse::Position GLMouse::getMousePosition()const{
 void GLMouse::positionUpdate(int x,int y){
 	mPos.x_ = x;
 	mPos.y_ = y;
+	mDrag = mPos;
 }
 /**========================================================*/
 /**
@@ -174,8 +177,13 @@ float GLMouse::length(){
  */
 /**========================================================*/
 float GLMouse::angle(){
-	Position tmp = mPos - mDrag;
-	return std::atan2f(tmp.y_,tmp.x_);
+	Position tmp(0,480);
+	if(mState == MOUSE_STATE_UP)
+		tmp -= mPos;
+	else
+		tmp -= mDrag;
+
+		return std::atan2f(tmp.y_,-tmp.x_);
 }
 void GLMouse::motionCall(int button,int state){
 	if(MouseClick(button,state))
