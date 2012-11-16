@@ -151,6 +151,18 @@ public:
 	 *	@return	角度
 	 */
 	float angle();
+	/**
+	 *	@brief	ドラッグ線の長さ取得
+	 *	@author	KORYUOH
+	 *	@return	長さ
+	 */
+	float length(const Vector2& position);
+	/**
+	 *	@brief	ドラッグ線の角度取得
+	 *	@author	KORYUOH
+	 *	@return	角度
+	 */
+	float angle(const Vector2& position);
 private:
 	/**	メンバー変数*/
 	/**
