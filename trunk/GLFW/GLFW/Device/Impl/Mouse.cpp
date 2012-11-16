@@ -11,6 +11,7 @@
 /**===File Include=========================================*/
 #include	<Device/Impl/Mouse.h>
 #include	<Type/Vector2/Vector2.h>
+#include	<Define/Define.h>
 #include	<cmath>
 #include	<cassert>
 #include	<gslib.h>
@@ -170,17 +171,49 @@ void GLMouse::positionUpdate(int x,int y){
 /**========================================================*/
 float GLMouse::length(){
 	Vector2 tmp = mPos - mDrag;
-	return std::sqrt((float)(tmp.x_*tmp.x_+tmp.y_*tmp.y_));
+	return tmp.length();
+}
+/**========================================================*/
+/**
+ *	@brief	Šp“x‚ÌŽæ“¾
+ *	@author	KORYUOH
+ *	@return	Šp“x
+ */
+/**========================================================*/
+float GLMouse::angle(){
+	Vector2 tmp(0,WINDW_SIZE_Y);
+	if(mState == DOWN)
+		tmp -= mDrag;
+	else
+		tmp -= mPos;
+	return std::atan2f(tmp.y_,-tmp.x_);
 }
 /**========================================================*/
 /**
  *	@brief	’·‚³‚ÌŽæ“¾
+ *	@param[in]	ˆÊ’u
  *	@author	KORYUOH
  *	@return	’·‚³
  */
 /**========================================================*/
-float GLMouse::angle(){
-	Vector2 tmp = mPos - mDrag;
+float GLMouse::length(const Vector2& position){
+	Vector2 tmp = position;
+		if(mState == DOWN)
+			tmp -= mDrag;
+		else
+			tmp -=mPos;
+	return tmp.length();
+}
+/**========================================================*/
+/**
+ *	@brief	Šp“x‚ÌŽæ“¾
+ *	@param[in]	ˆÊ’u
+ *	@author	KORYUOH
+ *	@return	Šp“x
+ */
+/**========================================================*/
+float GLMouse::angle(const Vector2& position){
+	Vector2 tmp = mPos - position;
 	return std::atan2f(tmp.y_,tmp.x_);
 }
 void GLMouse::motionCall(int button,int state){
