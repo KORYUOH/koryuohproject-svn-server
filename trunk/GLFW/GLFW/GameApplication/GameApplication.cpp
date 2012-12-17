@@ -58,27 +58,8 @@ void GameApplication::run(){
 	glutInitWindowPosition(getWindowPositionX(),getWindowPositionY());
 	glutInitWindowSize(getWindowWidth(),getWindowHeight());
 	//フルスクリーンモードか？
-	if(isFullScreenMode()==true){
-		std::ostringstream mode;
-		//フルスクリーン設定文字列作成
-		mode << getWindowWidth() << "x"<<getWindowHeight()<<"@60";
-		//フルスクリーンモードに設定
-		glutGameModeString(mode.str().c_str());
-		glutEnterGameMode();
-		//マウスカーソルは消す
-		glutSetCursor(GLUT_CURSOR_NONE);
-	}else{
-		//ウィンドウモード
-		glutCreateWindow(getWindowTitle().c_str());
-	}
-	
-	//グラフィックシステム初期化
-	gsInitGraphics();
-	//サウンドシステム初期化
-	gsInitSound((HWND)_glutGetHWND());
-	//入力デバイスシステム初期化
-	gsInitInput((HWND)_glutGetHWND());
-	
+	FullScreenCheck();
+	gsSystemInitialize();
 	//Vsync有効化
 	setSwapInterval(1);
 	//乱数初期化
@@ -89,16 +70,7 @@ void GameApplication::run(){
 	//アプリケーション初期化
 	initialize();
 
-	//終了処理関数設定
-	_glutDestroyFunc(destroy);
-	//ウィンドウサイズ変更時の関数を設定
-	glutReshapeFunc(reshape);
-	//表示処理関数を設定
-	glutDisplayFunc(display);
-	//イベントのないときの関数を設定
-	glutIdleFunc(idle);
-	//ウィンドウがアクティブになったときの関数を設定
-	_glutActivateFunc(activate);
+	setCallBacks();
 
 	//フレームタイマーリセット
 	gsFrameTimerReset();
@@ -470,8 +442,43 @@ void GameApplication::finishCheck(){
 		mInstance->destroy();
 }
 
+void GameApplication::FullScreenCheck(){
+	if(!isFullScreenMode()){
+		//ウィンドウモード
+		glutCreateWindow(getWindowTitle().c_str());
+		return;
+	}
+	std::ostringstream mode;
+	//フルスクリーン設定文字列作成
+	mode << getWindowWidth() << "x"<<getWindowHeight()<<"@60";
+	//フルスクリーンモードに設定
+	glutGameModeString(mode.str().c_str());
+	glutEnterGameMode();
+	//マウスカーソルは消す
+	glutSetCursor(GLUT_CURSOR_NONE);
+}
 
+void GameApplication::gsSystemInitialize(){
+	//グラフィックシステム初期化
+	gsInitGraphics();
+	//サウンドシステム初期化
+	gsInitSound((HWND)_glutGetHWND());
+	//入力デバイスシステム初期化
+	gsInitInput((HWND)_glutGetHWND());
+}
 
+void GameApplication::setCallBacks(){
+	//終了処理関数設定
+	_glutDestroyFunc(destroy);
+	//ウィンドウサイズ変更時の関数を設定
+	glutReshapeFunc(reshape);
+	//表示処理関数を設定
+	glutDisplayFunc(display);
+	//イベントのないときの関数を設定
+	glutIdleFunc(idle);
+	//ウィンドウがアクティブになったときの関数を設定
+	_glutActivateFunc(activate);
+}
 
 
 
