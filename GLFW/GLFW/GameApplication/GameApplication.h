@@ -186,8 +186,14 @@ private:
 	 *	@author	KORYUOH
 	 */
 	void finishCheck();
+	/**
+	 *
+	 */
+	void FullScreenCheck();
 
+	void gsSystemInitialize();
 
+	void setCallBacks();
 	/**
 	 *	@brief	アクティベート
 	 *	@param[in]	状態
