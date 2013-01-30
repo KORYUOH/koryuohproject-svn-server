@@ -92,6 +92,9 @@
     <Filter Include="Sprite\Sprite2D">
       <UniqueIdentifier>{dd62f855-b704-4706-9acd-1dbbf4dce2d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Type\Quaternion">
+      <UniqueIdentifier>{fde4fc80-ba12-4800-ba2a-f467749f40cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\InetAddress\InetAddress.cpp">
@@ -157,6 +160,9 @@
     </ClCompile>
     <ClCompile Include="Utility\Math_Utility.cpp">
       <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Quaternion\Quaternion.cpp">
+      <Filter>Type\Quaternion</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +249,9 @@
     </ClInclude>
     <ClInclude Include="Utility\Math_Utility.h">
       <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Quaternion\Quaternion.h">
+      <Filter>Type\Quaternion</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
