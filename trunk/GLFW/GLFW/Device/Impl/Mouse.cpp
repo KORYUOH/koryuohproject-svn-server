@@ -85,13 +85,11 @@ bool GLMouse::MouseClick(int button,int state)const{
  *	@return	“ü‚Á‚Ä‚¢‚ê‚Î^
  */
 /**========================================================*/
-namespace{
-	bool rectCheck(Rect& rect,Rect& mou){
-		if(rect.top()<mou.top()&&mou.top()<rect.bottom())
-			if(rect.left()<mou.left()&& mou.left() <rect.right())
-				return true;
-		return false;
-	}
+bool rectCheck(Rect& rect,Rect& mou){
+	if(rect.top()<mou.top()&&mou.top()<rect.bottom())
+		if(rect.left()<mou.left()&& mou.left() <rect.right())
+			return true;
+	return false;
 }
 /**========================================================*/
 /**
