@@ -1,37 +1,46 @@
+/**===File Commentary=======================================*/
 /**
-	@FileName	Singleton.h
-	@note			シングルトンパターン適応物をファザード化
-*/
-#ifndef _SINGLETON_H_INCLUDED_
-#define _SINGLETON_H_INCLUDED_
-#include	<Pad/Pad.h>
-#include	<Key/Key.h>
-#include	<Mouse/Mouce.h>
-	
-#include	<Fps/Fps.h>
-
-#include	<Container/ImgContainer.h>
-namespace SINGLETON{
-	namespace INPUT{
-		Pad& PadInstance(){
-			return Pad::getInstance();
-		}
-		Key& KeyInstance(){
-			return Key::getInstance();
-		}
-		Mouse& MouseInstance(){
-			return Mouse::getInstance();
-		}
-	};
-	namespace SYSTEM{
-		FPS_Ctrl& FPSInstance(){
-			return FPS_Ctrl::getInstance();
-		}
-	};
-	namespace CONTAINER{
-		Image_container& ImgCInstance(){
-			return Image_container::getInstance();
-		}
-	};
+ *	@file	Singleton.h
+ *
+ *	@brief	シングルトンパターンテンプレート
+ *
+ *	@note	C++ Style
+ *
+ *	@author	KORYUOH
+ *
+ *	@date	2012/06/21  -2013/02/19
+ */
+/**===Include Guard========================================*/
+#ifndef	_SINGLETON_H_
+#define	_SINGLETON_H_
+/**===File Include=========================================*/
+template<typename _Ty>
+/**===Class Definition=====================================*/
+class Singleton{
+protected:
+	/**
+	 *	Singleton Pattern Constructor
+	 */
+	/**
+	 *	@brief	コンストラクタ
+	 */ 
+	 Singleton(){}
+	 /**
+	 *	@brief	コピーコンストラクタ
+	 */
+	 Singleton(const Singleton& other){};
+	 Singleton& operator = (const Singleton& other){};
+	 virtual ~Singleton(){}
+public:
+	/**
+	 *	@brief	実体取得
+	 *	@return	実体
+	 */
+	 static _Ty& getInstance(){
+	 	static _Ty Instance;
+	 	return Instance;
+	 }
 };
-#endif // _SINGLETON_H_INCLUDED_
+/**===End Class Definition=================================*/
+#endif
+/**===End Of File==========================================*/

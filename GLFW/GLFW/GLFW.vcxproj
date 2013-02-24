@@ -95,6 +95,7 @@
     <ClCompile Include="Type\Color4\Color4.cpp" />
     <ClCompile Include="Type\Matrix4\Matrix4.cpp" />
     <ClCompile Include="Type\Quaternion\Quaternion.cpp" />
+    <ClCompile Include="Type\TextureData\TextureData.cpp" />
     <ClCompile Include="Type\Vector2\Vector2.cpp" />
     <ClCompile Include="Type\Vector3\Vector3.cpp" />
     <ClCompile Include="Utility\Math_Utility.cpp" />
@@ -126,6 +127,7 @@
     <ClInclude Include="Type\Matrix4\Matrix4.h" />
     <ClInclude Include="Type\Quaternion\Quaternion.h" />
     <ClInclude Include="Type\Rect\Rect.h" />
+    <ClInclude Include="Type\TextureData\TextureData.h" />
     <ClInclude Include="Type\Vector2\Vector2.h" />
     <ClInclude Include="Type\Vector3\Vector3.h" />
     <ClInclude Include="Utility\Math_Utility.h" />

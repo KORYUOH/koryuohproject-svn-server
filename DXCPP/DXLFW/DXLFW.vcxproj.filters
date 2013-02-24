@@ -40,6 +40,12 @@
     <Filter Include="Close">
       <UniqueIdentifier>{e203ff4b-a6c4-4ab4-b148-5ffb09f4910f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{0c10f4fc-6e7a-4a16-bfa7-17236f565901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\SoundManager">
+      <UniqueIdentifier>{649b4728-9170-47dc-94ad-5f6187643558}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -69,6 +75,9 @@
     </ClCompile>
     <ClCompile Include="Close\Close.cpp">
       <Filter>Close</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\SoundManager\SoundManager.cpp">
+      <Filter>Manager\SoundManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +140,9 @@
     </ClInclude>
     <ClInclude Include="Close\Close.h">
       <Filter>Close</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\SoundManager\SoundManager.h">
+      <Filter>Manager\SoundManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
