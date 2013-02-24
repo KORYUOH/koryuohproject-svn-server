@@ -12,12 +12,13 @@
 #ifndef	__Fps_Contorol
 #define	__Fps_Contorol
 /**===File Include=========================================*/
+#include	<Singleton/Singleton.h>
 /*
  *	@note	FPS設定値	60fps
  */
 #define FPS_DEFINE 60
 /**===Class Definition=======================================*/
-class FPS_Ctrl{
+class FPS_Ctrl:public Singleton<FPS_Ctrl>{
 private:
 	/**
 	 *	@note	FPS計算用
@@ -25,7 +26,7 @@ private:
 	int m_fpsCount,m_count0t;
 	int m_f[FPS_DEFINE];
 	double m_average;
-
+	friend Singleton<FPS_Ctrl>;
 private:
 	/**
 	 *	@brief	コンストラクタ
@@ -44,11 +45,12 @@ public:
 	 *	@author	KORYUOH
 	 *	@return	実体
 	 */
+	/*
 	static FPS_Ctrl& getInstance(){
 		static FPS_Ctrl Instance;
 		return Instance;
 	}
-
+	*/
 public:
 	/**
 	 *	@brief	fps待機処理

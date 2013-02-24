@@ -84,6 +84,7 @@
     <ClCompile Include="Fps\Fps.cpp" />
     <ClCompile Include="Key\Key.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager\SoundManager\SoundManager.cpp" />
     <ClCompile Include="Mouse\Mouce.cpp" />
     <ClCompile Include="Pad\Pad.cpp" />
     <ClCompile Include="XML\XmlReader.cpp" />
@@ -104,6 +105,7 @@
     <ClInclude Include="Facade\Contact.h" />
     <ClInclude Include="Fps\Fps.h" />
     <ClInclude Include="Key\Key.h" />
+    <ClInclude Include="Manager\SoundManager\SoundManager.h" />
     <ClInclude Include="Mouse\Mouce.h" />
     <ClInclude Include="Pad\Pad.h" />
     <ClInclude Include="Singleton\Singleton.h" />

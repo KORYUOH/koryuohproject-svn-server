@@ -95,6 +95,9 @@
     <Filter Include="Type\Quaternion">
       <UniqueIdentifier>{fde4fc80-ba12-4800-ba2a-f467749f40cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Type\TextureData">
+      <UniqueIdentifier>{b6887c86-ac3b-4b2e-9e4f-ca489782cb49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\InetAddress\InetAddress.cpp">
@@ -163,6 +166,9 @@
     </ClCompile>
     <ClCompile Include="Type\Quaternion\Quaternion.cpp">
       <Filter>Type\Quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\TextureData\TextureData.cpp">
+      <Filter>Type\TextureData</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +258,9 @@
     </ClInclude>
     <ClInclude Include="Type\Quaternion\Quaternion.h">
       <Filter>Type\Quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\TextureData\TextureData.h">
+      <Filter>Type\TextureData</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

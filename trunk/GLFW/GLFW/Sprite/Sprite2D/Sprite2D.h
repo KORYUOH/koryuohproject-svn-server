@@ -13,9 +13,10 @@
 #define _SPRITE2D_H_
 /**===File Include=========================================*/
 //#include<gslib.h>
-#include<Type/Rect/Rect.h>
-#include<Type/Vector2/Vector2.h>
+#include	<Type/Rect/Rect.h>
+#include	<Type/Vector2/Vector2.h>
 #include	<Type/Color4/Color4.h>
+#include	<Type/TextureData/TextureData.h>
 /**===Class Definition=====================================*/
 class Sprite2D{
 public:
@@ -26,7 +27,7 @@ public:
 	 *	@param[in]	ポジションY
 	 *	@author	Keisuke Ito
 	 */
-	Sprite2D(unsigned int textureID,float x_, float y_ ,const Rect& rect = Rect(0,0,-1,-1));
+	Sprite2D(const TextureData& texData,float x_, float y_ ,const Rect& rect = Rect(0,0,-1,-1));
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	テクスチャID
@@ -37,7 +38,7 @@ public:
 	  *	@param[in]  角度
 	 *	@author	Keisuke Ito
 	 */
-	Sprite2D(unsigned int textureID,float x_, float y_,float sizeX, float sizeY, float roration);
+	Sprite2D(const TextureData& texData,float x_, float y_,float sizeX, float sizeY, float roration);
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	テクスチャID
