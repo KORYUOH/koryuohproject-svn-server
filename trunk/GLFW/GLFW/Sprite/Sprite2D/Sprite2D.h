@@ -110,7 +110,7 @@ public:
 
 private:
 	/**	メンバー変数*/
-	unsigned int		mTextureID;		//テクスチャＩＤ
+	TextureData		mTexData;
 	Vector2				mPosition;		//座標
 	Rect				mRect;			//切り出し
 	Vector2				mCenter;		//中心
