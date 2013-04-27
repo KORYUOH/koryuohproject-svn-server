@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Application\Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Color4\Color4.cpp">
+      <Filter>Type\Color4</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Matrix4\Matrix4.cpp">
+      <Filter>Type\Matrix4</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector2\Vector2.cpp">
+      <Filter>Type\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Type\Vector3\Vector3.cpp">
+      <Filter>Type\Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\AppParam\AppParam.cpp">
+      <Filter>Application\AppParam</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{76f78d93-49d3-4283-806b-9bbcb32c3938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type">
+      <UniqueIdentifier>{3468e17b-0643-450c-b6e4-5db4cfedb930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Rect">
+      <UniqueIdentifier>{534ce5d9-1e1a-4574-a764-44d67dcbc9f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Vector2">
+      <UniqueIdentifier>{f02d734c-1ed5-4dca-9c58-4c7d8c3f31c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Vector3">
+      <UniqueIdentifier>{7c9bda79-bcf7-4b7b-829a-626c809821e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Matrix4">
+      <UniqueIdentifier>{32e7a81d-d46f-4b31-85ac-5e060754ac29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Type\Color4">
+      <UniqueIdentifier>{a3cd9cdd-3056-426c-8287-ee744684b902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\AppParam">
+      <UniqueIdentifier>{a3dc95b0-4f77-4ece-924d-a6015ad4d97b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\Application.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Color4\Color4.h">
+      <Filter>Type\Color4</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Matrix4\Matrix4.h">
+      <Filter>Type\Matrix4</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Rect\Rect.h">
+      <Filter>Type\Rect</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector2\Vector2.h">
+      <Filter>Type\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Type\Vector3\Vector3.h">
+      <Filter>Type\Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\AppParam\AppParam.h">
+      <Filter>Application\AppParam</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

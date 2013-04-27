@@ -10,6 +10,12 @@
     <Filter Include="DirectInput\KeyBoard">
       <UniqueIdentifier>{57951e63-5e54-4bc1-8e73-11e765331281}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DirectInput\JoyStick">
+      <UniqueIdentifier>{2fc5e80e-2969-4a89-80ba-6b1af19b16c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectInput\InputManager">
+      <UniqueIdentifier>{02b1f16b-1c31-42a7-b24f-39e79a380488}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -21,5 +27,10 @@
     <None Include="..\..\Cording Rule\Header_Rules.txt">
       <Filter>_Coding Rule</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InputManager\InputManager.h">
+      <Filter>DirectInput\InputManager</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
