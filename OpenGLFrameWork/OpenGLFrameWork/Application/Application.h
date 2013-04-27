@@ -26,45 +26,40 @@ public:
 	 *	@brief	実行
 	 */
 	void run();
+protected:
+	/**
+	 *	@brief	初期化
+	 */
+	virtual void initialize() = 0;
+	/**
+	 *	@brief	更新
+	 *	@param[in]	フレームタイマ
+	 */
+	virtual void update(float f) = 0;
+	/**
+	 *	@brief	描画
+	 */
+	virtual void draw() = 0;
+	/**
+	 *	@brief	終了
+	 */
+	virtual void finish() = 0;
 private:
-	/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	KORYUOH
-	 *	@return	<戻り値>
-	 */
-	void initialize();
-	/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	KORYUOH
-	 *	@return	<戻り値>
-	 */
-	void update(float f);
-	/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	KORYUOH
-	 *	@return	<戻り値>
-	 */
-	void draw();
-/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	KORYUOH
-	 *	@return	<戻り値>
-	 */
-	void finish();
+	void glutInitialize();
+	void initializeGL();
 
+	void checkFullScreenMode();
+private:
+	int getWindowPositionX()const;
+	int getWindowPositionY()const;
+	int getWindowWidth()const;
+	int getWindowHeight()const;
+//	void setSwapInterval(int interval);
 private:
 	/**	メンバー変数*/
 	static Application* mInstance;
 private:
-	AppParam param;
+	AppParam mParam;
 };
 /**===End Class Definition=================================*/
 #endif
