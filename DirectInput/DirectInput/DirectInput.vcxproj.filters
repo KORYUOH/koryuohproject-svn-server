@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DirectInput">
+      <UniqueIdentifier>{5174dc95-69d5-4046-98b5-66a349a48b6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Coding Rule">
+      <UniqueIdentifier>{f010ddf7-adae-4b39-808a-fdfa898b6640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectInput\KeyBoard">
+      <UniqueIdentifier>{57951e63-5e54-4bc1-8e73-11e765331281}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Cording Rule\Source_Rules.txt">
+      <Filter>_Coding Rule</Filter>
+    </None>
+    <None Include="..\..\Cording Rule\Header_Rules.txt">
+      <Filter>_Coding Rule</Filter>
+    </None>
+  </ItemGroup>
+</Project>

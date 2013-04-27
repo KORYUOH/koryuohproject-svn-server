@@ -22,8 +22,8 @@
  */
 /**========================================================*/
 
-Sprite2D::Sprite2D(GLuint textureID,float x_, float y_,const Rect& rect)
-	:mTextureID(textureID)
+Sprite2D::Sprite2D(TextureData& textureData,float x_, float y_,const Rect& rect)
+	:mTexData(textureData)
 	,mPosition(x_,y_)
 	,mRect(rect)
 	,mCenter(0.0f,0.0f)
