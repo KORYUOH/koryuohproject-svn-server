@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F97C2A5E-957C-4D1C-94CD-D3B14F05BE42}</ProjectGuid>
+    <ProjectGuid>{6D9BE144-791C-446C-949E-B233B22FA967}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>DirectInput</RootNamespace>
+    <RootNamespace>OpenGLFrameWork</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -74,14 +74,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application\Application.cpp" />
+    <ClCompile Include="Application\AppParam\AppParam.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Type\Color4\Color4.cpp" />
+    <ClCompile Include="Type\Matrix4\Matrix4.cpp" />
+    <ClCompile Include="Type\Vector2\Vector2.cpp" />
+    <ClCompile Include="Type\Vector3\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Cording Rule\Header_Rules.txt" />
-    <None Include="..\..\Cording Rule\Source_Rules.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="InputManager\InputManager.h" />
+    <ClInclude Include="Application\Application.h" />
+    <ClInclude Include="Application\AppParam\AppParam.h" />
+    <ClInclude Include="Type\Color4\Color4.h" />
+    <ClInclude Include="Type\Matrix4\Matrix4.h" />
+    <ClInclude Include="Type\Rect\Rect.h" />
+    <ClInclude Include="Type\Vector2\Vector2.h" />
+    <ClInclude Include="Type\Vector3\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
