@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gslibEXT", "gslibEXT.vcxproj", "{46698810-B89A-40E5-9B8D-799E910B21B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugMDd|Win32 = DebugMDd|Win32
+		DebugMTd|Win32 = DebugMTd|Win32
+		ReleaseMd|Win32 = ReleaseMd|Win32
+		ReleaseMT|Win32 = ReleaseMT|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.DebugMDd|Win32.ActiveCfg = DebugMDD|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.DebugMDd|Win32.Build.0 = DebugMDD|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.DebugMTd|Win32.ActiveCfg = DebugMTd|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.DebugMTd|Win32.Build.0 = DebugMTd|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.ReleaseMd|Win32.ActiveCfg = ReleaseMD|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.ReleaseMd|Win32.Build.0 = ReleaseMD|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.ReleaseMT|Win32.ActiveCfg = ReleaseMT|Win32
+		{46698810-B89A-40E5-9B8D-799E910B21B6}.ReleaseMT|Win32.Build.0 = ReleaseMT|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,56 @@
+﻿2013/02/13 2:47:05 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\GM\gslib_2010\build\gsgraphics.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /nologo /W3 /WX- /O2 /Ob2 /Oi /Ot /Oy- /D WIN32 /D NDEBUG /D _LIB /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\out\gsgraphics_md\\" /Fd"..\out\gsgraphics_md\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\GSgraphics\GSanimation.c ..\src\GSgraphics\GScollision.c ..\src\GSgraphics\GSframetimer.c ..\src\GSgraphics\GSfrustum.c ..\src\GSgraphics\GSgraphics.c ..\src\GSgraphics\GSmatrix3.c ..\src\GSgraphics\GSmatrix4.c ..\src\GSgraphics\GSmesh.c ..\src\GSgraphics\GSoctree.c ..\src\GSgraphics\GSplane.c ..\src\GSgraphics\GSquaternion.c ..\src\GSgraphics\GSskeleton.c ..\src\GSgraphics\GStexload.c ..\src\GSgraphics\GStext.c
+         GSanimation.c
+         GScollision.c
+         GSframetimer.c
+         GSfrustum.c
+         GSgraphics.c
+     1>..\src\GSgraphics\GSgraphics.c(148): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\src\GSgraphics\GSgraphics.c(1082): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\src\GSgraphics\GSgraphics.c(1107): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : 'vsprintf' の宣言を確認してください。
+         GSmatrix3.c
+         GSmatrix4.c
+         GSmesh.c
+     1>..\src\GSgraphics\GSmesh.c(1080): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 11.0\VC\include\stdlib.h(824) : '_splitpath' の宣言を確認してください。
+     1>..\src\GSgraphics\GSmesh.c(1081): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\src\GSgraphics\GSmesh.c(1082): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         GSoctree.c
+     1>..\src\GSgraphics\GSoctree.c(165): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 11.0\VC\include\stdlib.h(824) : '_splitpath' の宣言を確認してください。
+     1>..\src\GSgraphics\GSoctree.c(166): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\src\GSgraphics\GSoctree.c(167): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>..\src\GSgraphics\GSoctree.c(168): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         GSplane.c
+         GSquaternion.c
+         GSskeleton.c
+         GStexload.c
+     1>..\src\GSgraphics\GStexload.c(61): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : 'fopen' の宣言を確認してください。
+         GStext.c
+         コードを生成中...
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1299,5): warning MSB8012: TargetPath(C:\GM\gslib_2010\build\..\out\gsgraphics_md\gsgraphics_md.lib) does not match the Library's OutputFile property value (C:\GM\gslib_2010\lib\gsgraphics_md.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"..\lib\gsgraphics_md.lib" /NOLOGO ..\out\gsgraphics_md\GSanimation.obj
+         ..\out\gsgraphics_md\GScollision.obj
+         ..\out\gsgraphics_md\GSframetimer.obj
+         ..\out\gsgraphics_md\GSfrustum.obj
+         ..\out\gsgraphics_md\GSgraphics.obj
+         ..\out\gsgraphics_md\GSmatrix3.obj
+         ..\out\gsgraphics_md\GSmatrix4.obj
+         ..\out\gsgraphics_md\GSmesh.obj
+         ..\out\gsgraphics_md\GSoctree.obj
+         ..\out\gsgraphics_md\GSplane.obj
+         ..\out\gsgraphics_md\GSquaternion.obj
+         ..\out\gsgraphics_md\GSskeleton.obj
+         ..\out\gsgraphics_md\GStexload.obj
+         ..\out\gsgraphics_md\GStext.obj
+         gsgraphics.vcxproj -> C:\GM\gslib_2010\build\..\out\gsgraphics_md\gsgraphics_md.lib
+     1>プロジェクト "C:\GM\gslib_2010\build\gsgraphics.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:08.13
