@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル\CSV">
+      <UniqueIdentifier>{349ad8d9-4bb5-4ada-992c-a20ca53b0dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Collider">
+      <UniqueIdentifier>{baa27e21-6f0d-4591-9c9c-24a5b413c608}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Unit">
+      <UniqueIdentifier>{27773bd2-4e46-4031-99d9-545e2fc280f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\World">
+      <UniqueIdentifier>{6186ef76-454d-4f90-b89e-c9c249a6f233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{adc4980b-1a88-477d-9ad6-225556dff89b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Utility">
+      <UniqueIdentifier>{add8d687-5458-4b2a-ac19-88af746a21b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム">
+      <UniqueIdentifier>{2fa2aa45-5468-4ba3-b51a-77d673ee1d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム\CSV">
+      <UniqueIdentifier>{41e27a89-43e9-4c26-a65e-a85139d0953c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム\Draw">
+      <UniqueIdentifier>{a564b112-9a62-4296-a235-ee349ad4b6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム\Input">
+      <UniqueIdentifier>{c1dd32a5-af2d-412c-9a0c-c1d41cfd61ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="システム\System">
+      <UniqueIdentifier>{8de3eaca-fe1c-435d-b857-781c48befe91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Unit\IUnit">
+      <UniqueIdentifier>{5c8832eb-bc19-4626-8309-5053b20662f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\GUIFrame">
+      <UniqueIdentifier>{5c55ff9f-1a37-4f6c-81ac-7b826eb7e368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\GUIFrame\GUI">
+      <UniqueIdentifier>{8eb020bd-a7aa-400f-8a04-1173920f422a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\GUIFrame\Frame">
+      <UniqueIdentifier>{daf9b1d1-7474-4e25-92cc-09ee353c389b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Flag">
+      <UniqueIdentifier>{231f52da-3a26-4027-8220-968d976b729b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Managers">
+      <UniqueIdentifier>{9c0844cf-218b-492c-abdb-d8ab878fcf39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Souse\CSV\CSVReader.cpp">
+      <Filter>システム\CSV</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\CSV\CSVWriter.cpp">
+      <Filter>システム\CSV</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Draw\Animation.cpp">
+      <Filter>システム\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Draw\AnimationTimer.cpp">
+      <Filter>システム\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Draw\DrawSprite2D.cpp">
+      <Filter>システム\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Draw\Renderer.cpp">
+      <Filter>システム\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Draw\TextureNumber.cpp">
+      <Filter>システム\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Input\InputState.cpp">
+      <Filter>システム\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\System\ShootingApplication.cpp">
+      <Filter>システム\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\System\main.cpp">
+      <Filter>システム\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\System\GameApplication.cpp">
+      <Filter>システム\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Collider\Collider.cpp">
+      <Filter>ソース ファイル\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Collider\ColliderPair.cpp">
+      <Filter>ソース ファイル\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Collider\ColliderPairManager.cpp">
+      <Filter>ソース ファイル\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Scene\Credit.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Scene\GamePlay.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Scene\Ranking.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Scene\SceneManager.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Scene\SceneNull.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Scene\Title.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Actor.cpp">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Unit.cpp">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\UnitParameter.cpp">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Utility\Math.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Utility\Screen.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Utility\SubVector.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Utility\ToString.cpp">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\World\Camera.cpp">
+      <Filter>ソース ファイル\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\World\Timer.cpp">
+      <Filter>ソース ファイル\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\World\UnitManager.cpp">
+      <Filter>ソース ファイル\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\World\World.cpp">
+      <Filter>ソース ファイル\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\World\WorldUnit.cpp">
+      <Filter>ソース ファイル\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Input\KeyBoardState.cpp">
+      <Filter>システム\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Flag\FlagManager.cpp">
+      <Filter>ソース ファイル\Flag</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Input\MouseState.cpp">
+      <Filter>システム\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\Button.cpp">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\Cursor.cpp">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\GUI.cpp">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\GUIBarChart.cpp">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\GUILevel.cpp">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\GUINumber.cpp">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\GUIFrame.cpp">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\GUI\GUIManager.cpp">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Factory.cpp">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Farm.cpp">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Housing.cpp">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Player.cpp">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Space.cpp">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Unit\Star.cpp">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Input\JoyStickState.cpp">
+      <Filter>システム\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Managers\UnitStateManager.cpp">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Managers\Funds.cpp">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Managers\Food.cpp">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Souse\Managers\Human.cpp">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Souse\CSV\CSVReader.h">
+      <Filter>システム\CSV</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\CSV\CSVWriter.h">
+      <Filter>システム\CSV</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\Animation.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\AnimationTimer.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\DrawSprite2D.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\IRenderer.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\Renderer.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\TextureID.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Draw\TextureNumber.h">
+      <Filter>システム\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\IInputState.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\InputID.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\InputState.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\KeyCode.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\System\ShootingApplication.h">
+      <Filter>システム\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\System\GameApplication.h">
+      <Filter>システム\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Collider\Collider.h">
+      <Filter>ソース ファイル\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Collider\ColliderPair.h">
+      <Filter>ソース ファイル\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Collider\ColliderPairManager.h">
+      <Filter>ソース ファイル\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\Credit.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\GamePlay.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\IScene.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\Ranking.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\Scene.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\SceneManager.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\SceneNull.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Scene\Title.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Actor.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Unit.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\UnitElement.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\UnitHierarchy.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\UnitID.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\UnitParameter.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\UnitPtr.h">
+      <Filter>ソース ファイル\Unit\IUnit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Utility\Math.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Utility\Screen.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Utility\SubVector.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Utility\ToString.h">
+      <Filter>ソース ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\World\Camera.h">
+      <Filter>ソース ファイル\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\World\IWorld.h">
+      <Filter>ソース ファイル\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\World\Timer.h">
+      <Filter>ソース ファイル\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\World\UnitManager.h">
+      <Filter>ソース ファイル\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\World\World.h">
+      <Filter>ソース ファイル\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\World\WorldUnit.h">
+      <Filter>ソース ファイル\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\KeyBoardState.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Flag\FlagManager.h">
+      <Filter>ソース ファイル\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Flag\FlagID.h">
+      <Filter>ソース ファイル\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Flag\IFlagManager.h">
+      <Filter>ソース ファイル\Flag</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\MouseState.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\Button.h">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\Cursor.h">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUI.h">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUIBarChart.h">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUILevel.h">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUINumber.h">
+      <Filter>ソース ファイル\GUIFrame\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUICommand.h">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUIFrame.h">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUIFramePtr.h">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUIManager.h">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\GUI\GUIPtr.h">
+      <Filter>ソース ファイル\GUIFrame\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Factory.h">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Farm.h">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Housing.h">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Player.h">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Space.h">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Unit\Star.h">
+      <Filter>ソース ファイル\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Input\JoyStickState.h">
+      <Filter>システム\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Managers\UnitStateManager.h">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Managers\Funds.h">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Managers\Food.h">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Souse\Managers\Human.h">
+      <Filter>ソース ファイル\Managers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouse\Airfield.csv">
+      <Filter>リソース ファイル\CSV</Filter>
+    </None>
+    <None Include="Resouse\Factory.csv">
+      <Filter>リソース ファイル\CSV</Filter>
+    </None>
+    <None Include="Resouse\Farm.csv">
+      <Filter>リソース ファイル\CSV</Filter>
+    </None>
+    <None Include="Resouse\Housing.csv">
+      <Filter>リソース ファイル\CSV</Filter>
+    </None>
+    <None Include="Resouse\Space.csv">
+      <Filter>リソース ファイル\CSV</Filter>
+    </None>
+    <None Include="Resouse\Star.csv">
+      <Filter>リソース ファイル\CSV</Filter>
+    </None>
+  </ItemGroup>
+</Project>

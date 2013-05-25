@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FE713465-8490-4F9D-8507-53E9039B8B72}</ProjectGuid>
+    <RootNamespace>TGS_Team7_Projects</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>../LIB\gslib_2010\inc;../LIB\gslibEXT_2010\inc./;../LIB\gslibEXT_2010\DirectShow\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>../LIB\gslib_2010\lib;../LIB\gslibEXT_2010\lib;../LIB\gslibEXT_2010\DirectShow\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>../LIB\gslib_2010\inc;../LIB\gslibEXT_2010\inc./;../LIB\gslibEXT_2010\DirectShow\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>../LIB\gslib_2010\lib;../LIB\gslibEXT_2010\lib;../LIB\gslibEXT_2010\DirectShow\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Souse\Collider\Collider.cpp" />
+    <ClCompile Include="Souse\Collider\ColliderPair.cpp" />
+    <ClCompile Include="Souse\Collider\ColliderPairManager.cpp" />
+    <ClCompile Include="Souse\CSV\CSVReader.cpp" />
+    <ClCompile Include="Souse\CSV\CSVWriter.cpp" />
+    <ClCompile Include="Souse\Draw\Animation.cpp" />
+    <ClCompile Include="Souse\Draw\AnimationTimer.cpp" />
+    <ClCompile Include="Souse\Draw\DrawSprite2D.cpp" />
+    <ClCompile Include="Souse\Draw\Renderer.cpp" />
+    <ClCompile Include="Souse\Draw\TextureNumber.cpp" />
+    <ClCompile Include="Souse\Flag\FlagManager.cpp" />
+    <ClCompile Include="Souse\GUI\Button.cpp" />
+    <ClCompile Include="Souse\GUI\Cursor.cpp" />
+    <ClCompile Include="Souse\GUI\GUI.cpp" />
+    <ClCompile Include="Souse\GUI\GUIBarChart.cpp" />
+    <ClCompile Include="Souse\GUI\GUIFrame.cpp" />
+    <ClCompile Include="Souse\GUI\GUILevel.cpp" />
+    <ClCompile Include="Souse\GUI\GUIManager.cpp" />
+    <ClCompile Include="Souse\GUI\GUINumber.cpp" />
+    <ClCompile Include="Souse\Input\InputState.cpp" />
+    <ClCompile Include="Souse\Input\JoyStickState.cpp" />
+    <ClCompile Include="Souse\Input\KeyBoardState.cpp" />
+    <ClCompile Include="Souse\Input\MouseState.cpp" />
+    <ClCompile Include="Souse\Managers\Food.cpp" />
+    <ClCompile Include="Souse\Managers\Funds.cpp" />
+    <ClCompile Include="Souse\Managers\Human.cpp" />
+    <ClCompile Include="Souse\Managers\UnitStateManager.cpp" />
+    <ClCompile Include="Souse\Scene\Credit.cpp" />
+    <ClCompile Include="Souse\Scene\GamePlay.cpp" />
+    <ClCompile Include="Souse\Scene\Ranking.cpp" />
+    <ClCompile Include="Souse\Scene\SceneManager.cpp" />
+    <ClCompile Include="Souse\Scene\SceneNull.cpp" />
+    <ClCompile Include="Souse\Scene\Title.cpp" />
+    <ClCompile Include="Souse\System\GameApplication.cpp" />
+    <ClCompile Include="Souse\System\main.cpp" />
+    <ClCompile Include="Souse\System\ShootingApplication.cpp" />
+    <ClCompile Include="Souse\Unit\Actor.cpp" />
+    <ClCompile Include="Souse\Unit\Factory.cpp" />
+    <ClCompile Include="Souse\Unit\Farm.cpp" />
+    <ClCompile Include="Souse\Unit\Housing.cpp" />
+    <ClCompile Include="Souse\Unit\Player.cpp" />
+    <ClCompile Include="Souse\Unit\Space.cpp" />
+    <ClCompile Include="Souse\Unit\Star.cpp" />
+    <ClCompile Include="Souse\Unit\Unit.cpp" />
+    <ClCompile Include="Souse\Unit\UnitParameter.cpp" />
+    <ClCompile Include="Souse\Utility\Math.cpp" />
+    <ClCompile Include="Souse\Utility\Screen.cpp" />
+    <ClCompile Include="Souse\Utility\SubVector.cpp" />
+    <ClCompile Include="Souse\Utility\ToString.cpp" />
+    <ClCompile Include="Souse\World\Camera.cpp" />
+    <ClCompile Include="Souse\World\Timer.cpp" />
+    <ClCompile Include="Souse\World\UnitManager.cpp" />
+    <ClCompile Include="Souse\World\World.cpp" />
+    <ClCompile Include="Souse\World\WorldUnit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Souse\Collider\Collider.h" />
+    <ClInclude Include="Souse\Collider\ColliderPair.h" />
+    <ClInclude Include="Souse\Collider\ColliderPairManager.h" />
+    <ClInclude Include="Souse\CSV\CSVReader.h" />
+    <ClInclude Include="Souse\CSV\CSVWriter.h" />
+    <ClInclude Include="Souse\Draw\Animation.h" />
+    <ClInclude Include="Souse\Draw\AnimationTimer.h" />
+    <ClInclude Include="Souse\Draw\DrawSprite2D.h" />
+    <ClInclude Include="Souse\Draw\IRenderer.h" />
+    <ClInclude Include="Souse\Draw\Renderer.h" />
+    <ClInclude Include="Souse\Draw\TextureID.h" />
+    <ClInclude Include="Souse\Draw\TextureNumber.h" />
+    <ClInclude Include="Souse\Flag\FlagID.h" />
+    <ClInclude Include="Souse\Flag\FlagManager.h" />
+    <ClInclude Include="Souse\Flag\IFlagManager.h" />
+    <ClInclude Include="Souse\GUI\Button.h" />
+    <ClInclude Include="Souse\GUI\Cursor.h" />
+    <ClInclude Include="Souse\GUI\GUI.h" />
+    <ClInclude Include="Souse\GUI\GUIBarChart.h" />
+    <ClInclude Include="Souse\GUI\GUICommand.h" />
+    <ClInclude Include="Souse\GUI\GUIFrame.h" />
+    <ClInclude Include="Souse\GUI\GUIFramePtr.h" />
+    <ClInclude Include="Souse\GUI\GUILevel.h" />
+    <ClInclude Include="Souse\GUI\GUIManager.h" />
+    <ClInclude Include="Souse\GUI\GUINumber.h" />
+    <ClInclude Include="Souse\GUI\GUIPtr.h" />
+    <ClInclude Include="Souse\Input\IInputState.h" />
+    <ClInclude Include="Souse\Input\InputID.h" />
+    <ClInclude Include="Souse\Input\InputState.h" />
+    <ClInclude Include="Souse\Input\JoyStickState.h" />
+    <ClInclude Include="Souse\Input\KeyBoardState.h" />
+    <ClInclude Include="Souse\Input\KeyCode.h" />
+    <ClInclude Include="Souse\Input\MouseState.h" />
+    <ClInclude Include="Souse\Managers\Food.h" />
+    <ClInclude Include="Souse\Managers\Funds.h" />
+    <ClInclude Include="Souse\Managers\Human.h" />
+    <ClInclude Include="Souse\Managers\UnitStateManager.h" />
+    <ClInclude Include="Souse\Scene\Credit.h" />
+    <ClInclude Include="Souse\Scene\GamePlay.h" />
+    <ClInclude Include="Souse\Scene\IScene.h" />
+    <ClInclude Include="Souse\Scene\Ranking.h" />
+    <ClInclude Include="Souse\Scene\Scene.h" />
+    <ClInclude Include="Souse\Scene\SceneManager.h" />
+    <ClInclude Include="Souse\Scene\SceneNull.h" />
+    <ClInclude Include="Souse\Scene\Title.h" />
+    <ClInclude Include="Souse\System\GameApplication.h" />
+    <ClInclude Include="Souse\System\ShootingApplication.h" />
+    <ClInclude Include="Souse\Unit\Actor.h" />
+    <ClInclude Include="Souse\Unit\Factory.h" />
+    <ClInclude Include="Souse\Unit\Farm.h" />
+    <ClInclude Include="Souse\Unit\Housing.h" />
+    <ClInclude Include="Souse\Unit\Player.h" />
+    <ClInclude Include="Souse\Unit\Space.h" />
+    <ClInclude Include="Souse\Unit\Star.h" />
+    <ClInclude Include="Souse\Unit\Unit.h" />
+    <ClInclude Include="Souse\Unit\UnitElement.h" />
+    <ClInclude Include="Souse\Unit\UnitHierarchy.h" />
+    <ClInclude Include="Souse\Unit\UnitID.h" />
+    <ClInclude Include="Souse\Unit\UnitParameter.h" />
+    <ClInclude Include="Souse\Unit\UnitPtr.h" />
+    <ClInclude Include="Souse\Utility\Math.h" />
+    <ClInclude Include="Souse\Utility\Screen.h" />
+    <ClInclude Include="Souse\Utility\SubVector.h" />
+    <ClInclude Include="Souse\Utility\ToString.h" />
+    <ClInclude Include="Souse\World\Camera.h" />
+    <ClInclude Include="Souse\World\IWorld.h" />
+    <ClInclude Include="Souse\World\Timer.h" />
+    <ClInclude Include="Souse\World\UnitManager.h" />
+    <ClInclude Include="Souse\World\World.h" />
+    <ClInclude Include="Souse\World\WorldUnit.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouse\Airfield.csv" />
+    <None Include="Resouse\Factory.csv" />
+    <None Include="Resouse\Farm.csv" />
+    <None Include="Resouse\Housing.csv" />
+    <None Include="Resouse\Space.csv" />
+    <None Include="Resouse\Star.csv" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
