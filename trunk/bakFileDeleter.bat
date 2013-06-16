@@ -15,6 +15,7 @@ goto EXT
 rem .bakƒtƒ@ƒCƒ‹œ‹
 :KILL
 for /r %%i in ( *.bak ) do ( if exist "%%i" ( del /s /q "%%i"))
+for /r %%A in ( *.*~ ) do ( if exist "%%A" ( del /s /q "%%A"))
 goto EXT
 
 :EXT
