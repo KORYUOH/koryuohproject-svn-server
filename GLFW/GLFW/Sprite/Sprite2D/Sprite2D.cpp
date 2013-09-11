@@ -33,60 +33,10 @@ Sprite2D::Sprite2D(TextureData& textureData,float x_, float y_,const Rect& rect)
 	,mTexCoord(0.0f,0.0f,1.0f,1.0f)
 {
 	if(rect.mSize.x_<0||rect.mSize.y_<0){
-		mRect.mSize.x_ = gsTextureGetWidth(gsGetTexture(textureID));
-		mRect.mSize.y_ = gsTextureGetHeight(gsGetTexture(textureID));
+		mRect.mSize.x_ = mTexData.Width();
+		mRect.mSize.y_ = mTexData.Height();
 	}
 }
-
-/**========================================================*/
-/**
- *	@brief	コンストラクタ
- *	@param[in]	テクスチャーID
- *	@param[in]　座標のx
- *	@param[in]　座標のy
- *	@param[in]　表示する画像の横サイズ
- *	@param[in]  表示する画像の縦のサイズ
- *	@param[in]  角度
- *	@author	Keisuke Ito
- */
-/**========================================================*/
-
-Sprite2D::Sprite2D(GLuint textureID,float x_, float y_, float sizeX, float sizeY, float rotation)
-	:mTextureID(textureID)
-	,mPosition(x_,y_)
-	,mRect(0.0f,0.0f,sizeX,sizeY)
-	,mCenter(0.0f,0.0f)
-	,mScale(1.0f,1.0f)
-	,mRotation(rotation)
-	,mColor(1.0f,1.0f,1.0f,1.0f)
-	,mTexCoord(0.0f,0.0f,1.0f,1.0f)
-{
-}
-
-/**========================================================*/
-/**
- *	@brief	コンストラクタ
- *	@param[in]	テクスチャーID
- *	@author	KORYUOH
- */
-/**========================================================*/
-Sprite2D::Sprite2D(unsigned int textureID,const Vector2& position,float rotate,const Vector2& scale,const Rect & rect)
-	:mTextureID(textureID)
-	,mPosition(position)
-	,mRotation(rotate)
-	,mRect(rect)
-	,mCenter(0.0f,0.0f)
-	,mScale(scale)
-	,mColor(1.0f,1.0f,1.0f,1.0f)
-	,mTexCoord(0.0f,0.0f,1.0f,1.0f)
-{
-	if(rect.mSize.x_ <= 0&& rect.mSize.y_ <= 0){
-		mRect.mSize.x_ = gsTextureGetWidth(gsGetTexture(textureID));
-		mRect.mSize.y_ = gsTextureGetHeight(gsGetTexture(textureID));
-	}
-}
-
-
 
 /**
 	 *	@brief	位置の設定
@@ -138,7 +88,7 @@ Sprite2D::Sprite2D(unsigned int textureID,const Vector2& position,float rotate,c
 	void Sprite2D::setImageRect(const Rect& rect)
 	{
 		// テクスチャをバインドする
-		gsBindTexture( mTextureID );
+		gsBindTexture( mTexData.TextureID() );
 
 		// バインド中のテクスチャの幅と高さを取得する
 		GLint width, height;
@@ -174,7 +124,7 @@ void Sprite2D::draw()
 	glGetFloatv( GL_CURRENT_COLOR, (GLfloat*)&CurrentColor );
 
 	// テクスチャをバインドする
-	gsBindTexture( mTextureID );
+	gsBindTexture( mTexData.TextureID() );
 
 	// 透視変換行列の退避
 	glMatrixMode( GL_PROJECTION );
