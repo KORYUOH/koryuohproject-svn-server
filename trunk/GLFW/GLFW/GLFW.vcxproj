@@ -118,6 +118,7 @@
     <ClInclude Include="Network\SocketImpl\SocketImpl.h" />
     <ClInclude Include="Network\Socket\ServerSocket\ServerSocket.h" />
     <ClInclude Include="Network\Socket\Socket\Socket.h" />
+    <ClInclude Include="Sprite\Interface\IDraw.h" />
     <ClInclude Include="Sprite\Sprite2D\Sprite2D.h" />
     <ClInclude Include="Sprite\Sprite3D\Sprite3D.h" />
     <ClInclude Include="Thread\CriticalSection\CriticalSection.h" />

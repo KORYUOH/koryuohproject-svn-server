@@ -21,8 +21,8 @@
  *	@author	KORYUOH
  */
 /**========================================================*/
-Sprite3D::Sprite3D(unsigned int textureID)
-	:mTextureID(textureID)
+Sprite3D::Sprite3D(const TextureData& textureData)
+	:mTextureData(textureData)
 	,mPosition(0.0f,0.0f,0.0f)
 	,mScale(1.0f,1.0f)
 	,mRotate(0.0f)
@@ -89,12 +89,13 @@ void Sprite3D::setColor(const Color4& color){
 /**========================================================*/
 void Sprite3D::setImageRect(const Rect& rect){
 	//イメージをバインド
-	gsBindTexture(mTextureID);
+	gsBindTexture(mTextureData.TextureID());
 
 	//バインド中のテクスチャの幅と高さを取得
-	GLint	width,height;
-	glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_WIDTH,&width);
-	glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_HEIGHT,&height);
+	int	width=mTextureData.Width(),height=mTextureData.Height();
+//	glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_WIDTH,&width);
+//	glGetTexParameteriv(GL_TEXTURE_2D,GL_TEXTURE_HEIGHT,&height);
+
 
 	//テクスチャ座標の計算
 	mTexCoord.mPos.y_ = rect.top()/height;
@@ -117,7 +118,7 @@ void Sprite3D::draw(){
 	glDisable(GL_CULL_FACE);
 
 	//テクスチャのバインド
-	gsBindTexture(mTextureID);
+	gsBindTexture(mTextureData.TextureID());
 
 	//モデルビュー変換行列の退避
 	glMatrixMode(GL_MODELVIEW);
@@ -142,6 +143,15 @@ void Sprite3D::draw(){
 	glColor4fv((GLfloat*)&mColor);
 
 	//四角形の描画
+	drawQuad();
+
+	//モデルビュー復帰
+	glPopMatrix();
+	//レンダリングモード復帰
+	glPopAttrib();
+}
+
+void Sprite3D::drawQuad(){
 	glBegin(GL_QUADS);
 		glNormal3f(0.0f,0.0f,1.0f);
 		glTexCoord2f(mTexCoord.left(),mTexCoord.top());
@@ -157,10 +167,6 @@ void Sprite3D::draw(){
 		glVertex2f(mRect.right(),mRect.top());
 
 	glEnd();
-
-	//モデルビュー復帰
-	glPopMatrix();
-	//レンダリングモード復帰
-	glPopAttrib();
 }
+
 /**===End Of File==========================================*/

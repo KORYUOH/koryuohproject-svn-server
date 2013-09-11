@@ -98,6 +98,9 @@
     <Filter Include="Type\TextureData">
       <UniqueIdentifier>{b6887c86-ac3b-4b2e-9e4f-ca489782cb49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sprite\Interface">
+      <UniqueIdentifier>{4425aed5-973c-46b8-9267-c67845be4b3b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\InetAddress\InetAddress.cpp">
@@ -261,6 +264,9 @@
     </ClInclude>
     <ClInclude Include="Type\TextureData\TextureData.h">
       <Filter>Type\TextureData</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite\Interface\IDraw.h">
+      <Filter>Sprite\Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,19 +12,21 @@
 #ifndef	_SPRITE3D_H_
 #define	_SPRITE3D_H_
 /**===File Include=========================================*/
+#include	<Sprite/Interface/IDraw.h>
 #include	<Type/Vector3/Vector3.h>
 #include	<Type/Vector2/Vector2.h>
 #include	<Type/Rect/Rect.h>
 #include	<Type/Color4/Color4.h>
+#include	<Type/TextureData/TextureData.h>
 /**===Class Definition=====================================*/
-class Sprite3D{
+class Sprite3D:public IDraw{
 public:
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	テクスチャID
 	 *	@author	KORYUOH
 	 */
-	Sprite3D(unsigned int textureID);
+	Sprite3D(const TextureData& textureData);
 	/**
 	 *	@brief	位置の設定
 	 *	@param[in]	位置
@@ -65,18 +67,19 @@ public:
 	 *	@brief	描画
 	 *	@author	KORYUOH
 	 */
-	void draw();
-
+	virtual void draw();
+private:
+	void drawQuad();
 
 private:
 	/**	メンバー変数*/
-	unsigned int		mTextureID;
+	const TextureData&	mTextureData;
 	Vector3			mPosition;
 	Vector2			mScale;
-	float			mRotate;
+	float				mRotate;
 	Color4			mColor;
-	Rect			mRect;
-	Rect			mTexCoord;
+	Rect				mRect;
+	Rect				mTexCoord;
 
 };
 /**===End Class Definition=================================*/

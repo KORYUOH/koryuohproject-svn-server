@@ -13,12 +13,13 @@
 #define _SPRITE2D_H_
 /**===File Include=========================================*/
 //#include<gslib.h>
+#include	<Sprite/Interface/IDraw.h>
 #include	<Type/Rect/Rect.h>
 #include	<Type/Vector2/Vector2.h>
 #include	<Type/Color4/Color4.h>
 #include	<Type/TextureData/TextureData.h>
 /**===Class Definition=====================================*/
-class Sprite2D{
+class Sprite2D:public IDraw{
 public:
 	/**
 	 *	@brief	コンストラクタ
@@ -97,7 +98,7 @@ public:
 	 *	@brief	描画
 	 *	@author	Keisuke Ito
 	 */
-	void draw();
+	virtual void draw();
 
 	/**
 	 *	@brief	四角形描画
@@ -110,7 +111,7 @@ public:
 
 private:
 	/**	メンバー変数*/
-	TextureData		mTexData;
+	TextureData			mTexData;
 	Vector2				mPosition;		//座標
 	Rect				mRect;			//切り出し
 	Vector2				mCenter;		//中心
