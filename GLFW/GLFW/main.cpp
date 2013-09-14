@@ -9,7 +9,6 @@
  *	@date	2012/04/23
  */
 /**===File Include=========================================*/
-#define _FULLSCREEN
 #include	<GameLogic/impl/GameRunner.h>
 /**===Linker Options=======================================*/
 #pragma comment ( linker,"/entry:mainCRTStartup")

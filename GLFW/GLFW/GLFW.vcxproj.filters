@@ -101,6 +101,24 @@
     <Filter Include="Sprite\Interface">
       <UniqueIdentifier>{4425aed5-973c-46b8-9267-c67845be4b3b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{832ec5db-7652-4bcc-acdd-a17e04ee07e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\IMediator">
+      <UniqueIdentifier>{c69122a4-5e15-4459-857c-ffb0b3d13e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Base">
+      <UniqueIdentifier>{bea0400f-f436-4212-b1b1-46fd793be821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Manager">
+      <UniqueIdentifier>{e851507e-5738-456b-b4cf-7dc3fe46c5ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameApplication\WindowParam">
+      <UniqueIdentifier>{d5ec0701-8b4e-4b71-b7e9-62369c53bc40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameApplication\Perspective">
+      <UniqueIdentifier>{33255a0f-a193-4bd0-aecd-f87412f6e288}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Network\InetAddress\InetAddress.cpp">
@@ -172,6 +190,12 @@
     </ClCompile>
     <ClCompile Include="Type\TextureData\TextureData.cpp">
       <Filter>Type\TextureData</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Base\SceneBase.cpp">
+      <Filter>Scene\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Manager\SceneManager.cpp">
+      <Filter>Scene\Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -267,6 +291,21 @@
     </ClInclude>
     <ClInclude Include="Sprite\Interface\IDraw.h">
       <Filter>Sprite\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Manager\SceneManager.h">
+      <Filter>Scene\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Base\SceneBase.h">
+      <Filter>Scene\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\IMediator\ISceneMediator.h">
+      <Filter>Scene\IMediator</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApplication\WindowParam\Windowparam.h">
+      <Filter>GameApplication\WindowParam</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApplication\Perspective\Perspective.h">
+      <Filter>GameApplication\Perspective</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

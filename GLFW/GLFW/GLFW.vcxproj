@@ -88,6 +88,8 @@
     <ClCompile Include="Network\SocketImpl\SocketImpl.cpp" />
     <ClCompile Include="Network\Socket\ServerSocket\ServerSocket.cpp" />
     <ClCompile Include="Network\Socket\Socket\Socket.cpp" />
+    <ClCompile Include="Scene\Base\SceneBase.cpp" />
+    <ClCompile Include="Scene\Manager\SceneManager.cpp" />
     <ClCompile Include="Sprite\Sprite2D\Sprite2D.cpp" />
     <ClCompile Include="Sprite\Sprite3D\Sprite3D.cpp" />
     <ClCompile Include="Thread\CriticalSection\CriticalSection.cpp" />
@@ -107,6 +109,8 @@
     <ClInclude Include="Device\IDevice.h" />
     <ClInclude Include="Device\Impl\Mouse.h" />
     <ClInclude Include="GameApplication\GameApplication.h" />
+    <ClInclude Include="GameApplication\Perspective\Perspective.h" />
+    <ClInclude Include="GameApplication\WindowParam\Windowparam.h" />
     <ClInclude Include="GameLogic\impl\GameMain.h" />
     <ClInclude Include="GameLogic\impl\GameRunner.h" />
     <ClInclude Include="GameLogic\Interface\IGameSystem.h" />
@@ -118,6 +122,9 @@
     <ClInclude Include="Network\SocketImpl\SocketImpl.h" />
     <ClInclude Include="Network\Socket\ServerSocket\ServerSocket.h" />
     <ClInclude Include="Network\Socket\Socket\Socket.h" />
+    <ClInclude Include="Scene\Base\SceneBase.h" />
+    <ClInclude Include="Scene\IMediator\ISceneMediator.h" />
+    <ClInclude Include="Scene\Manager\SceneManager.h" />
     <ClInclude Include="Sprite\Interface\IDraw.h" />
     <ClInclude Include="Sprite\Sprite2D\Sprite2D.h" />
     <ClInclude Include="Sprite\Sprite3D\Sprite3D.h" />

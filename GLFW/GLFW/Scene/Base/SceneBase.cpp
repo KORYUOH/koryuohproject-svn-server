@@ -1,70 +1,81 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	GameRunner.cpp
+ *	@file	SceneBase.cpp
  *
- *	@brief	ゲーム実行基礎クラス
+ *	@brief	シーン基底クラス
  *
  *	@author	KORYUOH
  *
- *	@date	2012/04/22
+ *	@date	2013/09/14
  */
 /**===File Include=========================================*/
-#include	<GameLogic/impl/GameRunner.h>
+#include	<Scene/Base/SceneBase.h>
 /**===Class Implementation=================================*/
+
 /**========================================================*/
 /**
  *	@brief	コンストラクタ
- *	@param[in]	ゲームシステムポインタ
- *	@note	IGameSystemを継承したもの
- *	@author	KORYUOH
  */
 /**========================================================*/
-GameRunner::GameRunner(int argc,char* argv[]):GameApplication(argc,argv),mSManager(){
-}
-/**========================================================*/
-/**
- *	@brief	コンストラクタ
- *	@param[in]	ゲームシステムポインタ
- *	@note	IGameSystemを継承したもの
- *	@author	KORYUOH
- */
-/**========================================================*/
-GameRunner::GameRunner(int argc,char* argv[],SceneBase* scene):GameApplication(argc,argv),mSManager(scene){
+SceneBase::SceneBase():mMediator(nullptr)
+{
 }
 /**========================================================*/
 /**
  *	@brief	初期化
- *	@author	KORYUOH
  */
 /**========================================================*/
-void GameRunner::initialize(){
-	mSManager.initialize();
+void SceneBase::initialize(){
 }
 /**========================================================*/
 /**
- *	@brief	メイン処理
- *	@author	KORYUOH
+ *	@brief	更新
+ *	@param[in]	フレームタイム
  */
 /**========================================================*/
-void GameRunner::update(float f){
-	mSManager.update(f);
+void SceneBase::update(float f){
 }
 /**========================================================*/
 /**
- *	@brief	描画処理
- *	@author	KORYUOH
+ *	@brief	描画
  */
 /**========================================================*/
-void GameRunner::draw(){
-	mSManager.draw();
+void SceneBase::draw(){
 }
 /**========================================================*/
 /**
- *	@brief	終了処理
- *	@author	KORYUOH
+ *	@brief	終了
  */
 /**========================================================*/
-void GameRunner::finish(){
-	mSManager.finish();
+void SceneBase::finish(){
 }
+/**========================================================*/
+/**
+ *	@brief	シーン変更
+ *	@param[in]	次のシーン
+ */
+/**========================================================*/
+void SceneBase::SceneChange(SceneBase* scene){
+	mMediator->SceneChange(scene);
+}
+/**========================================================*/
+/**
+ *	@brief	シーン変更
+ *	@param[in]	次のシーン
+ */
+/**========================================================*/
+void SceneBase::SceneChange(std::shared_ptr<SceneBase> scene){
+	mMediator->SceneChange(scene);
+}
+/**========================================================*/
+/**
+ *	@brief	通知者設定
+ *	@param[in]	通知者
+ */
+/**========================================================*/
+void SceneBase::setMediator(ISceneMediator& mediator){
+	mMediator = &mediator;
+}
+
+
 /**===End Of File==========================================*/
