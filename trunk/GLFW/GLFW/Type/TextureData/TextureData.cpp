@@ -59,7 +59,7 @@ float TextureData::Width()const{
  *	@return	‚‚³
  */
 /**========================================================*/
-float TextureData.Height()const{
+float TextureData::Height()const{
 	return mSize.y_;
 }
 

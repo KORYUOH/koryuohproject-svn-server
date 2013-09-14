@@ -15,6 +15,7 @@
 #define	_GAMEAPPLICATION_H_
 /**===File Include=========================================*/
 #include	<GameLogic/Interface/IGameSystem.h>
+#include	<GameApplication/WindowParam/Windowparam.h>
 #include	<memory>
 #include	<string>
 /**===Class Definition=====================================*/
@@ -25,6 +26,13 @@ public:
 	 *	@author	KORYUOH
 	 */
 	void run();
+	/**
+	 *	@brief	フルスクリーンモード
+	 *	@param[in]	フラグ
+	 *	@note	True:FullScreen
+	 *	@author	KORYUOH
+	 */
+	void setFullScreenMode(bool mode);
 protected:
 	/**
 	 *	@brief	コンストラクタ
@@ -156,13 +164,6 @@ protected:
 	 */
 	void setPerspectiveFar(float far);
 	/**
-	 *	@brief	フルスクリーンモード
-	 *	@param[in]	フラグ
-	 *	@note	True:FullScreen
-	 *	@author	KORYUOH
-	 */
-	void setFullScreenMode(bool mode);
-	/**
 	 *	@brief	フルスクリーンモードか？
 	 *	@author	KORYUOH
 	 *	@return	フラグ
@@ -223,15 +224,9 @@ private:
 private:
 	/**	メンバー変数*/
 	std::string	mWindowTitle;
-	int	mWindowPositionX;
-	int	mWindowPositionY;
-	int	mWindowWidth;
-	int	mWindowHeight;
+	WindowParam mParam;
 	bool	mIsFullScreenMode;
-	float	mPerspectiveFov;
-	float	mPerspectiveNear;
-	float	mPerspectiveFar;
-
+	
 	static GameApplication*	mInstance;
 
 

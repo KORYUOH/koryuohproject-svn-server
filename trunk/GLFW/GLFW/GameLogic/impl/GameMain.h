@@ -40,12 +40,6 @@ public:
 
 private:
 	/**	ƒƒ“ƒo[•Ï”*/
-	enum GameImg{
-		TITLE=0,
-		BALL,
-		BAR,
-		RESULT_BG,
-	};
 };
 /**===End Class Definition=================================*/
 #endif

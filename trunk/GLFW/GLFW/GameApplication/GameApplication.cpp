@@ -32,14 +32,17 @@ GameApplication* GameApplication::mInstance = 0;
 /**========================================================*/
 GameApplication::GameApplication(int argc, char* argv[]):
 	mWindowTitle(APPLICATION_TITLE),
-	mWindowPositionX( WINDOW_CREATE_POSITION_X ),
-	mWindowPositionY( WINDOW_CREATE_POSITION_Y ),
-	mWindowWidth( WINDW_SIZE_X ),
-	mWindowHeight( WINDW_SIZE_Y ),
+	mParam(Rect(
+		WINDOW_CREATE_POSITION_X,
+		WINDOW_CREATE_POSITION_Y,
+		WINDOW_SIZE_X,
+		WINDOW_SIZE_Y
+		),
+		Perspective(
+		50.0f,
+		0.5f,
+		100.0f))
 	mIsFullScreenMode( SCREENMODE ),
-	mPerspectiveFov(50.0f),
-	mPerspectiveNear(0.5f),
-	mPerspectiveFar(100.0f)
 {
 	//自身のインスタンスを設定
 	mInstance = this;
@@ -263,7 +266,7 @@ const std::string& GameApplication::getWindowTitle()const{
  */
 /**========================================================*/
 int GameApplication::getWindowPositionX()const{
-	return mWindowPositionX;
+	return (int)mParam.mWindow.mPos.x_;
 }
 /**========================================================*/
 /**
@@ -273,7 +276,7 @@ int GameApplication::getWindowPositionX()const{
  */
 /**========================================================*/
 int GameApplication::getWindowPositionY()const{
-	return mWindowPositionY;
+	return (int)mParam.mWindow.mPos.y_;
 }
 /**========================================================*/
 /**
@@ -283,7 +286,7 @@ int GameApplication::getWindowPositionY()const{
  */
 /**========================================================*/
 int GameApplication::getWindowWidth()const{
-	return mWindowWidth;
+	return (int)mParam.mWindow.mSize.x_;
 }
 /**========================================================*/
 /**
@@ -293,7 +296,7 @@ int GameApplication::getWindowWidth()const{
  */
 /**========================================================*/
 int GameApplication::getWindowHeight()const{
-	return mWindowHeight;
+	return (int)mParam.mWindow.mSize.y_;
 }
 /**========================================================*/
 /**
@@ -303,7 +306,7 @@ int GameApplication::getWindowHeight()const{
  */
 /**========================================================*/
 float GameApplication::getPerspectiveFov()const{
-	return mPerspectiveFov;
+	return mParam.mPerspective.fov_;
 }
 /**========================================================*/
 /**
@@ -313,7 +316,7 @@ float GameApplication::getPerspectiveFov()const{
  */
 /**========================================================*/
 float GameApplication::getPerspectiveNear()const{
-	return mPerspectiveNear;
+	return mParam.mPerspective.near_;
 }
 /**========================================================*/
 /**
@@ -323,7 +326,7 @@ float GameApplication::getPerspectiveNear()const{
  */
 /**========================================================*/
 float GameApplication::getPerspectiveFar()const{
-	return mPerspectiveFar;
+	return mParam.mPerspective.far_;
 }
 /**========================================================*/
 /**
@@ -343,7 +346,7 @@ void GameApplication::setWindowTitle(const std::string& title){
  */
 /**========================================================*/
 void GameApplication::setWindowPositionX(int x){
-	mWindowPositionX = x;
+	mParam.mWindow.mPos.x_ = (float)x;
 }
 /**========================================================*/
 /**
@@ -353,7 +356,7 @@ void GameApplication::setWindowPositionX(int x){
  */
 /**========================================================*/
 void GameApplication::setWindowPositionY(int y){
-	mWindowPositionY = y;
+	mParam.mWindow.mPos.y_ = (float)y;
 }
 /**========================================================*/
 /**
@@ -363,7 +366,7 @@ void GameApplication::setWindowPositionY(int y){
  */
 /**========================================================*/
 void GameApplication::setWindowWidth(int width){
-	mWindowWidth = width;
+	mParam.mWindow.mSize.x_ = (float)width;
 }
 /**========================================================*/
 /**
@@ -373,7 +376,7 @@ void GameApplication::setWindowWidth(int width){
  */
 /**========================================================*/
 void GameApplication::setWindowHeight(int height){
-	mWindowHeight = height;
+	mParam.mWindow.mSize.y_ = (float)height;
 }
 /**========================================================*/
 /**
@@ -383,7 +386,7 @@ void GameApplication::setWindowHeight(int height){
  */
 /**========================================================*/
 void GameApplication::setPerspectiveFov(float fov){
-	mPerspectiveFov = fov;
+	mParam.mPerspective.fov_ = fov;
 }
 /**========================================================*/
 /**
@@ -393,7 +396,7 @@ void GameApplication::setPerspectiveFov(float fov){
  */
 /**========================================================*/
 void GameApplication::setPerspectiveNear(float znear){
-	mPerspectiveNear = znear;
+	mParam.mPerspective.near_ = znear;
 }
 /**========================================================*/
 /**
@@ -403,7 +406,7 @@ void GameApplication::setPerspectiveNear(float znear){
  */
 /**========================================================*/
 void GameApplication::setPerspectiveFar(float zfar){
-	mPerspectiveFar = zfar;
+	mParam.mPerspective.far_ = zfar;
 }
 /**========================================================*/
 /**
@@ -429,7 +432,6 @@ bool GameApplication::isFullScreenMode()const{
 /**
  *	@brief	終了処理動作チェック
  *	@author	KORYUOH
- *	@return	FullScreenMode
  */
 /**========================================================*/
 
@@ -441,7 +443,12 @@ void GameApplication::finishCheck(){
 		//終了処理呼び出し
 		mInstance->destroy();
 }
-
+/**========================================================*/
+/**
+ *	@brief	フルスクリーン起動チェック
+ *	@author	KORYUOH
+ */
+/**========================================================*/
 void GameApplication::FullScreenCheck(){
 	if(!isFullScreenMode()){
 		//ウィンドウモード
@@ -457,7 +464,11 @@ void GameApplication::FullScreenCheck(){
 	//マウスカーソルは消す
 	glutSetCursor(GLUT_CURSOR_NONE);
 }
-
+/**========================================================*/
+/**
+ *	@brief	gsシステム初期化
+ */
+/**========================================================*/
 void GameApplication::gsSystemInitialize(){
 	//グラフィックシステム初期化
 	gsInitGraphics();
@@ -466,7 +477,11 @@ void GameApplication::gsSystemInitialize(){
 	//入力デバイスシステム初期化
 	gsInitInput((HWND)_glutGetHWND());
 }
-
+/**========================================================*/
+/**
+ *	@brief	コールバック関数の設定
+ */
+/**========================================================*/
 void GameApplication::setCallBacks(){
 	//終了処理関数設定
 	_glutDestroyFunc(destroy);

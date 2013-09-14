@@ -22,7 +22,7 @@
  */
 /**========================================================*/
 
-Sprite2D::Sprite2D(TextureData& textureData,float x_, float y_,const Rect& rect)
+Sprite2D::Sprite2D(const TextureData& textureData,float x_, float y_,const Rect& rect)
 	:mTexData(textureData)
 	,mPosition(x_,y_)
 	,mRect(rect)

@@ -12,12 +12,12 @@
 #ifndef	_GAMERUNNER_H_
 #define	_GAMERUNNER_H_
 /**===File Include=========================================*/
-#include	<list>
-#include	<GameLogic/Interface/IGameSystem.h>
 #include	<GameApplication/GameApplication.h>
 #include	<Define/ClassDefine.h>
+#include	<Scene/Manager/SceneManager.h>
+class SceneBase;
 /**===Class Definition=====================================*/
-class GameRunner:public IGameSystem,public GameApplication{
+class GameRunner:public GameApplication{
 public:
 	/**
 	 *	@brief	コンストラクタ
@@ -25,25 +25,15 @@ public:
 	 */
 	GameRunner(int argc,char* argv[]);
 	/**
+	 *	@brief	コンストラクタ
+	 *	@author	KORYUOH
+	 */
+	GameRunner(int argc,char* argv[],SceneBase* scene);
+	/**
 	 *	@brief	仮想デストラクタ
 	 *	@author	KORYUOH
 	 */
 	virtual ~GameRunner(){};
-	/**
-	 *	@brief	後ろ追加
-	 *	@param[in]	GameSystem_ptr_t;
-	 *	@author	KORYUOH
-	 */
-	void push_back(GameSystem_ptr_t& ptr);
-	/**
-	 *	@brief	押し込む
-	 *	@param[in]	GameSystem_ptr_t;
-	 *	@param[in]	position;
-	 *	@author	KORYUOH
-	 */
-	void insert(GameSystem_ptr_t& ptr,unsigned int num);
-
-
 private:
 	/**
 	 *	@brief	初期化
@@ -68,7 +58,8 @@ private:
 
 private:
 	/**	メンバー変数*/
-	std::list<GameSystem_ptr_t> m_system;
+	SceneManager mSManager;
+
 };
 /**===End Class Definition=================================*/
 #endif
