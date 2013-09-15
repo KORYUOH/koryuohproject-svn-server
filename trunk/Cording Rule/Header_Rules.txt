@@ -22,7 +22,7 @@ class <クラス名>:public <継承元>{
 public:
 	/**
 	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
+	 *	@param[in]	<概要>
 	 *	@note	<メモ書き>
 	 *	@author	<作者名>
 	 *	@return	<戻り値>
