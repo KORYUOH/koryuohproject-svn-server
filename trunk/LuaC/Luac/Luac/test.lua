@@ -5,6 +5,10 @@ Name = "KORYUOH"
 
 print("Hello, " .. Name .. "!")
 
+print("CallTest")
+
+Shout()
+
 function say()
 	print ("He Saied " ..Name.. "")
 end

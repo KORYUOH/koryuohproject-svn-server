@@ -34,7 +34,10 @@ public:
 	 */
 //	template<typename Ty>
 	void CallFunc(const std::string& funcName);
-	/**
+
+	//template<typename Ty>
+	void setFunction(const std::string& funcName,int& func);
+	/**&
 	 *	@brief	仮想デストラクタ
 	 */
 	virtual ~Luac();

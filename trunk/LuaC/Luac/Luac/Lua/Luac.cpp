@@ -39,6 +39,20 @@ Luac::Luac(const std::string& luaPath)
  *	@return	<–ß‚è’l>
  */
 /**========================================================*/
+//template<typename Ty>
+void Luac::setFunction(const std::string& funcName, int& function){
+	lua_register(mLua,funcName.c_str(),&function);
+}
+/**========================================================*/
+/**
+ *	@brief	<—v–ñ>
+ *	@param[in]	<ˆø”>
+ *	@attention	<’ˆÓ‘‚«>
+ *	@note	<ƒƒ‚‘‚«>
+ *	@author	<ìŽÒ–¼>
+ *	@return	<–ß‚è’l>
+ */
+/**========================================================*/
 Luac::~Luac(){
 	lua_close(mLua);
 }
