@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <Lua/Luac.h>
+
+int func(){
+	printf("Called ...");
+	return 0;
+}
+
 int main(int argc, char* argv[])
 {
 //*
 	Luac lua("test.lua");
+	lua.setFunction("Shout",func);
 	lua.run();
 	lua.CallFunc("speech");
 	lua.CallFunc("say");
