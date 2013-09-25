@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
 {
 //*
 	Luac lua("test.lua");
-	lua.setFunction("Shout",func);
+//	lua.setFunction("Shout",func);
 	lua.run();
 	lua.CallFunc("speech");
 	lua.CallFunc("say");
