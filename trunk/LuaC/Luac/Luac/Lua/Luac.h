@@ -35,8 +35,8 @@ public:
 //	template<typename Ty>
 	void CallFunc(const std::string& funcName);
 
-	//template<typename Ty>
-	void setFunction(const std::string& funcName,int& func);
+//	template<typename Ty>
+//	void setFunction(const std::string& funcName,Ty& func);
 	/**&
 	 *	@brief	仮想デストラクタ
 	 */

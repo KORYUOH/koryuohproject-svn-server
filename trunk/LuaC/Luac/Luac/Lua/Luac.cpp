@@ -39,9 +39,9 @@ Luac::Luac(const std::string& luaPath)
  *	@return	<–ß‚è’l>
  */
 /**========================================================*/
-//template<typename Ty>
-void Luac::setFunction(const std::string& funcName, int& function){
-	//lua_register(mLua,funcName.c_str(),&function);
+/*template<typename Ty>
+void Luac::setFunction(const std::string& funcName,Ty& function){
+	lua_register(mLua,funcName.c_str(),(lua_CFunction)function);
 }
 /**========================================================*/
 /**
