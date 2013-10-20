@@ -1,42 +1,33 @@
 /**===File Commentary=======================================*/
 /**
- *	@file	For_each.h
+ *	@file	Algorithm.h
  *
- *	@brief	For_each関数
+ *	@brief	省略アルゴリズム表現
  *
  *	@author	KORYUOH
  *
- *	@date	2012/06/26
+ *	@date	2013/10/20
  *
- *	@virsion	ver.1.00
+ *	@virsion	ver.1.20
  */
 /**===Include Guard========================================*/
 #ifndef	_UTILITY_ALGORITHM_H_
 #define	_UTILITY_ALGORITHM_H_
 /**===File Include=========================================*/
-#include	<algorithm>
 /**===Class Definition=====================================*/
+template<typename CONTAINER,typename FUNCTION>
 class Algorithm{
 public:
 	/**
 	 *	@brief	省略形For_each
 	 *	@param[in]	コンテナ
 	 *	@param[in]	関数
-	 *	@return	関数の戻り値
+	 *	@return	実行結果
 	 */
-	template<typename Container,typename Function>
-	static Function for_each(Container& container,Function function){
-		return std::for_each(container.begin(),container.end(),function);
-	}
-	/**
-	 *	@brief	<要約>
-	 *	@param[in]	<[引数名]:[タイプ]>			<概要>
-	 *	@note	<メモ書き>
-	 *	@author	KORYUOH
-	 *	@return	<戻り値>
-	 */
+	static FUNCTION ForEach(CONTAINER& container,FUNCTION function);
 
 };
 /**===End Class Definition=================================*/
+#include <Utility/Argorithm/Algorithm.h>
 #endif
 /**===End Of File==========================================*/
