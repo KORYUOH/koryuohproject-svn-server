@@ -18,6 +18,8 @@
 /**===Class Definition=====================================*/
 class Luac{
 public:
+	typedef lua_State* LUA_STATE;
+	typedef int LUA_TYPES;
 	/**
 	 *	@brief	コンストラクタ
 	 *	@param[in]	luaファイル
@@ -34,9 +36,10 @@ public:
 	 */
 //	template<typename Ty>
 	void CallFunc(const std::string& funcName);
-
+	static void Dump(LUA_STATE lua);
+	void Dump();
 //	template<typename Ty>
-//	void setFunction(const std::string& funcName,Ty& func);
+	void setFunction(const std::string& funcName,void* func);
 	/**&
 	 *	@brief	仮想デストラクタ
 	 */
@@ -46,7 +49,7 @@ private:
 private:
 	/**	メンバー変数*/
 	const std::string	mLuaPath;
-	lua_State*	mLua;
+	LUA_STATE	mLua;
 };
 /**===End Class Definition=================================*/
 #endif

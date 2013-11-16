@@ -2,18 +2,30 @@
 #include <Lua/Luac.h>
 
 int func(){
-	printf("Called ...");
+	printf("Called ...\n");
 	return 0;
+}
+
+int add(Luac::LUA_STATE lua){
+	int a = luaL_checkint(lua,-2);
+	int b = luaL_checkint(lua,-1);
+	Luac::Dump(lua);
+	lua_pushnumber(lua,a+b);
+	Luac::Dump(lua);
+	return 1;
 }
 
 int main(int argc, char* argv[])
 {
 //*
 	Luac lua("test.lua");
-//	lua.setFunction("Shout",func);
+	lua.setFunction("Shout",&func);
+	lua.setFunction("add",&add);
 	lua.run();
 	lua.CallFunc("speech");
 	lua.CallFunc("say");
+
+	lua.Dump();
 /*/
     // Lua‚ðŠJ‚­
 	lua_State* L  = luaL_newstate();

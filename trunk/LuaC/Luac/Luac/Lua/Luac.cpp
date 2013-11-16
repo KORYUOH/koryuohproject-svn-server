@@ -11,6 +11,7 @@
 /**===File Include=========================================*/
 #include	<Lua/Luac.h>
 #include	<iostream>
+#include	<iomanip>
 /**===Class Implementation=================================*/
 
 /**========================================================*/
@@ -39,10 +40,61 @@ Luac::Luac(const std::string& luaPath)
  *	@return	<–ß‚è’l>
  */
 /**========================================================*/
-/*template<typename Ty>
-void Luac::setFunction(const std::string& funcName,Ty& function){
+//*template<typename Ty>
+void Luac::setFunction(const std::string& funcName,void* function){
 	lua_register(mLua,funcName.c_str(),(lua_CFunction)function);
 }
+/**========================================================*/
+/**
+ *	@brief	<—v–ñ>
+ *	@param[in]	<ˆø”>
+ *	@attention	<’ˆÓ‘‚«>
+ *	@note	<ƒƒ‚‘‚«>
+ *	@author	<ìŽÒ–¼>
+ *	@return	<–ß‚è’l>
+ */
+/**========================================================*/
+void Luac::Dump(LUA_STATE lua){
+	int max_stack = lua_gettop(lua);
+	std::cout <<"=== Lua Dump ========================================="<<"\n";
+	std::cout << "LUA_MAX_STACK : " << max_stack<<"\n";
+	for(int i = 0; i < max_stack;i++){
+		int stack =  max_stack - i;
+		int type = lua_type(lua,stack);
+		std::cout <<"Stack["<<std::setw(2)<<stack<< " : "<<std::setw(10)<< lua_typename(lua,type) <<"]\t";
+		switch(type){
+		case LUA_TNUMBER:
+			//numberŒ^
+			std::cout << lua_tonumber(lua, stack);
+			break;
+		case LUA_TBOOLEAN:
+			//booleanŒ^
+			if( lua_toboolean(lua, stack) ) {
+				std::cout << "true";
+			}else{
+				std::cout <<"false";
+			}
+			break;
+		case LUA_TSTRING:
+			//stringŒ^
+			std::cout << lua_tostring(lua,stack);
+			break;
+		case LUA_TNIL:
+			//nil
+			break;
+		default:
+			//‚»‚Ì‘¼‚ÌŒ^
+			std::cout <<lua_typename(lua, stack);
+			break;
+		}
+			std::cout<<"\n";
+	}
+	std::cout <<"======================================================"<<"\n";
+}
+void Luac::Dump(){
+	Dump(mLua);
+}
+
 /**========================================================*/
 /**
  *	@brief	<—v–ñ>
@@ -61,14 +113,14 @@ void Luac::luainit(){
 	luaL_openlibs(mLua);
 	if(luaL_loadfile(mLua, mLuaPath.c_str())){
 		std::string error = lua_tostring(mLua,-1);
-		perror(("init:"+error).c_str());
+		perror(("init ERROR:"+error).c_str());
 	}
 }
 void Luac::run(){
 //	luaL_openlibs(mLua);
 	if(luaL_loadfile(mLua, mLuaPath.c_str())||lua_pcall(mLua,0,0,0)){
 		std::string error = lua_tostring(mLua,-1);
-		perror(("init:"+error).c_str());
+		perror(("init ERROR:"+error).c_str());
 	}
 }
 
@@ -77,7 +129,7 @@ void Luac::CallFunc(const std::string& funcName){
 	lua_getglobal(mLua, funcName.c_str());
 	 if(lua_pcall(mLua, 0, 0, 0)) {
 		std::string error = lua_tostring(mLua,-1);
-		perror((funcName+" EXEC:"+error).c_str());
+		perror((funcName+" EXEC ERROR:"+error).c_str());
     }
 }
 /**===End Of File==========================================*/
