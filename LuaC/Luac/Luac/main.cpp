@@ -6,13 +6,21 @@ int func(){
 	return 0;
 }
 
+class Value{
+public:
+	static int destroy(Luac::LUA_STATE lua){
+		printf(" THIS IS DESTROY FUNCTION\n"); 
+		return 0;
+	};
+};
+
 int add(Luac::LUA_STATE lua){
 	int a = luaL_checkint(lua,-2);
 	int b = luaL_checkint(lua,-1);
 	Luac::Dump(lua);
 	lua_pushnumber(lua,a+b);
 	Luac::Dump(lua);
-	return 1;
+	return 1;//戻り値はスタックで返す個数
 }
 
 int main(int argc, char* argv[])
@@ -21,6 +29,7 @@ int main(int argc, char* argv[])
 	Luac lua("test.lua");
 	lua.setFunction("Shout",&func);
 	lua.setFunction("add",&add);
+	lua.setFunction("Destroyer",&Value::destroy);
 	lua.run();
 	lua.CallFunc("speech");
 	lua.CallFunc("say");

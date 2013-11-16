@@ -13,7 +13,18 @@
 #include	<iostream>
 #include	<iomanip>
 /**===Class Implementation=================================*/
-
+/**
+static const struct luaL_Reg myMathLib [] = {
+	{"add", l_add},
+    {"mul", l_mul},
+    {NULL, NULL} //最後は必ずNULLのペア
+}
+この後で
+	luaL_register(L, "myMath", myMathLib);って登録すると
+	luaのなかで
+	myMath.add(1,2)
+	とかで使えるようになる
+**/
 /**========================================================*/
 /**
  *	@brief	<要約>

@@ -19,3 +19,5 @@ end
 function speech()
     print("Is your name " .. Name .. "?")
 end
+
+Destroyer()
