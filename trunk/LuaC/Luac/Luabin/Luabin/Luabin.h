@@ -27,10 +27,11 @@ private:
 	static const char * reader(FILE *fp, size_t *size);
 	static int writer(const void *data, size_t size, FILE *fp);
 private:
+	static Luabin* mInstance;
 	const static int BUF_SIZE;
 	LUA_STATE mLua;
 	const std::string&	mLuaPath;
-	static char m_buf[LUA_BIN_BUF_SIZE];
+	char m_buf[LUA_BIN_BUF_SIZE];
 };
 /**===End Class Definition=================================*/
 #endif
