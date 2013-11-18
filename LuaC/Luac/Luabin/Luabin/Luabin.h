@@ -15,22 +15,22 @@
 #include	<string>
 #include	<lua.hpp>
 #pragma comment(lib, "lua52.lib")
+#define LUA_BIN_BUF_SIZE 1024
 /**===Class Definition=====================================*/
 class Luabin{
 public:
 	typedef lua_State* LUA_STATE;
 	Luabin(const std::string& luaPath);
 	virtual ~Luabin(){};
-
+	void convert();
 private:
-	void luainit();
 	static const char * reader(FILE *fp, size_t *size);
 	static int writer(const void *data, size_t size, FILE *fp);
 private:
 	const static int BUF_SIZE;
 	LUA_STATE mLua;
-	const std::string	mLuaPath;
-	static char m_buf[BUF_SIZE];
+	const std::string&	mLuaPath;
+	static char m_buf[LUA_BIN_BUF_SIZE];
 };
 /**===End Class Definition=================================*/
 #endif
