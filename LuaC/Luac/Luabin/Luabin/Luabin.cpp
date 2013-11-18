@@ -14,11 +14,13 @@
 /**===Class Implementation=================================*/
 const int Luabin::BUF_SIZE = LUA_BIN_BUF_SIZE;
 Luabin* Luabin::mInstance = nullptr;
+char Luabin::m_buf[BUF_SIZE];
 Luabin::Luabin(const std::string& luaPath)
 	:mLuaPath(luaPath)
 	,mLua(luaL_newstate())
 {
 	mInstance = this;
+	luainit();
 }
 /*
 void make_bin_lua(const char *bin_filename, const char *text_filename) {
@@ -32,9 +34,14 @@ void make_bin_lua(const char *bin_filename, const char *text_filename) {
 	fclose(fin);
 }
 */
+void Luabin::luainit(){
+//	m_buf = malloc(sizeof(char)*LUA_BIN_BUF_SIZE);
+	printf("buf_size: %d",sizeof(m_buf));
+}
 void Luabin::convert(){
 	FILE *fin = fopen(mLuaPath.c_str(), "r");
-	FILE *fout = fopen(std::string("test.lub").c_str(), "wb");
+	std::string filename = std::string(mLuaPath,0,mLuaPath.find_first_of('.'));
+	FILE *fout = fopen((filename+".lub").c_str(), "wb");
 	lua_load(mLua, (lua_Reader)reader, fin, "", NULL);
 	lua_dump(mLua, (lua_Writer)writer, fout);
 	lua_close(mLua);
@@ -42,18 +49,23 @@ void Luabin::convert(){
 	fclose(fin);
 }
 
-const char * Luabin::reader(FILE *fp, size_t *size) {
+const char * Luabin::reader(LUA_STATE L,FILE *fp, size_t *size) {
 	if (feof(fp)) {
 		*size = 0;
 		return NULL;
 	} else {
-		*size = std::fread(mInstance->m_buf, 1, sizeof(mInstance->m_buf), fp);
+		if(mInstance == nullptr){
+			return nullptr;
+		}
+		*size = std::fread(mInstance->m_buf, 1, mInstance->getBufSize(), fp);
 		return mInstance->m_buf;
 	}
 }
-int Luabin::writer(const void *data, size_t size, FILE *fp) {
+int Luabin::writer(LUA_STATE L,const void *data, size_t size, FILE *fp) {
 	fwrite(data, size, 1, fp);
 	return 0; // no error
 }
-
+size_t Luabin::getBufSize()const{
+	return sizeof(m_buf);
+}
 /**===End Of File==========================================*/

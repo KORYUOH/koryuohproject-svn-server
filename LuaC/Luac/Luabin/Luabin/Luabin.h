@@ -24,14 +24,16 @@ public:
 	virtual ~Luabin(){};
 	void convert();
 private:
-	static const char * reader(FILE *fp, size_t *size);
-	static int writer(const void *data, size_t size, FILE *fp);
+	void luainit();
+	static const char * reader(LUA_STATE L,FILE *fp, size_t *size);
+	static int writer(LUA_STATE L,const void *data, size_t size, FILE *fp);
+	size_t getBufSize()const;
 private:
 	static Luabin* mInstance;
 	const static int BUF_SIZE;
 	LUA_STATE mLua;
-	const std::string&	mLuaPath;
-	char m_buf[LUA_BIN_BUF_SIZE];
+	std::string	mLuaPath;
+	static char m_buf[LUA_BIN_BUF_SIZE];
 };
 /**===End Class Definition=================================*/
 #endif
