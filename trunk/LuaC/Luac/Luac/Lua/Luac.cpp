@@ -16,8 +16,8 @@
 /**
 static const struct luaL_Reg myMathLib [] = {
 	{"add", l_add},
-    {"mul", l_mul},
-    {NULL, NULL} //最後は必ずNULLのペア
+		{"mul", l_mul},
+		{NULL, NULL} //最後は必ずNULLのペア
 }
 この後で
 	luaL_register(L, "myMath", myMathLib);って登録すると
@@ -70,7 +70,7 @@ void Luac::Dump(LUA_STATE lua){
 	std::cout <<"=== Lua Dump ========================================="<<"\n";
 	std::cout << "LUA_MAX_STACK : " << max_stack<<"\n";
 	for(int i = 0; i < max_stack;i++){
-		int stack =  max_stack - i;
+		int stack =	max_stack - i;
 		int type = lua_type(lua,stack);
 		std::cout <<"Stack["<<std::setw(2)<<stack<< " : "<<std::setw(10)<< lua_typename(lua,type) <<"]\t";
 		switch(type){
@@ -141,6 +141,6 @@ void Luac::CallFunc(const std::string& funcName){
 	 if(lua_pcall(mLua, 0, 0, 0)) {
 		std::string error = lua_tostring(mLua,-1);
 		perror((funcName+" EXEC ERROR:"+error).c_str());
-    }
+	}
 }
 /**===End Of File==========================================*/
