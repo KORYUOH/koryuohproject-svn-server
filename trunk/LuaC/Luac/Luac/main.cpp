@@ -26,7 +26,7 @@ int add(Luac::LUA_STATE lua){
 int main(int argc, char* argv[])
 {
 //*
-	Luac lua("test.lua");
+	Luac lua("test.lub");
 	lua.setFunction("Shout",&func);
 	lua.setFunction("add",&add);
 	lua.setFunction("Destroyer",&Value::destroy);
