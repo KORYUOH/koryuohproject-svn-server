@@ -16,19 +16,21 @@
 #include	<lua.hpp>
 #pragma comment(lib, "lua52.lib")
 /**===Class Definition=====================================*/
-class Luabun{
+class Luabin{
 public:
 	typedef lua_State* LUA_STATE;
-	Luabin();
+	Luabin(const std::string& luaPath);
 	virtual ~Luabin(){};
 
 private:
 	void luainit();
-	const char * reader(lua_State *L, FILE *fp, size_t *size);
-	int writer(lua_State *ls, const void *data, size_t size, FILE *fp);
+	static const char * reader(FILE *fp, size_t *size);
+	static int writer(const void *data, size_t size, FILE *fp);
 private:
+	const static int BUF_SIZE;
 	LUA_STATE mLua;
 	const std::string	mLuaPath;
+	static char m_buf[BUF_SIZE];
 };
 /**===End Class Definition=================================*/
 #endif
