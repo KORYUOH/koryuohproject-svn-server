@@ -1,5 +1,5 @@
-#include	<lua.hpp>
-#pragma comment(lib, "lua52.lib")
+#include	<Luabin/Luabin.h>
+
 
 int main(int argc, char* argv[]){
 

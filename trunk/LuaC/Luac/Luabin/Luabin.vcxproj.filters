@@ -8,4 +8,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Luabin\Luabin.h">
+      <Filter>Lua</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
