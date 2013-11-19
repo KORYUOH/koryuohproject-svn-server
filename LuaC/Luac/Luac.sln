@@ -5,6 +5,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Luac", "Luac\Luac.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Luabin", "Luabin\Luabin.vcxproj", "{309B8F5E-6A51-4DF1-9C72-A750342CAF3B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "benchmark", "benchmark\benchmark.vcxproj", "{8E3B5E6B-3D20-4246-B2A6-93BB418F57AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Luac_static_lib", "Luac_static_lib\Luac_static_lib.vcxproj", "{4C466DBC-835B-4380-8A0A-7C6D0B72FA5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +23,14 @@ Global
 		{309B8F5E-6A51-4DF1-9C72-A750342CAF3B}.Debug|Win32.Build.0 = Debug|Win32
 		{309B8F5E-6A51-4DF1-9C72-A750342CAF3B}.Release|Win32.ActiveCfg = Release|Win32
 		{309B8F5E-6A51-4DF1-9C72-A750342CAF3B}.Release|Win32.Build.0 = Release|Win32
+		{8E3B5E6B-3D20-4246-B2A6-93BB418F57AB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E3B5E6B-3D20-4246-B2A6-93BB418F57AB}.Debug|Win32.Build.0 = Debug|Win32
+		{8E3B5E6B-3D20-4246-B2A6-93BB418F57AB}.Release|Win32.ActiveCfg = Release|Win32
+		{8E3B5E6B-3D20-4246-B2A6-93BB418F57AB}.Release|Win32.Build.0 = Release|Win32
+		{4C466DBC-835B-4380-8A0A-7C6D0B72FA5F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4C466DBC-835B-4380-8A0A-7C6D0B72FA5F}.Debug|Win32.Build.0 = Debug|Win32
+		{4C466DBC-835B-4380-8A0A-7C6D0B72FA5F}.Release|Win32.ActiveCfg = Release|Win32
+		{4C466DBC-835B-4380-8A0A-7C6D0B72FA5F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
