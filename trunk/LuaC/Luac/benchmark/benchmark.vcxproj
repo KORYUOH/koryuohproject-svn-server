@@ -94,6 +94,9 @@
     <ClInclude Include="Luabin\Luabin.h" />
     <ClInclude Include="Lua\Luac.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="tarai.lua" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
