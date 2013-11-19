@@ -13,7 +13,7 @@ int main(int argc,char* argv[]){
 	binary.convert();
 	Luac lua("tarai.lua");
 	Luac lub("tarai.lub");
-
+	std::cout<< "LUA START \n";
 	timer->start();
 //*
 	lua.run();
@@ -26,6 +26,7 @@ int main(int argc,char* argv[]){
 
 
 
+	std::cout<<"LUB START\n";
 	timer->start();
 //*
 	lua.run();
