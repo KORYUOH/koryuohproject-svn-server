@@ -15,6 +15,12 @@
 /**===Include Guard========================================*/
 #ifndef	_H_
 #define	_H_
+
+#ifdef _WIN32
+#pragma once
+#endif
+
+
 /**===File Include=========================================*/
 #include	<>
 /**===Class Definition=====================================*/
