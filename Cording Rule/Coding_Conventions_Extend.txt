@@ -7,7 +7,7 @@ Ex 01.VC++ディレクトリのインクルードディレクトリに次を追加
 
 Ex 02.boostをなるべく使わない
 
-Ex 03.new演算子を極力使わない。使う場合はshared_ptrかauto_ptrを使う
+Ex 03.new演算子を極力使わない。使う場合はshared_ptrかunique_ptrを使う
 	<memory>に格納されている(VC2010)	使用の際はstd::shared_ptr
 	<boost/shared_ptr.hpp>に格納されている(Boostライブラリ)	使用はboost::shared_ptr
 
@@ -33,13 +33,11 @@ Ex 07.フォルダわけして管理する特にゲーム関係のソース
 	├	File2_ext.h
 	└	File2_ext.cpp
 
-Ex 08.ヘッダがクラスの定義などをしていない場合に限り、#pragma onceを使用してもよいこととする。
-	//Head.h
-	#pragma once
-	#include	<something>
-	#pragma comment (lib,"something.lib")
-	//End of File
-
+Ex 08.pragma onceは #ifdef _WIN32　でかこって使う
+#ifdef _WIN32
+#pragma once
+#endif
 _/_/_/_/_/_/_/_/_/_/_/_/_/_/更新情報_/_/_/_/_/_/_/_/_/_/_/_/_/
 2012/01/23	制定
 2012/02/23	改定	Extend Ex08
+2014/09/17	改定	Change Ex08
