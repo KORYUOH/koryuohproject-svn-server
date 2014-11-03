@@ -27,12 +27,8 @@ static const struct luaL_Reg myMathLib [] = {
 **/
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
- *	@author	<作者名>
- *	@return	<戻り値>
+ *	@brief	コンストラクタ
+ *	@param[in]	Luaファイルパス
  */
 /**========================================================*/
 Luac::Luac(const std::string& luaPath)
@@ -43,26 +39,20 @@ Luac::Luac(const std::string& luaPath)
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
- *	@author	<作者名>
- *	@return	<戻り値>
+ *	@brief	Luaに関数を追加
+ *	@param[in]	追加関数名
+ *	@param[in]	コールバック関数
+ *	@note	追加の関数は既定の型のみ
  */
 /**========================================================*/
 //*template<typename Ty>
 void Luac::setFunction(const std::string& funcName,void* function){
-	lua_register(mLua,funcName.c_str(),(lua_CFunction)function);
+	lua_register(mLua,funcName.c_str(),static_cast<lua_CFunction>(function));
 }
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
- *	@author	<作者名>
- *	@return	<戻り値>
+ *	@brief	Luaダンプの生成
+ *	@param[in]	Luaステート
  */
 /**========================================================*/
 void Luac::Dump(LUA_STATE lua){
@@ -108,17 +98,17 @@ void Luac::Dump(){
 
 /**========================================================*/
 /**
- *	@brief	<要約>
- *	@param[in]	<引数>
- *	@attention	<注意書き>
- *	@note	<メモ書き>
- *	@author	<作者名>
- *	@return	<戻り値>
+ *	@brief	デストラクタ
  */
 /**========================================================*/
 Luac::~Luac(){
 	lua_close(mLua);
 }
+/**========================================================*/
+/**
+ *	@brief	Luaの初期化
+ */
+/**========================================================*/
 void Luac::luainit(){
 	// Lua標準関数を使う
 	luaL_openlibs(mLua);
@@ -127,6 +117,11 @@ void Luac::luainit(){
 		perror(("init ERROR:"+error).c_str());
 	}
 }
+/**========================================================*/
+/**
+ *	@brief	Luaファイルの実行
+ */
+/**========================================================*/
 void Luac::run(){
 //	luaL_openlibs(mLua);
 	if(luaL_loadfile(mLua, mLuaPath.c_str())||lua_pcall(mLua,0,0,0)){
@@ -134,7 +129,11 @@ void Luac::run(){
 		perror(("init ERROR:"+error).c_str());
 	}
 }
-
+/**========================================================*/
+/**
+ *	@brief	Luaの関数を呼び出す
+ */
+/**========================================================*/
 //template<typename Ty>
 void Luac::CallFunc(const std::string& funcName){
 	lua_getglobal(mLua, funcName.c_str());
