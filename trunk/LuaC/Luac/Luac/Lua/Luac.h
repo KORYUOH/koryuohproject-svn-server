@@ -11,6 +11,10 @@
 /**===Include Guard========================================*/
 #ifndef	_LUAC_H_
 #define	_LUAC_H_
+
+#ifdef _WIN32
+#pragma once
+#endif
 /**===File Include=========================================*/
 #include	<string>
 #include	<lua.hpp>
@@ -36,15 +40,34 @@ public:
 	 */
 //	template<typename Ty>
 	void CallFunc(const std::string& funcName);
+	/**
+	 *	@brief	Luaのダンプコールバック
+	 *	@note	テンプレート
+	 */
 	static void Dump(LUA_STATE lua);
+	/**
+	 *	@brief	Luaのダンプ
+	 */
 	void Dump();
-//	template<typename Ty>
+	/**
+	 *	@brief	関数を設定する
+	 *	@param[in]	Luaでの関数名
+	 *	@param[in]	追加する関数のポインタ
+	 */
 	void setFunction(const std::string& funcName,void* func);
-	/**&
+	/**
+	 *	@brief	Luaにクラス追加
+	 *	@note	テンプレート
+	 */
+	void addClass(const std::string& luaclass,const static struct luaL_Reg *classdef);
+	/**
 	 *	@brief	仮想デストラクタ
 	 */
 	virtual ~Luac();
 private:
+	/**
+	 *	@brief	Luaの初期化
+	 */
 	void luainit();
 private:
 	/**	メンバー変数*/
