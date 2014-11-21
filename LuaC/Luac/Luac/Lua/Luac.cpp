@@ -51,6 +51,19 @@ void Luac::setFunction(const std::string& funcName,void* function){
 }
 /**========================================================*/
 /**
+*	@brief	Luaに関数を追加
+*	@param[in]	追加関数名
+*	@param[in]	コールバック関数
+*	@note	追加の関数は既定の型のみ
+*/
+/**========================================================*/
+void Luac::addClass(const std::string& className , const static struct luaL_Reg *classdef)
+{
+	luaL_newlib(mLua, classdef);
+	lua_setglobal(mLua, className.c_str());
+}
+/**========================================================*/
+/**
  *	@brief	Luaダンプの生成
  *	@param[in]	Luaステート
  */
