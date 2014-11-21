@@ -23,6 +23,7 @@
 class Luac{
 public:
 	typedef lua_State* LUA_STATE;
+	typedef luaL_Reg LUA_LIBTABLE;
 	typedef int LUA_TYPES;
 	/**
 	 *	@brief	コンストラクタ
@@ -59,7 +60,7 @@ public:
 	 *	@brief	Luaにクラス追加
 	 *	@note	テンプレート
 	 */
-	void addClass(const std::string& luaclass,const static struct luaL_Reg *classdef);
+	void addClass(const std::string&className, const static struct luaL_Reg *classdef);
 	/**
 	 *	@brief	仮想デストラクタ
 	 */
