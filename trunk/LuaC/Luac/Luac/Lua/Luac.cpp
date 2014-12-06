@@ -32,10 +32,46 @@ static const struct luaL_Reg myMathLib [] = {
  */
 /**========================================================*/
 Luac::Luac(const std::string& luaPath)
-	:mLuaPath(luaPath)
-	,mLua(luaL_newstate())
+	: mLuaPath(luaPath)
+	, mLua(luaL_newstate())
+	, mInitialized(true)
+	, mArgCnt(0)
 {
 	luainit();
+}
+/**========================================================*/
+/**
+*	@brief	コンストラクタ
+*	@param[in]	Luaファイルパス
+*/
+/**========================================================*/
+Luac::Luac()
+	: mLuaPath("")
+	, mLua(nullptr)
+	, mInitialized(false)
+	, mArgCnt(0)
+{
+}
+/**========================================================*/
+/**
+*	@brief	初期化
+*	@param[in]	Luaファイルパス
+*	@note	本来はコンストラクタで呼ばれる
+*/
+/**========================================================*/
+void Luac::Initialize(const std::string& luapath)
+{
+	if (mInitialized)
+	{
+		lua_close(mLua);
+		mInitialized = false;
+	}
+
+	mLuaPath = luapath;
+	mLua = luaL_newstate();
+	mInitialized = true;
+	mArgCnt = 0;
+
 }
 /**========================================================*/
 /**
@@ -115,7 +151,8 @@ void Luac::Dump(){
  */
 /**========================================================*/
 Luac::~Luac(){
-	lua_close(mLua);
+	if (mInitialized)
+		lua_close(mLua);
 }
 /**========================================================*/
 /**
@@ -136,10 +173,15 @@ void Luac::luainit(){
  */
 /**========================================================*/
 void Luac::run(){
+
+	if (!isInitialized())
+	{
+		return;
+	}
 //	luaL_openlibs(mLua);
 	if(luaL_loadfile(mLua, mLuaPath.c_str())||lua_pcall(mLua,0,0,0)){
 		std::string error = lua_tostring(mLua,-1);
-		perror(("init ERROR:"+error).c_str());
+		perror(("Run ERROR:"+error).c_str());
 	}
 }
 /**========================================================*/
@@ -155,4 +197,75 @@ void Luac::CallFunc(const std::string& funcName){
 		perror((funcName+" EXEC ERROR:"+error).c_str());
 	}
 }
+/**========================================================*/
+/**
+*	@brief	Luaの関数を呼び出す準備
+*	@param[in] 関数名
+*/
+/**========================================================*/
+
+void Luac::ReadyFunc(const std::string& funcName)
+{
+	lua_getglobal(mLua, funcName.c_str());
+}
+
+/**========================================================*/
+/**
+*	@brief	Luaの関数を呼び出す
+*	@param[in]	Luaの引数の数
+*/
+/**========================================================*/
+void Luac::CallFunc()
+{
+	if (lua_pcall(mLua, mArgCnt, 0, 0))
+	{
+		std::string error = lua_tostring(mLua, -1);
+		perror((" EXEC ERROR:" + error).c_str());
+	}
+	mArgCnt = 0;
+}
+/**========================================================*/
+/**
+*	@brief	Luaの関数の引数を設定
+*	@param[in]	引数
+*/
+/**========================================================*/
+
+void Luac::SetInt(int arg)
+{
+	lua_pushinteger(mLua, arg);
+	++mArgCnt;
+}
+
+void Luac::SetFloat(float arg)
+{
+	lua_pushnumber(mLua, arg);
+	++mArgCnt;
+}
+
+void Luac::SetPtr(void* p)
+{
+	lua_pushlightuserdata(mLua, p);
+	++mArgCnt;
+}
+
+void Luac::SetStr(const char* str)
+{
+	lua_pushstring(mLua, str);
+	++mArgCnt;
+}
+
+void Luac::SetStr(const std::string& str)
+{
+	SetStr(str.c_str());
+	++mArgCnt;
+}
+
+void Luac::SetNil()
+{
+	lua_pushnil(mLua);
+	++mArgCnt;
+}
+
+
 /**===End Of File==========================================*/

@@ -31,16 +31,34 @@ public:
 	 */
 	Luac(const std::string& luaPath);
 	/**
+	*	@brief	コンストラクタ
+	*/
+	Luac();
+	/**
+	 *	@brief 初期化を開始
+	 *	@param[in]	Luaファイルパス
+	 *	@note 非推奨、コンストラクタを使ってほしい
+	 */
+	void Initialize(const std::string& luapath);
+	/**
 	 *	@brief	Luaファイル実行
 	 */
 	void run();
 	/**
 	 *	@brief	関数呼び出し
-	 *	@note	テンプレート
-	 *	@return	指定タイプ
 	 */
 //	template<typename Ty>
 	void CallFunc(const std::string& funcName);
+	/**
+	 *	@brief	関数呼び出し準備
+	 *	@param[in]	関数名
+	 *	@note	この後に与える引数をスタックにつむ
+	 */
+	void ReadyFunc(const std::string& funcName);
+	/**
+	*	@brief	関数呼び出し
+	*/
+	void CallFunc();
 	/**
 	 *	@brief	Luaのダンプコールバック
 	 *	@note	テンプレート
@@ -62,6 +80,20 @@ public:
 	 */
 	void addClass(const std::string&className, const static struct luaL_Reg *classdef);
 	/**
+	 *	@brief	初期化されているか？
+	 *	@return	初期化状態
+	 */
+	bool isInitialized()const{ return mInitialized;}
+
+
+	void SetInt(int arg);
+	void SetFloat(float arg);
+	void SetPtr(void* p);
+	void SetStr(const char* str);
+	void SetStr(const std::string& str);
+	void SetNil();
+	
+	/**
 	 *	@brief	仮想デストラクタ
 	 */
 	virtual ~Luac();
@@ -72,8 +104,10 @@ private:
 	void luainit();
 private:
 	/**	メンバー変数*/
-	const std::string	mLuaPath;
+	std::string	mLuaPath;
 	LUA_STATE	mLua;
+	bool	mInitialized;
+	int mArgCnt;
 };
 /**===End Class Definition=================================*/
 #endif
