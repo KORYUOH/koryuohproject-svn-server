@@ -146,24 +146,35 @@ static Luac::LUA_LIBTABLE g_lib_b[] =
 int main(int argc, char* argv[])
 {
 //*
-	Luac lua("test.lua");
-	lua.setFunction("Shout",&func);
-	lua.setFunction("add",&add);
-	lua.setFunction("Destroyer",&Value::destroy);
-
-	printf("===ADD_CLASS===\n");
-
-	lua.Dump();
-	lua.addClass("Mod",g_lib_a);
-	lua.addClass("FB", g_lib_b);
-	lua.Dump();
-
-	printf("===============\n");
-
+//	Luac lua("test.lua");
+//	lua.setFunction("Shout",&func);
+//	lua.setFunction("add",&add);
+//	lua.setFunction("Destroyer",&Value::destroy);
+//
+//	printf("===ADD_CLASS===\n");
+//
+//	lua.Dump();
+//	lua.addClass("Mod",g_lib_a);
+//	lua.addClass("FB", g_lib_b);
+//	lua.Dump();
+//
+//	printf("===============\n");
+//
+//	lua.run();
+//	lua.CallFunc("speech");
+//	lua.CallFunc("say");
+//
+	Luac lua("call.lua");
 	lua.run();
-	lua.CallFunc("speech");
-	lua.CallFunc("say");
 
+	lua.Dump();
+	lua.ReadyFunc("sum");
+	lua.Dump();
+	lua.SetInt(2);
+	lua.Dump();
+	lua.SetInt(5);
+	lua.Dump();
+	lua.CallFunc();
 
 	lua.Dump();
 /*/
