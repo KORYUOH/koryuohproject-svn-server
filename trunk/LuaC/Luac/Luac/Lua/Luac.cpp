@@ -72,6 +72,8 @@ void Luac::Initialize(const std::string& luapath)
 	mInitialized = true;
 	mArgCnt = 0;
 
+	luainit();
+
 }
 /**========================================================*/
 /**
