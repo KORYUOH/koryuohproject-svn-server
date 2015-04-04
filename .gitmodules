@@ -1,0 +1,3 @@
+[submodule "Luac"]
+	path = Luac
+	url = git@github.com:KORYUOH/Luac.git
