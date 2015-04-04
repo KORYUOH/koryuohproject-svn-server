@@ -20,4 +20,8 @@ function speech()
     print("Is your name " .. Name .. "?")
 end
 
+function sum( x , y )
+	print( ..x.. " + " ..y.. " = " ..x+y..)
+end
+
 Destroyer()

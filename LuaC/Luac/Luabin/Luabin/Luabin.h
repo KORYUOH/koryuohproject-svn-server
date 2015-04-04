@@ -23,6 +23,7 @@ public:
 	Luabin(const std::string& luaPath);
 	virtual ~Luabin(){};
 	void convert();
+	void setOutDir(const std::string& outdir);
 private:
 	void luainit();
 	static const char * reader(LUA_STATE L,FILE *fp, size_t *size);
@@ -33,6 +34,8 @@ private:
 	const static int BUF_SIZE;
 	LUA_STATE mLua;
 	std::string	mLuaPath;
+	std::string mOutDir;
+	std::string mExtention;
 	static char m_buf[LUA_BIN_BUF_SIZE];
 };
 /**===End Class Definition=================================*/

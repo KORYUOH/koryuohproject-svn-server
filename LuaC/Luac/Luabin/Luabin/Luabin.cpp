@@ -17,6 +17,8 @@ Luabin* Luabin::mInstance = nullptr;
 char Luabin::m_buf[BUF_SIZE];
 Luabin::Luabin(const std::string& luaPath)
 	:mLuaPath(luaPath)
+	, mOutDir("")
+	, mExtention(".lub")
 	,mLua(luaL_newstate())
 {
 	mInstance = this;
@@ -36,17 +38,38 @@ void make_bin_lua(const char *bin_filename, const char *text_filename) {
 */
 void Luabin::luainit(){
 //	m_buf = malloc(sizeof(char)*LUA_BIN_BUF_SIZE);
-	printf("buf_size: %d",sizeof(m_buf));
+	printf("buf_size: %d\n",sizeof(m_buf));
 }
 void Luabin::convert(){
 	FILE *fin = fopen(mLuaPath.c_str(), "r");
-	std::string filename = std::string(mLuaPath,0,mLuaPath.find_first_of('.'));
-	FILE *fout = fopen((filename+".lub").c_str(), "wb");
+	if (fin == nullptr)
+	{
+		printf("LUA OPEN ERROR\n");
+		return;
+	}
+	std::string filename = "";
+	std::string outpath = "";
+	if (mLuaPath.find_last_of('/') == mLuaPath.npos)
+	{
+		filename = std::string(mLuaPath, 0 , mLuaPath.find_last_of('.'));
+	}
+	else
+	{
+		filename = std::string(mLuaPath, mLuaPath.find_last_of('/'), mLuaPath.find_last_of('.'));
+		outpath = std::string(mLuaPath, 0, mLuaPath.find_last_of('/'));
+	}
+
+	FILE *fout = fopen((outpath+mOutDir+filename+mExtention).c_str(), "wb");
 	lua_load(mLua, (lua_Reader)reader, fin, "", NULL);
 	lua_dump(mLua, (lua_Writer)writer, fout);
 	lua_close(mLua);
 	fclose(fout);
 	fclose(fin);
+}
+
+void Luabin::setOutDir(const std::string& outdir)
+{
+	mOutDir = outdir;
 }
 
 const char * Luabin::reader(LUA_STATE L,FILE *fp, size_t *size) {
